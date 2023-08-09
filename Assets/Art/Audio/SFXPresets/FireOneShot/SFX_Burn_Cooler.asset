@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Burn_Cooler
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 0acaf225145c9411fa96c8c82a8440f8, type: 3}
+  - {fileID: 8300000, guid: 99f97fc8b288540bd81de616252f7eed, type: 3}
+  - {fileID: 8300000, guid: 264fc20eb2cf94a70a096ff2761f4b25, type: 3}
+  - {fileID: 8300000, guid: 060b6f2291e8948458a4ed57714e2999, type: 3}
+  - {fileID: 8300000, guid: 2a5af2a835c044ccd8fcaa14c679503f, type: 3}
+  volume: 0.8
+  randomisePitch: 0
+  randomPitchRange: {x: 0.8, y: 1.2}
+  loops: 0
+  spatialBlend: 0.8
+  maxDistance: 500

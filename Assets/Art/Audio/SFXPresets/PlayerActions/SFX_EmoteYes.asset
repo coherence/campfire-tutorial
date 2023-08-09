@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_EmoteYes
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 8ffc9df6951c74fbf89d09f0ef7e7d28, type: 3}
+  - {fileID: 8300000, guid: 36293efe9c2394f5f9685d89dc2ab08f, type: 3}
+  - {fileID: 8300000, guid: 34c27105a03224cd0b1f0969d18c40b8, type: 3}
+  - {fileID: 8300000, guid: 4c1eb2859c01d40dfb5ae6d7e983731b, type: 3}
+  - {fileID: 8300000, guid: ca5dbc7f199af463ebcc54b537204fec, type: 3}
+  volume: 0.8
+  randomisePitch: 0
+  randomPitchRange: {x: 1, y: 1.2}
+  loops: 0
+  spatialBlend: 1
+  maxDistance: 100

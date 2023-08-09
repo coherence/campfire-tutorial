@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Bounce
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: d7510d6da860c6542a66d13a30fc75fd, type: 3}
+  - {fileID: 8300000, guid: 2730264613141a146acdc246f68342e8, type: 3}
+  - {fileID: 8300000, guid: b111174d8b4a4d247ad8806c34ca024f, type: 3}
+  - {fileID: 8300000, guid: 0341e87de5836d2438ec7bdca3c815d2, type: 3}
+  - {fileID: 8300000, guid: c4772915fc8445b42a85f422346c17b2, type: 3}
+  volume: 1
+  randomisePitch: 1
+  randomPitchRange: {x: 0.9, y: 1.1}
+  loops: 0
+  spatialBlend: 0.8
+  maxDistance: 100

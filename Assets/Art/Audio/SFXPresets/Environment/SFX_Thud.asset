@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Thud
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: f4374778f009a426496eca3c7f638ed1, type: 3}
+  - {fileID: 8300000, guid: a02547b686c7e4727a41b40fc4112776, type: 3}
+  - {fileID: 8300000, guid: 3a4edb5a292844cd6a35260a0fd749b0, type: 3}
+  - {fileID: 8300000, guid: cb53ad015e6e2423dbbb683f37cbb1f1, type: 3}
+  - {fileID: 8300000, guid: 19cf16e8e83bc45308490d7c8db531d5, type: 3}
+  - {fileID: 8300000, guid: ace1028ebf3b84fc7ade899536b47c43, type: 3}
+  - {fileID: 8300000, guid: 7de391d74356c414a835983ff65e8082, type: 3}
+  - {fileID: 8300000, guid: 237b7c49b3ead4de1a8f2a4844a53cdf, type: 3}
+  - {fileID: 8300000, guid: e47043d06062e462c8370fcfc0b3a873, type: 3}
+  - {fileID: 8300000, guid: 21baf53f891704aa3adf43669d6ad8a5, type: 3}
+  volume: 1
+  randomisePitch: 1
+  randomPitchRange: {x: 0.8, y: 1}
+  loops: 0
+  spatialBlend: 0.8
+  maxDistance: 10

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Footsteps_Grass
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 964ef8cac1c9c3c4fa9d4f9c019d3080, type: 3}
+  - {fileID: 8300000, guid: b4f2f53412f14b446bc05949f4a177f2, type: 3}
+  - {fileID: 8300000, guid: fae62056829523c4195e84295425bfaa, type: 3}
+  - {fileID: 8300000, guid: 5de89231c4044f646b33c3173d0ac33d, type: 3}
+  - {fileID: 8300000, guid: db71eb8a878685e44b1c6a2a16850d33, type: 3}
+  - {fileID: 8300000, guid: 0b1c3b0ca639ed94d843e526db260d6e, type: 3}
+  - {fileID: 8300000, guid: d5c0f9c56303a734999c3ba582150348, type: 3}
+  - {fileID: 8300000, guid: 99d58fac0bbb88549b23fe2a7cc2e3fe, type: 3}
+  - {fileID: 8300000, guid: 6e571545142871a4b96484f67c4c0978, type: 3}
+  - {fileID: 8300000, guid: ced29a19b507bb54982a68c12c4287c9, type: 3}
+  - {fileID: 8300000, guid: 6319850abd175a243a655792ac58b67e, type: 3}
+  volume: 0.105
+  randomisePitch: 0
+  randomPitchRange: {x: 0.9, y: 1.1}
+  loops: 0
+  spatialBlend: 1
+  maxDistance: 1

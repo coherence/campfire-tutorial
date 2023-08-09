@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Chop
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: af987866d3220a647a0c83983e63b862, type: 3}
+  - {fileID: 8300000, guid: 5502348dadef62b4c8be22484de7bc9f, type: 3}
+  - {fileID: 8300000, guid: 6931b1ef78893f941b1cba592da9a666, type: 3}
+  - {fileID: 8300000, guid: cc6eedc6a5d26574fb7184fa70d967ee, type: 3}
+  - {fileID: 8300000, guid: 9669180acde00834dab6341b09f22cd9, type: 3}
+  volume: 0.823
+  randomisePitch: 0
+  randomPitchRange: {x: 0.8, y: 1.2}
+  loops: 0
+  spatialBlend: 1
+  maxDistance: 100

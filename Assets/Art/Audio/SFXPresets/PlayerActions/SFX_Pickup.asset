@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Pickup
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 7cd15817bab32564283c6bc0786f9b66, type: 3}
+  - {fileID: 8300000, guid: d9178741815d00e44a8614b2f62f0317, type: 3}
+  - {fileID: 8300000, guid: 9fe81baa208d9784ab88df6374d41e02, type: 3}
+  volume: 0.88
+  randomisePitch: 0
+  randomPitchRange: {x: 0.8, y: 1.2}
+  loops: 0
+  spatialBlend: 1
+  maxDistance: 100

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Footsteps_Extra
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: c6394c8b0b6003f47807f105947bfb2d, type: 3}
+  - {fileID: 8300000, guid: 42f59c8ca8e3f2b4ab4048e966d565c6, type: 3}
+  - {fileID: 8300000, guid: 23fd00bc714e7164fade8722e613dacf, type: 3}
+  - {fileID: 8300000, guid: 4d7087113a56e2a4d9b022a7b71389ef, type: 3}
+  - {fileID: 8300000, guid: b9f6fbc564f94ab47984719c9c0490af, type: 3}
+  - {fileID: 8300000, guid: 6a566debe09b96843b34cfab12b52879, type: 3}
+  - {fileID: 8300000, guid: 5f86af0523691ed41bcaa08bb8ffdd0b, type: 3}
+  - {fileID: 8300000, guid: f2b11d59d4daab04b831c6a9a503752f, type: 3}
+  - {fileID: 8300000, guid: 73b9a0650fc1c3643ab764adf78d5d3c, type: 3}
+  volume: 0.105
+  randomisePitch: 0
+  randomPitchRange: {x: 0.9, y: 1.1}
+  loops: 0
+  spatialBlend: 1
+  maxDistance: 1

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Burn_Duck
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 4a1f5ae6599a0419da45358001fea192, type: 3}
+  - {fileID: 8300000, guid: c21c4a66f480f4611b8838e730e58c3b, type: 3}
+  - {fileID: 8300000, guid: b6a10ae189de1477cb1742bf31c88563, type: 3}
+  - {fileID: 8300000, guid: b86be884a73bc45df88df1dfd16a2470, type: 3}
+  - {fileID: 8300000, guid: 136ee32af54e242aa8b506ce8947d8fa, type: 3}
+  volume: 0.8
+  randomisePitch: 0
+  randomPitchRange: {x: 0.8, y: 1.2}
+  loops: 0
+  spatialBlend: 0.8
+  maxDistance: 500

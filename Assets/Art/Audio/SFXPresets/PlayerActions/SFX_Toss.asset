@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Toss
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: ea8ac678069e3784d96928a06688fb5f, type: 3}
+  - {fileID: 8300000, guid: e00c28ff5d69fce428733996a5b8bdac, type: 3}
+  - {fileID: 8300000, guid: 63101e7546f123944805952a0d7bd37c, type: 3}
+  - {fileID: 8300000, guid: 676b307ab2556d9469015c0b8adb7f52, type: 3}
+  volume: 0.583
+  randomisePitch: 0
+  randomPitchRange: {x: 0.8, y: 1.2}
+  loops: 0
+  spatialBlend: 1
+  maxDistance: 100

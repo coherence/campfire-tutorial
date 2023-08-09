@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Burn_Banjo
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 2948cad93e2021744b5b2f94fe2d9f4e, type: 3}
+  - {fileID: 8300000, guid: cd58433b5cd1c924eb2642eb303f04e6, type: 3}
+  - {fileID: 8300000, guid: 8c43cf11ad4dbbe4594a8aa271cdfff9, type: 3}
+  - {fileID: 8300000, guid: 63e25acac1d5609429eb3544185cf83e, type: 3}
+  - {fileID: 8300000, guid: a07ee5ec29baf4b47bf7704a9ea6e781, type: 3}
+  - {fileID: 8300000, guid: a982a8eea123efb4581011483bdfc972, type: 3}
+  - {fileID: 8300000, guid: 85b0a06610a5e7a4f82b708f187ab00f, type: 3}
+  - {fileID: 8300000, guid: 864644b9898657347a4ad19b538f52be, type: 3}
+  volume: 0.8
+  randomisePitch: 0
+  randomPitchRange: {x: 0.8, y: 1.2}
+  loops: 0
+  spatialBlend: 0.8
+  maxDistance: 500

@@ -1,0 +1,290 @@
+component Banana_c76bd173fbfcfba44982ec0a19f9c897_Coherence__char_46_Toolkit__char_46_CoherenceNode_7947429143224902437
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Banana_c76bd173fbfcfba44982ec0a19f9c897_Grabbable_7577043058907851794
+  isBeingCarried Bool [bits "1"]
+
+component Banana_c76bd173fbfcfba44982ec0a19f9c897_PositionedObject_4384992023136877932
+  objectAnchorSync Entity [bits "20"]
+
+component Banana_c76bd173fbfcfba44982ec0a19f9c897_UnityEngine__char_46_Transform_7844961029480478066
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component Banjo_e74854605b68b435280bc0ac73fef6c1_Coherence__char_46_Toolkit__char_46_CoherenceNode_929081723536030390
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Banjo_e74854605b68b435280bc0ac73fef6c1_Grabbable_831233887725647233
+  isBeingCarried Bool [bits "1"]
+
+component Banjo_e74854605b68b435280bc0ac73fef6c1_PositionedObject_6806255523165594879
+  objectAnchorSync Entity [bits "20"]
+
+component Banjo_e74854605b68b435280bc0ac73fef6c1_UnityEngine__char_46_Transform_1040564784666946785
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component Boombox_0109999de4f6d45bb8c13493b504dee7_Coherence__char_46_Toolkit__char_46_CoherenceNode_1143969198414876421
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Boombox_0109999de4f6d45bb8c13493b504dee7_Grabbable_616379459864002610
+  isBeingCarried Bool [bits "1"]
+
+component Boombox_0109999de4f6d45bb8c13493b504dee7_PositionedObject_6732985197249073484
+  objectAnchorSync Entity [bits "20"]
+
+component Boombox_0109999de4f6d45bb8c13493b504dee7_UnityEngine__char_46_Transform_969442854977362258
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire_6540142254599110064
+  activeFireEffect Int [bits "4", range-min "-1", range-max "10"]
+  fireTimer Float [bits "17", range-min "-5", range-max "100", compression "FixedPoint", precision "0.001"]
+  bigFireTimer Float [bits "17", range-min "-5", range-max "100", compression "FixedPoint", precision "0.001"]
+
+component Campfire_3889a458e94666d4784df30d8dd06d7d_UnityEngine__char_46_Transform_8979440835089238673
+  position Vector3 [compression "None"]
+
+component Cooler_f446f3c484ae048c4ba11ef7b8642420_Coherence__char_46_Toolkit__char_46_CoherenceNode_4071990166734286761
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Cooler_f446f3c484ae048c4ba11ef7b8642420_Grabbable_4607038716989399198
+  isBeingCarried Bool [bits "1"]
+
+component Cooler_f446f3c484ae048c4ba11ef7b8642420_PositionedObject_7643438469673120224
+  objectAnchorSync Entity [bits "20"]
+
+component Cooler_f446f3c484ae048c4ba11ef7b8642420_UnityEngine__char_46_Transform_4185686510380661246
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component Cupcake_0d27e1ad6d8e5ba4abca3216a92298f7_Coherence__char_46_Toolkit__char_46_CoherenceNode_7947429143224902437
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Cupcake_0d27e1ad6d8e5ba4abca3216a92298f7_Grabbable_7577043058907851794
+  isBeingCarried Bool [bits "1"]
+
+component Cupcake_0d27e1ad6d8e5ba4abca3216a92298f7_PositionedObject_4384992023136877932
+  objectAnchorSync Entity [bits "20"]
+
+component Cupcake_0d27e1ad6d8e5ba4abca3216a92298f7_UnityEngine__char_46_Transform_7844961029480478066
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_UnityEngine__char_46_Animator_4667129514690375174
+  IsFlailing Bool [bits "1"]
+  IsCarrying Bool [bits "1"]
+
+component KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_UnityEngine__char_46_Transform_844632473942023379
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+
+component Log_9ea9c7ad1465c4769a67e80391f1158b_Coherence__char_46_Toolkit__char_46_CoherenceNode_2975753946441600970
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Log_9ea9c7ad1465c4769a67e80391f1158b_Grabbable_3324184583126450429
+  isBeingCarried Bool [bits "1"]
+
+component Log_9ea9c7ad1465c4769a67e80391f1158b_UnityEngine__char_46_Transform_3159300142120098205
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component NetworkedFolderObject_b222c7ad94d9f44beb6d7a92a631da26_UnityEngine__char_46_Transform_8044904814215782244
+  position Vector3 [compression "None"]
+
+component ObjectAnchor_ec47cd7906b7749f4853524abf78e799_ObjectAnchor_432812263773753349
+  holdingForUUID String [bits "6"]
+  isObjectPresent Bool [bits "1"]
+  syncConfigId String [bits "6"]
+
+component ObjectAnchor_ec47cd7906b7749f4853524abf78e799_UnityEngine__char_46_Transform_1700211698526400712
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+
+component Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_8520998716179763618
+  currentBackpack Int [bits "3", range-min "-2", range-max "3"]
+  currentSkinTone Int [bits "5", range-min "-2", range-max "20"]
+  currentClothes Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+  currentBody Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+  currentHairstyle Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_3184128103638100181
+  text String [bits "6"]
+
+component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_176131441763086322
+  MoveSpeed Float [compression "None"]
+  Grounded Bool [bits "1"]
+  CarryingBig Bool [bits "1"]
+  IsChopping Bool [bits "1"]
+  IsSitting Bool [bits "1"]
+
+component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4998465150839130408
+  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+
+component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_6621220932995602478
+  position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+  rotation Quaternion [bits "12"]
+
+component Rubberduckie_89bb435d615753b4f86caa89fd2a5d9d_Coherence__char_46_Toolkit__char_46_CoherenceNode_4071990166734286761
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Rubberduckie_89bb435d615753b4f86caa89fd2a5d9d_Grabbable_4607038716989399198
+  isBeingCarried Bool [bits "1"]
+
+component Rubberduckie_89bb435d615753b4f86caa89fd2a5d9d_PositionedObject_7643438469673120224
+  objectAnchorSync Entity [bits "20"]
+
+component Rubberduckie_89bb435d615753b4f86caa89fd2a5d9d_UnityEngine__char_46_Transform_4185686510380661246
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component Shroom_8d0ae98c8cb2746df8fa6b7fef5ee166_Coherence__char_46_Toolkit__char_46_CoherenceNode_7947429143224902437
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Shroom_8d0ae98c8cb2746df8fa6b7fef5ee166_Grabbable_7577043058907851794
+  isBeingCarried Bool [bits "1"]
+
+component Shroom_8d0ae98c8cb2746df8fa6b7fef5ee166_PositionedObject_4384992023136877932
+  objectAnchorSync Entity [bits "20"]
+
+component Shroom_8d0ae98c8cb2746df8fa6b7fef5ee166_UnityEngine__char_46_Transform_7844961029480478066
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component Trashcan_451e73a8eddd14b2daf891b5ee6c2308_Coherence__char_46_Toolkit__char_46_CoherenceNode_6267697520601458368
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Trashcan_451e73a8eddd14b2daf891b5ee6c2308_Grabbable_5879086033831766519
+  isBeingCarried Bool [bits "1"]
+
+component Trashcan_451e73a8eddd14b2daf891b5ee6c2308_PositionedObject_318412099543152777
+  objectAnchorSync Entity [bits "20"]
+
+component Trashcan_451e73a8eddd14b2daf891b5ee6c2308_UnityEngine__char_46_Transform_6084155704728187031
+  position Vector3 [compression "None"]
+  rotation Quaternion [bits "32"]
+  localScale Vector3 [compression "None"]
+
+component Tree_3d92447627afdfc419ceeb6b26251a87_ChoppableTree_1406947345458511524
+  energy Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
+component Tree_3d92447627afdfc419ceeb6b26251a87_UnityEngine__char_46_Transform_3007756791257221797
+  position Vector3 [compression "None"]
+
+command Banana_c76bd173fbfcfba44982ec0a19f9c897_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command Banjo_e74854605b68b435280bc0ac73fef6c1_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command Boombox_0109999de4f6d45bb8c13493b504dee7_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire__char_46_BurnObject_f8f688eb_08cb_493f_acb6_d766417377d4 [routing "AuthorityOnly"]
+  syncConfigID String 
+
+command Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire__char_46_FireDiedDown_3664e59f_d3cd_4dd2_8175_902369f5bb38 [routing "All"]
+  oldEffectID Int 
+  newEffectID Int 
+
+command Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire__char_46_FireStateChanged_df8fe4d8_a610_4b7a_b780_e439afba5391 [routing "All"]
+  oldEffectID Int 
+  newEffectID Int 
+  syncConfigID String 
+
+command Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire__char_46_PlayInstantEffects_3738e043_00d8_46df_a774_ba252d8208db [routing "All"]
+
+command Cooler_f446f3c484ae048c4ba11ef7b8642420_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command Cupcake_0d27e1ad6d8e5ba4abca3216a92298f7_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_KeeperRobot__char_46_PlayAppear_0f10acf8_439d_4493_85db_d33450d1f0fb [routing "All"]
+
+command KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_KeeperRobot__char_46_PlayConjure_e584959f_4214_48c0_b118_bf28bd4867b2 [routing "All"]
+
+command KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_KeeperRobot__char_46_PlayHumSound_e86b8c2f_f539_476e_96c5_792baaad07d6 [routing "All"]
+
+command KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_KeeperRobot__char_46_PlayVoiceSound_a08cbf1b_7c0b_489e_9d34_a142c88514c8 [routing "All"]
+
+command ObjectAnchor_ec47cd7906b7749f4853524abf78e799_ObjectAnchor__char_46_ChangeLinkedObjectStateAuth_d9e25df6_55c0_450f_92da_43abe92a930d [routing "AuthorityOnly"]
+  newState Bool 
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_Chat__char_46_SendChatMessage_d80a9015_b884_4731_b2e0_4870faa56abe [routing "Other"]
+  encodedMessage Bytes 
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_ChopAction__char_46_PlayChopSound_9072e960_68c9_4ef9_a783_ea24d7448bf8 [routing "Other"]
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_Emotes__char_46_PlayHeySound_344741bc_fef1_4e43_909a_3d3fe59aa829 [routing "All"]
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_Emotes__char_46_PlayNoSound_c6cd65f2_d335_47e7_800e_9cd24ce9a96c [routing "All"]
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_Emotes__char_46_PlayYesSound_a6362094_f44f_4918_a0b4_a6b21f19b61d [routing "All"]
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_GrabAction__char_46_PlayDropSound_a44176ed_bb6f_4de8_8cf6_11e02b9b81a5 [routing "All"]
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_GrabAction__char_46_PlayPickUpSound_2306915e_2284_4ead_bded_8e81dad23c41 [routing "All"]
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_SitAction__char_46_PlaySitSound_9b336114_382d_4c8e_9176_71bfe4a6a142 [routing "Other"]
+
+command Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator__char_46_SetTrigger_3f725e0b_03bc_47c6_b9a9_e726699545a6 [routing "All"]
+  name String 
+
+command Rubberduckie_89bb435d615753b4f86caa89fd2a5d9d_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command Shroom_8d0ae98c8cb2746df8fa6b7fef5ee166_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command Trashcan_451e73a8eddd14b2daf891b5ee6c2308_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command Tree_3d92447627afdfc419ceeb6b26251a87_ChoppableTree__char_46_ChangeState_64674b8d_4999_426f_b995_493ab95cb6d7 [routing "Other"]
+  toUp Bool 
+
+command Tree_3d92447627afdfc419ceeb6b26251a87_ChoppableTree__char_46_Chop_e5df7db2_535f_4106_90ed_f553148f2ac6 [routing "AuthorityOnly"]
+
+command Tree_3d92447627afdfc419ceeb6b26251a87_ChoppableTree__char_46_PlayChopEffect_195171a3_094b_49ce_9dc6_24b38e8a6b09 [routing "Other"]
+
+archetype Campfire_3889a458e94666d4784df30d8dd06d7d
+  lod 0
+    WorldPosition 
+      value [compression "None"]
+    Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire_6540142254599110064 
+      number [bits "4", range-min "-1", range-max "10"]
+      number [bits "17", range-min "-5", range-max "100", compression "FixedPoint", precision "0.001"]
+      number [bits "17", range-min "-5", range-max "100", compression "FixedPoint", precision "0.001"]
+
+archetype Player_cd9bcc1feead9419fac0c5981ce85c23
+  lod 0
+    WorldPosition 
+      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    WorldOrientation 
+      value [bits "12"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_8520998716179763618 
+      number [bits "3", range-min "-2", range-max "3"]
+      number [bits "5", range-min "-2", range-max "20"]
+      number [bits "32", range-min "-2147483648", range-max "2147483647"]
+      number [bits "32", range-min "-2147483648", range-max "2147483647"]
+      number [bits "32", range-min "-2147483648", range-max "2147483647"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_TMPro__char_46_TextMeshProUGUI_3184128103638100181 
+      name [bits "6"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_4998465150839130408 
+      value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Animator_176131441763086322 
+      number [compression "None"]
+      number [bits "1"]
+      number [bits "1"]
+      number [bits "1"]
+      number [bits "1"]
+

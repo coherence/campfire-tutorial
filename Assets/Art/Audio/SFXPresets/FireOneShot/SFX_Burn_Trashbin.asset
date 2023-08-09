@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Burn_Trashbin
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: 989c6539df86748dbb2a187659205140, type: 3}
+  - {fileID: 8300000, guid: 694b9e04001084864b7c7bc20e4f18b5, type: 3}
+  - {fileID: 8300000, guid: 425218158e2ec49088c2105b76e2cd7a, type: 3}
+  - {fileID: 8300000, guid: f5d5aa64048d449af9cb4bebaeb138b7, type: 3}
+  - {fileID: 8300000, guid: 8da90b778760b4c1288945da039b28ed, type: 3}
+  volume: 0.8
+  randomisePitch: 0
+  randomPitchRange: {x: 0.8, y: 1.2}
+  loops: 0
+  spatialBlend: 0.8
+  maxDistance: 500

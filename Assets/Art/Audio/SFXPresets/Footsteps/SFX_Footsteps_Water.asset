@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34618ec183c49441bb2086d9baa22740, type: 3}
+  m_Name: SFX_Footsteps_Water
+  m_EditorClassIdentifier: 
+  _audioClips:
+  - {fileID: 8300000, guid: c46f8cc93ae9b7941a7871d322bae0e7, type: 3}
+  - {fileID: 8300000, guid: 4896d5e2e2a1336488ceeb465783d14b, type: 3}
+  - {fileID: 8300000, guid: 02b78d80f11b52f4599e7490f6be3ead, type: 3}
+  - {fileID: 8300000, guid: b82a826da82b3c9439340a8769a9aab4, type: 3}
+  - {fileID: 8300000, guid: 3600c8c17611ff84bbe044113b5f7710, type: 3}
+  - {fileID: 8300000, guid: 9046f7dd8cdab9f4aa0728c2d3c84a0f, type: 3}
+  - {fileID: 8300000, guid: f8279ae0236661f4fbd1bd3d756a7fe6, type: 3}
+  - {fileID: 8300000, guid: f0e9d60cfd610264593a13717f1badd4, type: 3}
+  - {fileID: 8300000, guid: 5749fe8487c7af74189731568f9fa9fe, type: 3}
+  - {fileID: 8300000, guid: 4c1b194243fb9334197506e4b440746c, type: 3}
+  volume: 0.105
+  randomisePitch: 0
+  randomPitchRange: {x: 0.9, y: 1.1}
+  loops: 0
+  spatialBlend: 1
+  maxDistance: 1
