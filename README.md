@@ -1,4 +1,4 @@
-![Campfire tutorial](https://github.com/coherence/campfire-tutorial/assets/5457632/8784356b-8247-4314-abb6-2100b5e4f596)
+![Campfire tutorial](https://i.imgur.com/n4I4TRz.jpg)
 
 Campfire is a tutorial project for coherence, a Unity networking framework.  
 It is a slightly advanced demo, so if you are new to coherence, we recommend starting from the [First Steps](https://docs.coherence.io/learning-coherence/first-steps-tutorial) tutorial project.
