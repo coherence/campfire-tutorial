@@ -20,7 +20,6 @@ public class ObjectAnchor : MonoBehaviour
 
     public void Init(string referenceSyncConfigID, string uuid)
     {
-        //Debug.Log($"Anchor created for {referenceSyncConfigID} with UUID {uuid}");
         syncConfigId = referenceSyncConfigID;
         holdingForUUID = uuid;
         isObjectPresent = true;

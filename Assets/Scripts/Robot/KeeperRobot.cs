@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Coherence;
 using Coherence.Toolkit;
@@ -23,12 +24,12 @@ public class KeeperRobot : MonoBehaviour
     public RobotState _state = RobotState.Sleeping;
     public enum RobotState
     {
-        Idle,
+        Idle, // Waiting to check the situation again shortly
         RecreatingObject, // Wait for the reappear shader animation to play out
         CarryingObject, // Carrying an object to its original position
         SeekingObject, // Going to pick up an object
-        GoingToSleep,
-        Sleeping,
+        GoingToSleep, // Going back to its base
+        Sleeping, // Robot is in the base, will check again
     }
 
     private Vector3 _initialPosition;
@@ -39,6 +40,7 @@ public class KeeperRobot : MonoBehaviour
     private Grabbable _targetObjectGrabbable;
     private Transform _targetAnchor;
     private Coroutine _adjustDestinationCoroutine;
+    private Coroutine _recheckCoroutine;
 
     [SerializeField] private bool _log = true;
 
@@ -57,12 +59,16 @@ public class KeeperRobot : MonoBehaviour
 
     private void OnLiveQuerySynced(CoherenceBridge bridge)
     {
-        if(_log) Debug.Log("OnLiveQuerySynced");
-        
         PlayHumSound();
         _sync.SendCommand<KeeperRobot>(nameof(PlayHumSound), MessageTarget.Other);
 
-        StartCoroutine(WaitThenRecheck(situationCheckCooldown));
+        if (_sync.HasStateAuthority)
+        {
+            if(_log) Debug.Log("OnLiveQuerySynced");
+            
+            // Begin acting
+            _recheckCoroutine = StartCoroutine(WaitThenRecheck(situationCheckCooldown));
+        }
     }
 
     private IEnumerator WaitThenRecheck(float waitTime)
@@ -197,6 +203,7 @@ public class KeeperRobot : MonoBehaviour
     private void SetState(RobotState newState)
     {
         if(_adjustDestinationCoroutine != null) StopCoroutine(_adjustDestinationCoroutine);
+        if(_recheckCoroutine != null) StopCoroutine(_recheckCoroutine);
         
         if(_log) Debug.Log($"New state: {newState}");
 
@@ -204,8 +211,7 @@ public class KeeperRobot : MonoBehaviour
         {
             case RobotState.Idle:
                 animator.SetBool("IsCarrying", false);
-                MoveToRandomPoint();
-                StartCoroutine(WaitThenRecheck(4f));
+                _recheckCoroutine = StartCoroutine(WaitThenRecheck(4f));
                 break;
             
             case RobotState.RecreatingObject:
@@ -228,7 +234,7 @@ public class KeeperRobot : MonoBehaviour
                 break;
             
             case RobotState.Sleeping:
-                StartCoroutine(WaitThenRecheck(situationCheckCooldown));
+                _recheckCoroutine = StartCoroutine(WaitThenRecheck(situationCheckCooldown));
                 break;
         }
 
@@ -250,13 +256,6 @@ public class KeeperRobot : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         
         SetState(RobotState.CarryingObject);
-    }
-
-    private void MoveToRandomPoint()
-    {
-        Vector3 randomPoint = UnityEngine.Random.onUnitSphere * 3f;
-        randomPoint.Scale(new Vector3(1f, 0f, 1f));
-        MoveTowards(transform.position + randomPoint);
     }
 
     private void Update()
@@ -318,6 +317,15 @@ public class KeeperRobot : MonoBehaviour
 
     private void ReleaseObject()
     {
+        if (_targetObject == null || _targetAnchor == null)
+        {
+            Debug.LogError("Why is carried object null?");
+            Debug.Log($"targetObject: {_targetObject}");
+            Debug.Log($"_targetAnchor: {_targetAnchor}");
+            SetState(RobotState.Idle);
+            return;
+        }
+        
         _targetObject.SetPositionAndRotation(_targetAnchor.position, _targetAnchor.rotation);
         _targetObject.SetParent(null, true);
         _targetObject.GetComponent<Grabbable>().Release();
@@ -358,6 +366,11 @@ public class KeeperRobot : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void OnDisable()
+    {
+        if(_recheckCoroutine != null) StopCoroutine(_recheckCoroutine);
     }
 
     private void OnDestroy()

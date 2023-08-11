@@ -60,6 +60,36 @@ MonoBehaviour:
           type: 3}
     - rid: 7887415027782385683
       type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+--- !u!114 &-7442464603825993304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Pictable
+  m_EditorClassIdentifier: 
+  id: 7eef8177eb732314fb850470094a70c9
+  editorTarget: {fileID: 7660487669077454345, guid: 7eef8177eb732314fb850470094a70c9,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 3041628591939387466
+  objectInstantiator:
+    rid: 3041628591939387467
+  references:
+    version: 2
+    RefIds:
+    - rid: 3041628591939387466
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 7660487669077454345, guid: 7eef8177eb732314fb850470094a70c9,
+          type: 3}
+    - rid: 3041628591939387467
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
 --- !u!114 &-5911028478130909987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +107,7 @@ MonoBehaviour:
     type: 3}
   includeInSchema: 1
   objectProvider:
-    rid: 8975625177941934094
+    rid: 8975625222769344512
   objectInstantiator:
     rid: 7887415027782385677
   references:
@@ -85,11 +115,41 @@ MonoBehaviour:
     RefIds:
     - rid: 7887415027782385677
       type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
-    - rid: 8975625177941934094
+    - rid: 8975625222769344512
       type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data:
         prefab: {fileID: 2519309279888379935, guid: 3d92447627afdfc419ceeb6b26251a87,
           type: 3}
+--- !u!114 &-5106855548532323381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Campchair
+  m_EditorClassIdentifier: 
+  id: 91ccee2338d92624a8021fda1c91e47c
+  editorTarget: {fileID: 4928420910313222587, guid: 91ccee2338d92624a8021fda1c91e47c,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 3041628591939387456
+  objectInstantiator:
+    rid: 3041628591939387457
+  references:
+    version: 2
+    RefIds:
+    - rid: 3041628591939387456
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 4928420910313222587, guid: 91ccee2338d92624a8021fda1c91e47c,
+          type: 3}
+    - rid: 3041628591939387457
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
 --- !u!114 &-4999607336348525213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +332,40 @@ MonoBehaviour:
   - {fileID: -2463630670308474964}
   - {fileID: 4607621584090736149}
   - {fileID: 7075538866983041667}
+  - {fileID: -5106855548532323381}
+  - {fileID: -7442464603825993304}
+  - {fileID: 1300973219719221638}
   loadFromAssetDatabase: 0
+--- !u!114 &1300973219719221638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Barstool
+  m_EditorClassIdentifier: 
+  id: 7455a9685d292b843b28465a4faffd05
+  editorTarget: {fileID: 8181717766106267377, guid: 7455a9685d292b843b28465a4faffd05,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 3041628591939387472
+  objectInstantiator:
+    rid: 3041628591939387473
+  references:
+    version: 2
+    RefIds:
+    - rid: 3041628591939387472
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 8181717766106267377, guid: 7455a9685d292b843b28465a4faffd05,
+          type: 3}
+    - rid: 3041628591939387473
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
 --- !u!114 &3456182747437522535
 MonoBehaviour:
   m_ObjectHideFlags: 0

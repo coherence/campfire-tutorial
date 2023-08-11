@@ -78,8 +78,16 @@ public class CosmeticsChanger : MonoBehaviour
     private void Awake()
     {
         // Reset any item that might have been left on at authoring time
-        foreach (GameObject item in hairstyles) item.SetActive(false);
-        foreach (GameObject item in backpacks) item.SetActive(false);
+        for (int i = 0; i < hairstyles.Length; i++)
+        {
+            GameObject item = hairstyles[i];
+            if(currentHairstyle != i) item.SetActive(false);
+        }
+        for (int i = 0; i < backpacks.Length; i++)
+        {
+            GameObject item = backpacks[i];
+            if(currentBackpack != i) item.SetActive(false);
+        }
     }
 
     /// <summary>

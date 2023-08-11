@@ -34,22 +34,33 @@ public class SitAction : MonoBehaviour, INetworkInteraction
 
         Vector3 targetPos = _chair.sittingAnchor.position;
         Vector3 targetLookdir = _chair.sittingAnchor.forward;
-        Debug.DrawRay(_chair.sittingAnchor.position, _chair.sittingAnchor.forward, Color.green);
 
         _baseTransform.position = Vector3.Lerp(_baseTransform.position, targetPos + _archOffset, _lerpZ);
         _baseTransform.forward = Vector3.Slerp(_baseTransform.forward, targetLookdir, _lerpZ);
         _archOffset = Vector3.Lerp(_archOffset, Vector3.zero, _lerpZ);
-        _lerpZ = Mathf.Lerp(_lerpZ, .333f, .05f);
+        _lerpZ = Mathf.Lerp(_lerpZ, .333f, Time.deltaTime * 2f);
     }
 
     public void Sit(Chair chairComponent)
     {
         _chair = chairComponent;
+        if (_chair.isBusy)
+        {
+            // Invalidate the action
+            _chair = null;
+            Done?.Invoke(true);
+            return;
+        }
+        
+        _chair.Occupy();
+        
         _move.SetKinematic(true);
         animator.SetBool("IsSitting", true);
         _playerInput.jumpAction.action.performed += JumpInputPerformed;
-        _archOffset = new Vector3(0, 3, 0);
-        _lerpZ = 0;
+        _archOffset = new Vector3(0f, 3f, 0f);
+        _lerpZ = 0f;
+        
+        _baseTransform.SetParent(_chair.sittingAnchor.transform, true);
 
         PlaySitSound();
         sync.SendCommand<SitAction>(nameof(PlaySitSound), MessageTarget.Other);
@@ -68,6 +79,10 @@ public class SitAction : MonoBehaviour, INetworkInteraction
     
     public void StandUp()
     {
+        _baseTransform.SetParent(null, true);
+        
+        _chair.Free();
+        
         _chair = null;
         _playerInput.jumpAction.action.performed -= JumpInputPerformed;
         _move.SetKinematic(false);

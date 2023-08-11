@@ -13,6 +13,7 @@ public class GrabAction : MonoBehaviour, INetworkInteraction
     public bool IsCarryingSomething { get; private set; }
 
     public event UnityAction<bool> Done;
+    public event UnityAction PickedUpObject; 
 
     private Grabbable _grabbedObject;
     private Rigidbody _grabbedObjectRB;
@@ -39,6 +40,7 @@ public class GrabAction : MonoBehaviour, INetworkInteraction
         _grabbedObject.PickupValidated -= OnPickUpValidated;
         if (success)
         {
+            PickedUpObject?.Invoke();
             PickUp(_grabbedObject);
         }
         else

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterSplash : MonoBehaviour
@@ -37,13 +35,13 @@ public class WaterSplash : MonoBehaviour
 
     private void Splash()
     {
-        waterSplashEffect?.Play();
+        waterSplashEffect.Play();
         soundHandler.Play(splashSFX);
     }
 
     private void SmallSplash()
     {
-        waterRunEffect?.Play();
+        waterRunEffect.Play();
         soundHandler.Play(wadeSFX);
     }
 }

@@ -127,10 +127,6 @@ public class ChoppableTree : MonoBehaviour
                     70f); // Random Y, and a Z that is not exactly 90 so the log falls sideways
         CoherenceSync newLog =
             logSyncConfig.GetInstance(transform.position + Vector3.up * 2f, Quaternion.Euler(randomRotation));
-
-        if (Random.Range(0f, 100f) <= 1f)
-            newLog.transform.localScale =
-                new Vector3(1.4f, 1.3f, 1.3f); // Randomly spawn a giga-log every now and then (1% chance)
     }
 
     /// <summary>

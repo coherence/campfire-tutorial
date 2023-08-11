@@ -1,5 +1,92 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &118496468477875266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9173246137270503472}
+  - component: {fileID: 8984313321826824917}
+  - component: {fileID: 7313661170841328048}
+  - component: {fileID: 8551261703447512967}
+  m_Layer: 0
+  m_Name: Seat
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9173246137270503472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118496468477875266}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.70710665, z: -0, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0.39899993, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2659856684815926954}
+  m_Father: {fileID: 6342975798731359634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8984313321826824917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118496468477875266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d30541e213a4f3ab6bfcde8ee82399c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainObject: {fileID: 118496468477875266}
+  objectsToHighlight:
+  - {fileID: 1774156413306791106}
+  _style: 0
+--- !u!65 &7313661170841328048
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118496468477875266}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.42, z: 0}
+--- !u!114 &8551261703447512967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118496468477875266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 039c76eb7fe0475495643dfd35403dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sittingAnchor: {fileID: 2659856684815926954}
+  sync: {fileID: -3359619185253440237}
+  isBusy: 0
 --- !u!1 &258220021027912687
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +176,7 @@ MonoBehaviour:
   holdSocket: {fileID: 8693188804916679657}
   situationCheckCooldown: 12
   _state: 5
-  _log: 0
+  _log: 1
 --- !u!114 &-3359619185253440237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +264,16 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 3791772795559446476}
       lodStepsActive: 1
+    - component: {fileID: 9173246137270503472}
+      lodStepsActive: 1
+    - component: {fileID: 8984313321826824917}
+      lodStepsActive: 1
+    - component: {fileID: 7313661170841328048}
+      lodStepsActive: 1
+    - component: {fileID: 8551261703447512967}
+      lodStepsActive: 1
+    - component: {fileID: 2659856684815926954}
+      lodStepsActive: 1
     lodLevels:
     - distance: 0
     archetypeName: KeeperRobot_a857fd6c221f7f04fa9ed500e317642a
@@ -215,6 +312,8 @@ MonoBehaviour:
   - rid: 8975625062529892404
   - rid: 8975625062529892406
   - rid: 8975625202164826113
+  - rid: 3041628591939387454
+  - rid: 3041628591939387480
   onNetworkedInstantiation:
     m_PersistentCalls:
       m_Calls: []
@@ -238,6 +337,89 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 3041628591939387454
+      type: {class: BoolBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 3041628591939387455
+        routing: 0
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 0174ef8a-52ab-48e6-aee7-88bea243f7f5
+        archetypeData:
+          type: 3
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 3
+            bits: 1
+            precision: 0
+            floatCompression: 0
+        unityComponent: {fileID: 8551261703447512967}
+        coherenceSync: {fileID: 0}
+        interpolationSettings: {fileID: 0}
+    - rid: 3041628591939387455
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: isBusy
+        monoAssemblyType: System.Boolean, mscorlib
+        required: 1
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: Chair, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.BoolBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+    - rid: 3041628591939387480
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 3041628591939387481
+        routing: 0
+        isPredicted: 0
+        defaultInterpolationPath: 
+        guid: 7f3e0b9e-3ab2-47f6-8ebb-0067b5b4b6c4
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 0
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 8551261703447512967}
+        coherenceSync: {fileID: 0}
+        interpolationSettings: {fileID: 0}
+    - rid: 3041628591939387481
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: ChangeState
+        monoAssemblyType: 
+        required: 1
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes:
+        - System.Boolean, mscorlib
+        ownerType:
+          assemblyQualifiedName: Chair, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
     - rid: 8975625062529892391
       type: {class: PositionBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
         asm: Coherence.Toolkit}
@@ -606,6 +788,37 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
+--- !u!1 &5609846739691108691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2659856684815926954}
+  m_Layer: 0
+  m_Name: SittingAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2659856684815926954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609846739691108691}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.9253529, z: -0, w: 0.37910697}
+  m_LocalPosition: {x: 0.441, y: 0.843, z: -0.582}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9173246137270503472}
+  m_LocalEulerAnglesHint: {x: 0, y: 135.443, z: 0}
 --- !u!1 &8481490009137765611
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +1024,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4101813583311747397, guid: 273da6808809bed4687514875c3096d7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 273da6808809bed4687514875c3096d7,
         type: 3}
       propertyPath: m_Name
@@ -912,6 +1130,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -36.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -4101813583311747397, guid: 29124e5471b90604c984f1f609d660ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 29124e5471b90604c984f1f609d660ff,
         type: 3}
@@ -1030,6 +1253,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4101813583311747397, guid: fc9bfcf4fd832af4eb9f6f3a8cfb9303,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fc9bfcf4fd832af4eb9f6f3a8cfb9303,
         type: 3}
       propertyPath: m_Name
@@ -1059,6 +1287,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8693188804916679657}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc9bfcf4fd832af4eb9f6f3a8cfb9303,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9173246137270503472}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc9bfcf4fd832af4eb9f6f3a8cfb9303,
         type: 3}
@@ -1078,6 +1310,12 @@ Transform:
 --- !u!33 &1295456648698819073 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: -3569633314355982216, guid: fc9bfcf4fd832af4eb9f6f3a8cfb9303,
+    type: 3}
+  m_PrefabInstance: {fileID: 6885018240900473465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1774156413306791106 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4101813583311747397, guid: fc9bfcf4fd832af4eb9f6f3a8cfb9303,
     type: 3}
   m_PrefabInstance: {fileID: 6885018240900473465}
   m_PrefabAsset: {fileID: 0}
@@ -1213,6 +1451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -36.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -4101813583311747397, guid: 29124e5471b90604c984f1f609d660ff,
+        type: 3}
+      propertyPath: m_Layer
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 29124e5471b90604c984f1f609d660ff,
         type: 3}

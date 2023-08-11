@@ -15,7 +15,8 @@ public class InteractionInput : MonoBehaviour
         Free,
         Carrying,
         Sitting,
-        Chopping
+        Chopping,
+        AwaitingResponse
     }
 
     private Interactable _interactionTarget; // The Interactable currently in focus
@@ -37,21 +38,23 @@ public class InteractionInput : MonoBehaviour
         interactAction.asset.Enable();
         interactAction.action.performed += OnInteractionPerformed;
         _chopAction.Done += OnDone;
-        _grabAction.Done += OnDone;
         _sitAction.Done += OnDone;
+        _grabAction.Done += OnDone;
+        _grabAction.PickedUpObject += OnObjectPickedUp;
     }
 
     private void OnDisable()
     {
         interactAction.action.performed -= OnInteractionPerformed;
+        _sitAction.Done -= OnDone;
         _chopAction.Done -= OnDone;
         _grabAction.Done -= OnDone;
-        _sitAction.Done -= OnDone;
+        _grabAction.PickedUpObject -= OnObjectPickedUp;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (_interactionState != InteractionState.Free)
+        if (_interactionState != InteractionState.Free || !other.gameObject.activeInHierarchy)
             return;
 
         // Found an interactable object
@@ -113,7 +116,7 @@ public class InteractionInput : MonoBehaviour
                         if (!grabbableComponent.isBeingCarried)
                         {
                             // Pick up
-                            _interactionState = InteractionState.Carrying;
+                            _interactionState = InteractionState.AwaitingResponse;
                             _interactionTarget.RemoveHighlight();
                             _targetBurnable.Burned -= OnInteractionTargetBurned;
                             _grabAction.RequestPickup(grabbableComponent);
@@ -128,9 +131,9 @@ public class InteractionInput : MonoBehaviour
                     else if (_interactionTarget.mainObject.TryGetComponent(out Chair chairComponent))
                     {
                         // Sit down
-                        _sitAction.Sit(chairComponent);
                         _interactionTarget.RemoveHighlight();
                         _interactionState = InteractionState.Sitting;
+                        _sitAction.Sit(chairComponent);
                     }
                 }
 
@@ -152,9 +155,15 @@ public class InteractionInput : MonoBehaviour
         }
     }
 
+    private void OnObjectPickedUp()
+    {
+        _interactionState = InteractionState.Carrying;
+    }
+
     private void OnInteractionTargetBurned()
     {
         _targetBurnable.Burned -= OnInteractionTargetBurned;
+        _interactionTarget.RemoveHighlight();
         _interactionTarget = null;
         _targetBurnable = null;
     }
@@ -172,6 +181,11 @@ public class InteractionInput : MonoBehaviour
         {
             _interactionTarget.RemoveHighlight();
             _interactionTarget = null;
+        }
+        else
+        {
+            if (_interactionTarget.mainObject.TryGetComponent(out _targetBurnable))
+                _targetBurnable.Burned += OnInteractionTargetBurned;
         }
     }
 

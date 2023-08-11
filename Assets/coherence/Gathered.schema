@@ -28,6 +28,15 @@ component Banjo_e74854605b68b435280bc0ac73fef6c1_UnityEngine__char_46_Transform_
   rotation Quaternion [bits "32"]
   localScale Vector3 [compression "None"]
 
+component Barstool_7455a9685d292b843b28465a4faffd05_Chair_486810980
+  isBusy Bool [bits "1"]
+
+component Barstool_7455a9685d292b843b28465a4faffd05_UnityEngine__char_46_CapsuleCollider_4295192434143702777
+  enabled Bool [bits "1"]
+
+component Barstool_7455a9685d292b843b28465a4faffd05_UnityEngine__char_46_Transform_8845241575160439883
+  position Vector3 [compression "None"]
+
 component Boombox_0109999de4f6d45bb8c13493b504dee7_Coherence__char_46_Toolkit__char_46_CoherenceNode_1143969198414876421
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
@@ -42,6 +51,15 @@ component Boombox_0109999de4f6d45bb8c13493b504dee7_UnityEngine__char_46_Transfor
   position Vector3 [compression "None"]
   rotation Quaternion [bits "32"]
   localScale Vector3 [compression "None"]
+
+component Campchair_91ccee2338d92624a8021fda1c91e47c_Chair_4713251173614319484
+  isBusy Bool [bits "1"]
+
+component Campchair_91ccee2338d92624a8021fda1c91e47c_UnityEngine__char_46_CapsuleCollider_1987083777327440787
+  enabled Bool [bits "1"]
+
+component Campchair_91ccee2338d92624a8021fda1c91e47c_UnityEngine__char_46_Transform_5705660609335651073
+  position Vector3 [compression "None"]
 
 component Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire_6540142254599110064
   activeFireEffect Int [bits "4", range-min "-1", range-max "10"]
@@ -81,6 +99,9 @@ component Cupcake_0d27e1ad6d8e5ba4abca3216a92298f7_UnityEngine__char_46_Transfor
   rotation Quaternion [bits "32"]
   localScale Vector3 [compression "None"]
 
+component KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_Chair_8551261703447512967
+  isBusy Bool [bits "1"]
+
 component KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_UnityEngine__char_46_Animator_4667129514690375174
   IsFlailing Bool [bits "1"]
   IsCarrying Bool [bits "1"]
@@ -113,6 +134,19 @@ component ObjectAnchor_ec47cd7906b7749f4853524abf78e799_UnityEngine__char_46_Tra
   position Vector3 [compression "None"]
   rotation Quaternion [bits "32"]
 
+component Pictable_7eef8177eb732314fb850470094a70c9_Chair_468635232
+  isBusy Bool [bits "1"]
+
+component Pictable_7eef8177eb732314fb850470094a70c9_UnityEngine__char_46_CapsuleCollider_468635231
+  enabled Bool [bits "1"]
+
+component Pictable_7eef8177eb732314fb850470094a70c9_UnityEngine__char_46_Transform_6990805285014041779
+  position Vector3 [compression "None"]
+
+component Player_cd9bcc1feead9419fac0c5981ce85c23_Coherence__char_46_Toolkit__char_46_CoherenceNode_4874302885197676216
+  path String [bits "6"]
+  pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
+
 component Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_8520998716179763618
   currentBackpack Int [bits "3", range-min "-2", range-max "3"]
   currentSkinTone Int [bits "5", range-min "-2", range-max "20"]
@@ -136,6 +170,7 @@ component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform
 component Player_cd9bcc1feead9419fac0c5981ce85c23_UnityEngine__char_46_Transform_6621220932995602478
   position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
   rotation Quaternion [bits "12"]
+  localScale Vector3 [compression "None"]
 
 component Rubberduckie_89bb435d615753b4f86caa89fd2a5d9d_Coherence__char_46_Toolkit__char_46_CoherenceNode_4071990166734286761
   path String [bits "6"]
@@ -192,7 +227,13 @@ command Banana_c76bd173fbfcfba44982ec0a19f9c897_PositionedObject__char_46_PlayRe
 
 command Banjo_e74854605b68b435280bc0ac73fef6c1_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
 
+command Barstool_7455a9685d292b843b28465a4faffd05_Chair__char_46_ChangeState_4f5f3147_4cef_489f_9193_6637c9eefcff [routing "AuthorityOnly"]
+  newBusyState Bool 
+
 command Boombox_0109999de4f6d45bb8c13493b504dee7_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
+
+command Campchair_91ccee2338d92624a8021fda1c91e47c_Chair__char_46_ChangeState_da4067b1_fcd3_4e8a_93ae_914a3b0df2f9 [routing "AuthorityOnly"]
+  newBusyState Bool 
 
 command Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire__char_46_BurnObject_f8f688eb_08cb_493f_acb6_d766417377d4 [routing "AuthorityOnly"]
   syncConfigID String 
@@ -212,6 +253,9 @@ command Cooler_f446f3c484ae048c4ba11ef7b8642420_PositionedObject__char_46_PlayRe
 
 command Cupcake_0d27e1ad6d8e5ba4abca3216a92298f7_PositionedObject__char_46_PlayReappearShaderEffect_ad9e6356_3803_4d88_b0c6_dcd8a9c83286 [routing "All"]
 
+command KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_Chair__char_46_ChangeState_7f3e0b9e_3ab2_47f6_8ebb_0067b5b4b6c4 [routing "AuthorityOnly"]
+  newBusyState Bool 
+
 command KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_KeeperRobot__char_46_PlayAppear_0f10acf8_439d_4493_85db_d33450d1f0fb [routing "All"]
 
 command KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_KeeperRobot__char_46_PlayConjure_e584959f_4214_48c0_b118_bf28bd4867b2 [routing "All"]
@@ -222,6 +266,9 @@ command KeeperRobot_a857fd6c221f7f04fa9ed500e317642a_KeeperRobot__char_46_PlayVo
 
 command ObjectAnchor_ec47cd7906b7749f4853524abf78e799_ObjectAnchor__char_46_ChangeLinkedObjectStateAuth_d9e25df6_55c0_450f_92da_43abe92a930d [routing "AuthorityOnly"]
   newState Bool 
+
+command Pictable_7eef8177eb732314fb850470094a70c9_Chair__char_46_ChangeState_510b1c05_cf02_49e6_8fbc_ff362acff187 [routing "AuthorityOnly"]
+  newBusyState Bool 
 
 command Player_cd9bcc1feead9419fac0c5981ce85c23_Chat__char_46_SendChatMessage_d80a9015_b884_4731_b2e0_4870faa56abe [routing "Other"]
   encodedMessage Bytes 
@@ -271,6 +318,8 @@ archetype Player_cd9bcc1feead9419fac0c5981ce85c23
       value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01"]
     WorldOrientation 
       value [bits "12"]
+    GenericScale 
+      value [compression "None"]
     Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_8520998716179763618 
       number [bits "3", range-min "-2", range-max "3"]
       number [bits "5", range-min "-2", range-max "20"]
@@ -287,4 +336,7 @@ archetype Player_cd9bcc1feead9419fac0c5981ce85c23
       number [bits "1"]
       number [bits "1"]
       number [bits "1"]
+    Player_cd9bcc1feead9419fac0c5981ce85c23_Coherence__char_46_Toolkit__char_46_CoherenceNode_4874302885197676216 
+      name [bits "6"]
+      number [bits "32", range-min "-2147483648", range-max "2147483647"]
 

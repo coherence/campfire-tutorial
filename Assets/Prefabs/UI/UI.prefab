@@ -753,7 +753,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: <b>Move:</b> WASD | <b>Run:</b> Hold Shift | <b>Jump:</b> Spacebar | <b>Interact:</b>
-    E | <b>Emotes:</b> 1, 2, 3, 4 | <b>Appearance:</b> C | <b>Chat:</b> Enter
+    K | <b>Emotes:</b> 1, 2, 3, 4 | <b>Appearance:</b> C | <b>Chat:</b> Enter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cc357af70eef948fabb67ea41eac40eb, type: 2}
   m_sharedMaterial: {fileID: 3194769153404464303, guid: cc357af70eef948fabb67ea41eac40eb,
@@ -2298,6 +2298,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4950308625866784602}
     m_Modifications:
+    - target: {fileID: 26661953200334776, guid: 7857ccb49ecb3864787412f46a05c3b2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15.97998
+      objectReference: {fileID: 0}
     - target: {fileID: 297095449091729290, guid: 7857ccb49ecb3864787412f46a05c3b2,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -2350,8 +2355,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1829210016773767737, guid: 7857ccb49ecb3864787412f46a05c3b2,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829210016773767737, guid: 7857ccb49ecb3864787412f46a05c3b2,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829210016773767737, guid: 7857ccb49ecb3864787412f46a05c3b2,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 348
+      value: -242
       objectReference: {fileID: 0}
     - target: {fileID: 1829210016773767737, guid: 7857ccb49ecb3864787412f46a05c3b2,
         type: 3}

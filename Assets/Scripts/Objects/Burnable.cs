@@ -1,4 +1,3 @@
-using System.Collections;
 using Coherence.Toolkit;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,6 +13,7 @@ public class Burnable : MonoBehaviour
     public FireEffect.EffectType bigFireEffectType = FireEffect.EffectType.RegularFireBig;
     public SFXPreset burntSFX;
     public SFXPreset thudSFX;
+    public bool timedSelfDestruct; // Used so logs remove themselves when they exist for too long
     
     [HideInInspector] public bool checkCollisions = true;
 
@@ -23,6 +23,8 @@ public class Burnable : MonoBehaviour
     private Collider _collider;
     private CoherenceSync _sync;
     private bool _hasBurned;
+    private float _creationTime;
+    private readonly float _selfDestructTime = 1800f;
 
     private void Awake()
     {
@@ -34,6 +36,12 @@ public class Burnable : MonoBehaviour
     private void OnEnable()
     {
         _hasBurned = false;
+        _creationTime = Time.time;
+    }
+
+    private void Update()
+    {
+        if(timedSelfDestruct && Time.time > _creationTime + _selfDestructTime) Remove();
     }
 
     private void FixedUpdate()
@@ -45,27 +53,31 @@ public class Burnable : MonoBehaviour
     {
         if (_collider.bounds.Intersects(_campfire.CollisionBounds))
         {
-            StartCoroutine(GetBurned());
+            GetBurned();
         }
     }
 
-    private IEnumerator GetBurned()
+    private void GetBurned()
+    {
+        _campfire.BurnObjectLocal(_sync);
+        Remove();
+    }
+
+    private void Remove()
     {
         // Informs GrabAction to invoke LetGo,
         // so if a player is carrying the object it will be as if they had released it
         Burned?.Invoke();
-
-        _hasBurned = true;
-        _campfire.BurnObjectLocal(_sync);
-
-        _sync.SendConnectedEntity(); //TODO: remove this later when we release a patch
-
-        yield return new WaitForEndOfFrame();
+        
+        _hasBurned = true; // Prevents more campfire collisions
+        GetComponent<Grabbable>().isBeingCarried = true; // Prevents pickup requests (GrabAction)
+        GetComponentInChildren<Interactable>().SetCollider(false); // Prevents object highlighting (InteractionInput)
+        // These are reset in the relevant OnEnable
 
         _sync.ReleaseInstance();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision _)
     {
         if(gameObject.activeInHierarchy)
             soundHandler.Play(thudSFX);

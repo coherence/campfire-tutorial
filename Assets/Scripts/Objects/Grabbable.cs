@@ -37,7 +37,7 @@ public class Grabbable : MonoBehaviour
         _sync.OnAuthorityRequested += OnAuthorityRequested;
         _sync.OnStateAuthority.AddListener(OnStateAuthority);
         _sync.OnStateRemote.AddListener(OnStateRemote);
-        
+
         // This check is fundamental for remote Log objects being enabled,
         // since they are coming from the object pool.
         // They fire the OnEnable too late to hook into OnStateRemote,
@@ -88,7 +88,14 @@ public class Grabbable : MonoBehaviour
     /// </summary>
     public void RequestPickup()
     {
-        if (_sync.HasStateAuthority && !isBeingCarried)
+        // Act as if a request was sent, and got denied
+        if (isBeingCarried || !gameObject.activeSelf)
+        {
+            PickupValidated?.Invoke(false);
+            return;
+        }
+        
+        if (_sync.HasStateAuthority)
         {
             ConfirmPickup();
         }
@@ -96,7 +103,14 @@ public class Grabbable : MonoBehaviour
         {
             _pickupRequested = true;
             _sync.RequestAuthority(AuthorityType.Full);
+            _sync.OnAuthorityRequestRejected.AddListener(OnRequestRejected);
         }
+    }
+
+    private void OnRequestRejected(AuthorityType arg0)
+    {
+        _sync.OnAuthorityRequestRejected.RemoveListener(OnRequestRejected);
+        PickupValidated?.Invoke(false);
     }
 
     /// <summary>
@@ -111,6 +125,7 @@ public class Grabbable : MonoBehaviour
         if (_pickupRequested)
         {
             // Authority change happened as a result of a pick up action
+            _sync.OnAuthorityRequestRejected.RemoveListener(OnRequestRejected);
             _pickupRequested = false;
             ConfirmPickup();
         }
@@ -137,7 +152,7 @@ public class Grabbable : MonoBehaviour
     }
 
     /// <summary>
-    /// Like gaining authority, losing authority can happen because of two reasons: see <see cref="OnStateAuthority"/>.
+    /// Losing authority can happen because of two reasons: see <see cref="OnStateAuthority"/>.
     /// </summary>
     private void OnStateRemote()
     {
