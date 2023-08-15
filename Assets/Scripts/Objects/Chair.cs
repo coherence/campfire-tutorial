@@ -14,7 +14,6 @@ public class Chair : MonoBehaviour
     private void Awake()
     {
         _interactable = GetComponentInChildren<Interactable>();
-        sync = GetComponent<CoherenceSync>();
         sync.OnStateAuthority.AddListener(OnStateAuthority);
     }
 
@@ -23,7 +22,7 @@ public class Chair : MonoBehaviour
         // Free the chair if it has no children.
         // This could happen if a player who previously had authority
         // disconnected while was siting on the chair
-        if(sittingAnchor.childCount != 0) Free();
+        if(sittingAnchor.childCount == 0) Free();
     }
 
     public void Occupy()
