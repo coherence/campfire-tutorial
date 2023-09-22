@@ -135,7 +135,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 1.0.0
+  bundleVersion: 1.0.2
   preloadedAssets:
   - {fileID: 11400000, guid: a4aa0754334244480b83e41c327a4dee, type: 2}
   - {fileID: 11400000, guid: 05f52a426355b49ed9e1062c38c7cec9, type: 2}
@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.coherence.FirstSteps
+    Android: com.coherence.Campfire
     Standalone: com.coherence.Campfire
     iPhone: io.coherence.firststeps
   buildNumber:
