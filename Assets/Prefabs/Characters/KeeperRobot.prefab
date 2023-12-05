@@ -176,7 +176,7 @@ MonoBehaviour:
   holdSocket: {fileID: 8693188804916679657}
   situationCheckCooldown: 12
   _state: 5
-  _log: 1
+  _log: 0
 --- !u!114 &-3359619185253440237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +325,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 45780
   coherenceUUID: keeper-robot
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions:

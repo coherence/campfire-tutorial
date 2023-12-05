@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey:
-  schemaID: bfd97f0ce234a681114535b3b3eb2a3126dc3f96
-  uploadedSchema: 1
+  schemaID: e04f43ab28b8b0c7d23b65bb45ffac978411330a
   simulatorSlug: robot-v14
   localHost: 127.0.0.1
   localWorldUDPPort: 32001

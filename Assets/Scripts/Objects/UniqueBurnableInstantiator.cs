@@ -13,9 +13,9 @@ public class UniqueBurnableInstantiator : INetworkObjectInstantiator
 {
     public void OnUniqueObjectReplaced(ICoherenceSync instance) { }
     
-    public ICoherenceSync Instantiate(CoherenceBridge bridge, ICoherenceSync prefab, Vector3 position, Quaternion rotation)
+    public ICoherenceSync Instantiate(SpawnInfo spawnInfo)
     {
-        return Object.Instantiate(prefab as MonoBehaviour, position, rotation) as ICoherenceSync;
+        return Object.Instantiate((CoherenceSync)spawnInfo.prefab, spawnInfo.position, (Quaternion)spawnInfo.rotation);
     }
     
     public void Destroy(ICoherenceSync obj)
