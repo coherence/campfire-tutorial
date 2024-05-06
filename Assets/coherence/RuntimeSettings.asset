@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
-  runtimeKey:
-  schemaID: e04f43ab28b8b0c7d23b65bb45ffac978411330a
-  simulatorSlug: robot-v14
+  runtimeKey: dfd8f781fadc4c13bdbe782e793e52f1
+  schemaID: 0f3172820067971f91ed6d16692cfc5889ea1dd4
+  simulatorSlug: 
   localHost: 127.0.0.1
   localWorldUDPPort: 32001
   localWorldWebPort: 32002
@@ -28,9 +28,9 @@ MonoBehaviour:
   localHttpServerPort: 42006
   localDevelopmentMode: 1
   useDebugStreams: 0
-  organizationID:
-  projectID:
-  projectName:
+  organizationID: c1mnh99rn6r9re0fhp00
+  projectID: cke7octklouml7ml5lrg
+  projectName: campfire
   defaultTransportMode: 0
   replicationServerToken: 
   playApiEndpoint: https://api.prod.coherence.io/v1/play

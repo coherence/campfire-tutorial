@@ -81,7 +81,7 @@ MonoBehaviour:
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: -7561722947944320827, guid: a4aa0754334244480b83e41c327a4dee,
+  coherenceSyncConfig: {fileID: -739136850616195594, guid: a4aa0754334244480b83e41c327a4dee,
     type: 2}
   archetype:
     boundComponents:
@@ -136,6 +136,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: filled-at-runtime
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions: []

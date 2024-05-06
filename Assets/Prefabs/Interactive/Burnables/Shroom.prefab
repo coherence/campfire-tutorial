@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4984902805325404251}
-  serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.726, y: 0.72599995, z: 0.72599995}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7844961029480478066}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &8487310228509909837
 ParticleSystem:
@@ -4978,7 +4978,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coherenceSyncConfig
       value: 
-      objectReference: {fileID: 3652535020897794676, guid: a4aa0754334244480b83e41c327a4dee,
+      objectReference: {fileID: 6158861006511957472, guid: a4aa0754334244480b83e41c327a4dee,
         type: 2}
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
