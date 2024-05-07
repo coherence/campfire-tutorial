@@ -22,6 +22,7 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_9ea9c7ad1465c4769a67e80391f1158b_0d09d827_e9dc_48d4_8234_312ff3610eb4 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -69,6 +70,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_9ea9c7ad1465c4769a67e80391f1158b_ea22c661_3240_4862_9b36_fc289800b247 : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -115,6 +117,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_9ea9c7ad1465c4769a67e80391f1158b_abd6ea83_0b7b_416c_8a6d_d35eb11f2a4f : ScaleBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -161,6 +164,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_9ea9c7ad1465c4769a67e80391f1158b_59b52bcb_476d_404a_94c7_b0a30cfbaf19 : StringBinding
     {   
         private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
@@ -207,6 +211,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_9ea9c7ad1465c4769a67e80391f1158b_cc845b88_6612_4cb0_82e0_181af5e7f681 : IntBinding
     {   
         private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
@@ -253,6 +258,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_9ea9c7ad1465c4769a67e80391f1158b_2ef575fd_e1d8_4535_b83a_10a14e8b6cd0 : BoolBinding
     {   
         private global::Grabbable CastedUnityComponent;
@@ -299,6 +305,7 @@ namespace Coherence.Generated
         }    
     }
 
+    [UnityEngine.Scripting.Preserve]
     public class CoherenceSyncLog_9ea9c7ad1465c4769a67e80391f1158b : CoherenceSyncBaked
     {
         private Entity entityId;

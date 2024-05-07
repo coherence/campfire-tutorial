@@ -22,6 +22,7 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_060eae84_e0a5_489a_a3f3_2d7c800cf950 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -69,6 +70,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_750f7041_8bae_4108_b1e7_4427fb548aae : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -115,6 +117,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_189625fe_fb07_446a_ac78_80b2b0dbf320 : StringBinding
     {   
         private global::ObjectAnchor CastedUnityComponent;
@@ -161,6 +164,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_120b91f3_d4bd_4bc3_ae37_cce0009abd40 : BoolBinding
     {   
         private global::ObjectAnchor CastedUnityComponent;
@@ -207,6 +211,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_74c49d2e_ed91_46be_872d_431e635e3816 : StringBinding
     {   
         private global::ObjectAnchor CastedUnityComponent;
@@ -253,6 +258,7 @@ namespace Coherence.Generated
         }    
     }
 
+    [UnityEngine.Scripting.Preserve]
     public class CoherenceSyncObjectAnchor_ec47cd7906b7749f4853524abf78e799 : CoherenceSyncBaked
     {
         private Entity entityId;

@@ -22,6 +22,7 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_b222c7ad94d9f44beb6d7a92a631da26_2098c804_0ea0_4eef_a25a_ed5596a0cdf5 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -69,6 +70,7 @@ namespace Coherence.Generated
         }    
     }
 
+    [UnityEngine.Scripting.Preserve]
     public class CoherenceSyncNetworkedFolderObject_b222c7ad94d9f44beb6d7a92a631da26 : CoherenceSyncBaked
     {
         private Entity entityId;

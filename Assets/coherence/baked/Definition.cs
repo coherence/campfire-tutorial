@@ -13,7 +13,10 @@ namespace Coherence.Generated
     using Coherence.Entities;
     using Coherence.Serializer;
     using Coherence.Log;
-    
+
+
+    [UnityEngine.Scripting.Preserve]
+
     public class Definition : IDefinition
     {
         public const string schemaId = "0f3172820067971f91ed6d16692cfc5889ea1dd4";
@@ -1759,5 +1762,6 @@ namespace Coherence.Generated
         }
 }
     
+
 
 }

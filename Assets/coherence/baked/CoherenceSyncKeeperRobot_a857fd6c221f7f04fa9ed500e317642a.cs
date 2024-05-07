@@ -22,6 +22,7 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_aa3341ec_45d8_47e3_a633_4d365bb6e8f6 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -69,6 +70,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_4cef7f16_f634_4b52_9a98_ff11487873bc : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -115,6 +117,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_f4b199da_e036_494b_af49_43dea2b97d33 : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -161,6 +164,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_5735b03a_1aa7_4d87_a5f2_e163eed89df2 : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -207,6 +211,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_0174ef8a_52ab_48e6_aee7_88bea243f7f5 : BoolBinding
     {   
         private global::Chair CastedUnityComponent;
@@ -253,6 +258,7 @@ namespace Coherence.Generated
         }    
     }
 
+    [UnityEngine.Scripting.Preserve]
     public class CoherenceSyncKeeperRobot_a857fd6c221f7f04fa9ed500e317642a : CoherenceSyncBaked
     {
         private Entity entityId;

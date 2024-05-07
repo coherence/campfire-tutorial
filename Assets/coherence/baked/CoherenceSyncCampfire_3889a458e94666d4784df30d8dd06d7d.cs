@@ -22,6 +22,7 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_3889a458e94666d4784df30d8dd06d7d_05ba497e_2c7b_4bf9_9d98_348ae880439b : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -69,6 +70,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_3889a458e94666d4784df30d8dd06d7d_3d7b0de0_9c23_48eb_abdb_8c4aa943ce3b : IntBinding
     {   
         private global::Campfire CastedUnityComponent;
@@ -115,6 +117,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_3889a458e94666d4784df30d8dd06d7d_f16a8507_6b0d_47e8_8723_75cb715fc67e : FloatBinding
     {   
         private global::Campfire CastedUnityComponent;
@@ -161,6 +164,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_3889a458e94666d4784df30d8dd06d7d_d8d012f4_1961_45ca_a10c_8e40b2bd3e06 : FloatBinding
     {   
         private global::Campfire CastedUnityComponent;
@@ -207,6 +211,7 @@ namespace Coherence.Generated
         }    
     }
 
+    [UnityEngine.Scripting.Preserve]
     public class CoherenceSyncCampfire_3889a458e94666d4784df30d8dd06d7d : CoherenceSyncBaked
     {
         private Entity entityId;

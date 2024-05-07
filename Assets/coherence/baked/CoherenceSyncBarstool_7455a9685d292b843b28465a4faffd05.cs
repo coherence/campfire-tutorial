@@ -22,6 +22,7 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_7455a9685d292b843b28465a4faffd05_04d46498_47d3_41ea_a3b4_0d6b6ca56901 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -69,6 +70,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_7455a9685d292b843b28465a4faffd05_cee0b592_0f58_413c_a75e_511a8904cfe4 : BoolBinding
     {   
         private global::Chair CastedUnityComponent;
@@ -115,6 +117,7 @@ namespace Coherence.Generated
         }    
     }
     
+    [UnityEngine.Scripting.Preserve]
     public class Binding_7455a9685d292b843b28465a4faffd05_aa676c18_977b_4027_ad16_fcd14f36b407 : BoolBinding
     {   
         private global::UnityEngine.CapsuleCollider CastedUnityComponent;
@@ -161,6 +164,7 @@ namespace Coherence.Generated
         }    
     }
 
+    [UnityEngine.Scripting.Preserve]
     public class CoherenceSyncBarstool_7455a9685d292b843b28465a4faffd05 : CoherenceSyncBaked
     {
         private Entity entityId;
