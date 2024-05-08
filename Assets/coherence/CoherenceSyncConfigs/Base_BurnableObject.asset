@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Base_BurnableObject
+  m_EditorClassIdentifier: 
+  id: 8833df0ce8b904a2c930b33acfa5fd13
+  selfId: 45377a2bf56744d12aa900e4c3cc9de9
+  editorTarget: {fileID: 2272056274626123602, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 7574136627706986508
+  objectInstantiator:
+    rid: 7574136627706986509
+  references:
+    version: 2
+    RefIds:
+    - rid: 7574136627706986508
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 2272056274626123602, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+          type: 3}
+    - rid: 7574136627706986509
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}

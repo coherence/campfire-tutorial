@@ -33,6 +33,11 @@ namespace Editor
             {
                 EditorLauncher.RunWorldsReplicationServerInTerminal();
             }
+            EditorGUILayout.Space(0f);
+            if (GUILayout.Button("Run Rooms RS", GUILayout.Height(buttonHeight)))
+            {
+                EditorLauncher.RunRoomsReplicationServerInTerminal();
+            }
             EditorGUILayout.EndVertical();
         }
     }

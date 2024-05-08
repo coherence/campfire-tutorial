@@ -9,6 +9,7 @@ namespace Coherence.Generated
     using UnityEngine;
     using Coherence.Entities;
     using Toolkit;
+    using Coherence.SimulationFrame;
     
     public class CoherenceLiveQueryImpl
     {
@@ -19,17 +20,20 @@ namespace Coherence.Generated
             Impl.UpdateLiveQuery = UpdateLiveQuery;
         }
 
-        private static Entity CreateLiveQuery(IClient client, float radius, Vector3 pos) {
+        private static Entity CreateLiveQuery(IClient client, float radius, Vector3 pos, AbsoluteSimulationFrame simFrame) {
             var components = new ICoherenceComponentData[] {
                 new WorldPosition
                 {
                     value = pos,
+                    valueSimulationFrame = simFrame,
                     FieldsMask = 0b1,
                 },
                 new WorldPositionQuery
                 {
                     position = pos,
                     radius = radius,
+                    positionSimulationFrame = simFrame,
+                    radiusSimulationFrame = simFrame,
                     FieldsMask = 0b11,
                 }
             };
@@ -37,12 +41,14 @@ namespace Coherence.Generated
             return client.CreateEntity(components, false);
         }
 
-        private static void UpdateLiveQuery(IClient client, Entity liveQuery, float radius, Vector3 pos)
+        private static void UpdateLiveQuery(IClient client, Entity liveQuery, float radius, Vector3 pos, AbsoluteSimulationFrame simFrame)
         {
             var newWorldPositionQuery = new WorldPositionQuery
             {
                 position = pos,
                 radius = radius,
+                positionSimulationFrame = simFrame,
+                radiusSimulationFrame = simFrame,
                 FieldsMask = 0b11,
             };
 
@@ -51,12 +57,7 @@ namespace Coherence.Generated
                 newWorldPositionQuery,
             };
 
-            var masks = new uint[]
-            {
-                0b11,
-            };
-
-            client.UpdateComponents(liveQuery, components, masks);
+            client.UpdateComponents(liveQuery, components);
         }
     }
 

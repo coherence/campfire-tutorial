@@ -14,6 +14,7 @@ namespace Coherence.Generated
     using Log;
     using Logger = Log.Logger;
     using Coherence.Entities;
+    using Coherence.SimulationFrame;
     
     public class CoherenceSyncImpl
     {
@@ -43,16 +44,33 @@ namespace Coherence.Generated
             return componentName;
         }
 
-        private static ICoherenceComponentData[] CreateInitialComponents(ICoherenceSync self, string uuid, bool isFromGroup)
+        private static ICoherenceComponentData[] CreateInitialComponents(ICoherenceSync self, string uuid, bool isFromGroup, AbsoluteSimulationFrame simFrame)
         {
             var comps = new List<ICoherenceComponentData>();
-            comps.Add(new WorldPosition() { value = self.coherencePosition, FieldsMask = 0b1, });
+            comps.Add(new WorldPosition() 
+            { 
+                value = self.coherencePosition, 
+                valueSimulationFrame = simFrame, 
+                FieldsMask = 0b1, 
+            });
 
-            comps.Add(new AssetId() { value = self.CoherenceSyncConfig.ID, isFromGroup = isFromGroup });
+            comps.Add(new AssetId() 
+            { 
+                value = self.CoherenceSyncConfig.ID, 
+                isFromGroup = isFromGroup, 
+                valueSimulationFrame = simFrame,
+                isFromGroupSimulationFrame = simFrame,
+                FieldsMask = 0b11, 
+            });
 
             if (!string.IsNullOrEmpty(uuid))
             {
-                comps.Add(new UniqueID() { uuid = uuid, FieldsMask = 0b1, });
+                comps.Add(new UniqueID() 
+                { 
+                    uuid = uuid, 
+                    uuidSimulationFrame = simFrame, 
+                    FieldsMask = 0b1, 
+                });
             }
 
             if (self.LifetimeTypeConfig != CoherenceSync.LifetimeType.SessionBased)
@@ -150,7 +168,7 @@ namespace Coherence.Generated
             }
         }
 
-        private static ICoherenceComponentData CreateConnectedEntityUpdateInternal(Entity parentID, Vector3 newPos, Quaternion newRot, Vector3 newScale)
+        private static ICoherenceComponentData CreateConnectedEntityUpdateInternal(Entity parentID, Vector3 newPos, Quaternion newRot, Vector3 newScale, AbsoluteSimulationFrame simFrame)
         {
             var comp = new ConnectedEntity()
             {
@@ -158,6 +176,10 @@ namespace Coherence.Generated
                 pos = newPos,
                 rot = newRot,
                 scale = newScale,
+                valueSimulationFrame = simFrame,
+                posSimulationFrame = simFrame,
+                rotSimulationFrame = simFrame,
+                scaleSimulationFrame = simFrame,
                 FieldsMask = 0b1111,
             };
 
@@ -169,19 +191,19 @@ namespace Coherence.Generated
             return Definition.InternalConnectedEntity;
         }
 
-        private static void UpdateTag(IClient client, Entity liveQuery, string tag)
+        private static void UpdateTag(IClient client, Entity liveQuery, string tag, AbsoluteSimulationFrame simFrame)
         {
             var components = new ICoherenceComponentData[]
             {
-                new Tag { tag = tag }
+                new Tag 
+                { 
+                    tag = tag,
+                    tagSimulationFrame = simFrame,
+                    FieldsMask = 0b1
+                }
             };
 
-            var masks = new uint[]
-            {
-                0b01,
-            };
-
-            client.UpdateComponents(liveQuery, components, masks);
+            client.UpdateComponents(liveQuery, components);
         }
 
         private static void RemoveTag(IClient client, Entity liveQuery)

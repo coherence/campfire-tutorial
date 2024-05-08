@@ -11,12 +11,12 @@ namespace Coherence.Generated
     
     public static class Archetypes
     {
-        public const int Campfire_3889a458e94666d4784df30d8dd06d7dIndex = 0;
-        public const int Player_cd9bcc1feead9419fac0c5981ce85c23Index = 1;
+        public const int _3889a458e94666d4784df30d8dd06d7dIndex = 0;
+        public const int _cd9bcc1feead9419fac0c5981ce85c23Index = 1;
 
         public static readonly EntityArchetype[] Definitions =
 		{
-            new EntityArchetype() // Campfire_3889a458e94666d4784df30d8dd06d7d
+            new EntityArchetype() // _3889a458e94666d4784df30d8dd06d7d
             {
                 LODs = new EntityArchetypeLOD[]
                 {
@@ -26,8 +26,8 @@ namespace Coherence.Generated
                         Distance = 0,
                         ComponentReplacement = new Dictionary<uint, uint>
                         {
-                            { 0, Definition.InternalArchetypeCampfire_3889a458e94666d4784df30d8dd06d7d_WorldPosition_LOD0 },
-                            { 169, Definition.InternalArchetypeCampfire_3889a458e94666d4784df30d8dd06d7d_Campfire_3889a458e94666d4784df30d8dd06d7d_Campfire_6540142254599110064_LOD0 },
+                            { 0, Definition.InternalArchetype_3889a458e94666d4784df30d8dd06d7d_WorldPosition_LOD0 },
+                            { 159, Definition.InternalArchetype_3889a458e94666d4784df30d8dd06d7d__3889a458e94666d4784df30d8dd06d7d_6540142254599110064_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -35,7 +35,7 @@ namespace Coherence.Generated
                     },
                 },
             },
-            new EntityArchetype() // Player_cd9bcc1feead9419fac0c5981ce85c23
+            new EntityArchetype() // _cd9bcc1feead9419fac0c5981ce85c23
             {
                 LODs = new EntityArchetypeLOD[]
                 {
@@ -45,14 +45,14 @@ namespace Coherence.Generated
                         Distance = 0,
                         ComponentReplacement = new Dictionary<uint, uint>
                         {
-                            { 0, Definition.InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 },
-                            { 1, Definition.InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 },
-                            { 17, Definition.InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0 },
-                            { 185, Definition.InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CosmeticsChanger_8520998716179763618_LOD0 },
-                            { 186, Definition.InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_TextMeshProUGUI_3184128103638100181_LOD0 },
-                            { 187, Definition.InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Transform_4998465150839130408_LOD0 },
-                            { 183, Definition.InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_Animator_176131441763086322_LOD0 },
-                            { 184, Definition.InternalArchetypePlayer_cd9bcc1feead9419fac0c5981ce85c23_Player_cd9bcc1feead9419fac0c5981ce85c23_CoherenceNode_4874302885197676216_LOD0 },
+                            { 0, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 },
+                            { 1, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 },
+                            { 17, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0 },
+                            { 190, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618_LOD0 },
+                            { 187, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181_LOD0 },
+                            { 189, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408_LOD0 },
+                            { 186, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_176131441763086322_LOD0 },
+                            { 188, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -64,8 +64,8 @@ namespace Coherence.Generated
     
         public static Dictionary<string, int> IndexForName = new Dictionary<string, int>() 
         {
-            { "Campfire_3889a458e94666d4784df30d8dd06d7d", 0 },
-            { "Player_cd9bcc1feead9419fac0c5981ce85c23", 1 },
+            { "_3889a458e94666d4784df30d8dd06d7d", 0 },
+            { "_cd9bcc1feead9419fac0c5981ce85c23", 1 },
         };
     }     
     

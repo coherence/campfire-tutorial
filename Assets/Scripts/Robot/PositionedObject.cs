@@ -72,7 +72,7 @@ public class PositionedObject : MonoBehaviour
     /// </summary>
     private void OnBurned()
     {
-        if(_bridge != null && _bridge.isConnected)
+        if(_bridge != null && _bridge.IsConnected)
             objectAnchorSync.GetComponent<ObjectAnchor>().LinkedObjectBurned();
     }
     

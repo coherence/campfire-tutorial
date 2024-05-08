@@ -13,6 +13,8 @@ namespace Coherence.Generated
     using ConnectionType = Coherence.Connection.ConnectionType;
     using ClientID = Coherence.Connection.ClientID;
     using Coherence.Entities;
+    using Coherence.SimulationFrame;
+    using Coherence.Core;
     public class CoherenceBridgeImpl
     {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -22,19 +24,20 @@ namespace Coherence.Generated
             Impl.GetSpawnInfo = GetSpawnInfo;
             Impl.GetRootDefinition = GetRootDefinition;
             Impl.CreateConnectionSceneUpdateInternal = CreateConnectionSceneUpdateInternal;
+            Impl.GetComponentInteropHandler = GetComponentInteropHandler;
         }
-    
+
         private static uint AssetId()
         {
             return Definition.InternalAssetId;
         }
-    
-        static (bool, SpawnInfo) GetSpawnInfo(IClient client, EntityUpdate entityUpdate)
+
+        static (bool, SpawnInfo) GetSpawnInfo(IClient client, IncomingEntityUpdate entityUpdate)
         {
             var info = new SpawnInfo();
             var gotPosition = false;
             var gotUnityAsset = false;
-    
+
             foreach (var comp in entityUpdate.Components.Updates.Store)
             {
                 switch(comp.Value.Data)
@@ -47,7 +50,7 @@ namespace Coherence.Generated
                         info.rotation = rot.value;
                         break;
                     case AssetId assetId:
-                        if (CoherenceSyncConfigManager.GetConfigFromAssetId(assetId.value) != null)
+                        if (CoherenceSyncConfigRegistry.Instance.TryGetFromAssetId(assetId.value, out _))
                         {
                             info.assetId = assetId.value;
                             info.isFromGroup = assetId.isFromGroup;
@@ -66,27 +69,34 @@ namespace Coherence.Generated
                         break;
                 }
             }
-    
+
             var shouldSpawn = (gotPosition && gotUnityAsset) || info.clientId.HasValue;
-    
+
             return (shouldSpawn, info);
         }
-    
+
         private static IDefinition GetRootDefinition()
         {
             return new Definition();
         }
-    
-        private static ICoherenceComponentData CreateConnectionSceneUpdateInternal(uint sceneIndex)
+
+        private static ICoherenceComponentData CreateConnectionSceneUpdateInternal(uint sceneIndex, AbsoluteSimulationFrame simFrame)
         {
             var update = new ConnectionScene()
             {
                 value = sceneIndex,
+                valueSimulationFrame = simFrame,
                 FieldsMask = 0b1,
             };
-    
+
             return update;
         }
+
+        private static IComponentInteropHandler GetComponentInteropHandler()
+        {
+            return new ComponentInteropHandler();
+        }
     }
+
 
 }

@@ -199,15 +199,20 @@ MonoBehaviour:
   OnAuthorityRequestRejected:
     m_PersistentCalls:
       m_Calls: []
+  OnAuthTransferComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnConnectedEntityChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: -4944405749243340283, guid: a4aa0754334244480b83e41c327a4dee,
+  coherenceSyncConfig: {fileID: 11400000, guid: 45377a2bf56744d12aa900e4c3cc9de9,
     type: 2}
   archetype:
+    lodLevels:
+    - distance: 0
     boundComponents:
     - component: {fileID: 1498616242359619048}
       lodStepsActive: 1
@@ -269,9 +274,6 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 7164931542136375948}
       lodStepsActive: 1
-    lodLevels:
-    - distance: 0
-    archetypeName: Base_BurnableObject_8833df0ce8b904a2c930b33acfa5fd13
     GeneratesArchetypeDefinition: 0
   interpolationLocation: 1
   RigidbodyUpdateMode: 0
@@ -287,7 +289,7 @@ MonoBehaviour:
   OnRigidbody3DRotationUpdate:
     m_PersistentCalls:
       m_Calls: []
-  bakedScriptType: Coherence.Generated.CoherenceSyncBase_BurnableObject_8833df0ce8b904a2c930b33acfa5fd13,
+  bakedScriptType: Coherence.Generated.CoherenceSync_8833df0ce8b904a2c930b33acfa5fd13,
     Assembly-CSharp
   approveAuthorityTransferRequests: 0
   simulationType: 0
@@ -338,8 +340,9 @@ MonoBehaviour:
           rid: 134368550202900517
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 2ef575fd-e1d8-4535-b83a-10a14e8b6cd0
+        guid: 2ef575fde1d84535b83a10a14e8b6cd0
         archetypeData:
           type: 3
           minRange: 0
@@ -387,8 +390,9 @@ MonoBehaviour:
           rid: 3472946656693190764
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 0d09d827-e9dc-48d4-8234-312ff3610eb4
+        guid: 0d09d827e9dc48d48234312ff3610eb4
         archetypeData:
           type: 7
           minRange: 0
@@ -432,8 +436,9 @@ MonoBehaviour:
           rid: 3472946656693190766
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: ea22c661-3240-4862-9b36-fc289800b247
+        guid: ea22c661324048629b36fc289800b247
         archetypeData:
           type: 8
           minRange: 0
@@ -477,8 +482,9 @@ MonoBehaviour:
           rid: 3472946656693190768
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: abd6ea83-0b7b-416c-8a6d-d35eb11f2a4f
+        guid: abd6ea830b7b416c8a6dd35eb11f2a4f
         archetypeData:
           type: 7
           minRange: 0
@@ -525,8 +531,9 @@ MonoBehaviour:
           rid: 3472946656693190775
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 59b52bcb-476d-404a-94c7-b0a30cfbaf19
+        guid: 59b52bcb476d404a94c7b0a30cfbaf19
         archetypeData:
           type: 5
           minRange: 0
@@ -549,8 +556,9 @@ MonoBehaviour:
           rid: 3472946656693190776
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: cc845b88-6612-4cb0-82e0-181af5e7f681
+        guid: cc845b8866124cb082e0181af5e7f681
         archetypeData:
           type: 1
           minRange: -2147483648
@@ -613,8 +621,9 @@ MonoBehaviour:
           rid: 8975625062529892427
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: ad9e6356-3803-4d88-b0c6-dcd8a9c83286
+        guid: ad9e635638034d88b0c6dcd8a9c83286
         archetypeData:
           type: 0
           minRange: 0
@@ -653,8 +662,9 @@ MonoBehaviour:
           rid: 8975625062529892550
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: f2d1c22c-30b0-44c8-bb3d-ddc445e2c67a
+        guid: f2d1c22c30b044c8bb3dddc445e2c67a
         archetypeData:
           type: 9
           minRange: 0

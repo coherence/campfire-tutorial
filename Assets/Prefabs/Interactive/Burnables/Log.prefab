@@ -152,7 +152,7 @@ PrefabInstance:
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
       propertyPath: bakedScriptType
-      value: Coherence.Generated.CoherenceSyncLog_9ea9c7ad1465c4769a67e80391f1158b,
+      value: Coherence.Generated.CoherenceSync_9ea9c7ad1465c4769a67e80391f1158b,
         Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
@@ -164,7 +164,7 @@ PrefabInstance:
         type: 3}
       propertyPath: coherenceSyncConfig
       value: 
-      objectReference: {fileID: -1692069238430365739, guid: a4aa0754334244480b83e41c327a4dee,
+      objectReference: {fileID: 11400000, guid: e148f5cf69aee40a796b1ef6289bc929,
         type: 2}
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
@@ -195,6 +195,36 @@ PrefabInstance:
         type: 3}
       propertyPath: archetype.boundComponents.Array.size
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+        type: 3}
+      propertyPath: managedReferences[134368550202900516].guid
+      value: 2ef575fde1d84535b83a10a14e8b6cd0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+        type: 3}
+      propertyPath: managedReferences[3472946656693190763].guid
+      value: 0d09d827e9dc48d48234312ff3610eb4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+        type: 3}
+      propertyPath: managedReferences[3472946656693190765].guid
+      value: ea22c661324048629b36fc289800b247
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+        type: 3}
+      propertyPath: managedReferences[3472946656693190767].guid
+      value: abd6ea830b7b416c8a6dd35eb11f2a4f
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+        type: 3}
+      propertyPath: managedReferences[3472946656693190773].guid
+      value: 59b52bcb476d404a94c7b0a30cfbaf19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+        type: 3}
+      propertyPath: managedReferences[3472946656693190774].guid
+      value: cc845b8866124cb082e0181af5e7f681
       objectReference: {fileID: 0}
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}

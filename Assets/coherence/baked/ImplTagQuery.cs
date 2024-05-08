@@ -9,6 +9,7 @@ namespace Coherence.Generated
     using UnityEngine;
     using Coherence.Entities;
     using Toolkit;
+    using Coherence.SimulationFrame;
     
     public class CoherenceTagQueryImpl
     {
@@ -19,19 +20,19 @@ namespace Coherence.Generated
             Impl.RemoveTagQuery = RemoveTagQuery;
         }
 
-        private static void UpdateTagQuery(IClient client, Entity liveQuery, string tag)
+        private static void UpdateTagQuery(IClient client, Entity liveQuery, string tag, AbsoluteSimulationFrame simFrame)
         {
             var components = new ICoherenceComponentData[]
             {
-                new TagQuery { tag = tag }
+                new TagQuery 
+                { 
+                    tag = tag,
+                    tagSimulationFrame = simFrame,
+                    FieldsMask = 0b1
+                }
             };
 
-            var masks = new uint[]
-            {
-                0b01,
-            };
-
-            client.UpdateComponents(liveQuery, components, masks);
+            client.UpdateComponents(liveQuery, components);
         }
 
         private static void RemoveTagQuery(IClient client, Entity liveQuery)
