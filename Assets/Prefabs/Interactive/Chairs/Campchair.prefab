@@ -313,15 +313,20 @@ MonoBehaviour:
   OnAuthorityRequestRejected:
     m_PersistentCalls:
       m_Calls: []
+  OnAuthTransferComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnConnectedEntityChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: -5106855548532323381, guid: a4aa0754334244480b83e41c327a4dee,
+  coherenceSyncConfig: {fileID: 11400000, guid: 43e433ff3e74248ad95708db83f6a76f,
     type: 2}
   archetype:
+    lodLevels:
+    - distance: 0
     boundComponents:
     - component: {fileID: 5705660609335651073}
       lodStepsActive: 1
@@ -361,9 +366,6 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 8078353229788889723}
       lodStepsActive: 1
-    lodLevels:
-    - distance: 0
-    archetypeName: Campchair_91ccee2338d92624a8021fda1c91e47c
     GeneratesArchetypeDefinition: 0
   interpolationLocation: 1
   RigidbodyUpdateMode: 0
@@ -379,7 +381,7 @@ MonoBehaviour:
   OnRigidbody3DRotationUpdate:
     m_PersistentCalls:
       m_Calls: []
-  bakedScriptType: Coherence.Generated.CoherenceSyncCampchair_91ccee2338d92624a8021fda1c91e47c,
+  bakedScriptType: Coherence.Generated.CoherenceSync_91ccee2338d92624a8021fda1c91e47c,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
@@ -406,6 +408,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: 
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions: []
@@ -424,8 +427,9 @@ MonoBehaviour:
           rid: 3041628591939387459
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: af57f962-994c-4ec7-887c-2f2f6b67f68a
+        guid: af57f962994c4ec7887c2f2f6b67f68a
         archetypeData:
           type: 7
           minRange: 0
@@ -468,8 +472,9 @@ MonoBehaviour:
           rid: 3041628591939387461
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 6653d280-b186-4071-bb38-15f49a73d029
+        guid: 6653d280b1864071bb3815f49a73d029
         archetypeData:
           type: 3
           minRange: 0
@@ -511,8 +516,9 @@ MonoBehaviour:
           rid: 3041628591939387483
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: da4067b1-fcd3-4e8a-93ae-914a3b0df2f9
+        guid: da4067b1fcd34e8a93ae914a3b0df2f9
         archetypeData:
           type: 0
           minRange: 0
@@ -551,8 +557,9 @@ MonoBehaviour:
           rid: 3041628591939387489
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 85ff4db8-c33a-45df-ab71-39834053c3e6
+        guid: 85ff4db8c33a45dfab7139834053c3e6
         archetypeData:
           type: 3
           minRange: 0

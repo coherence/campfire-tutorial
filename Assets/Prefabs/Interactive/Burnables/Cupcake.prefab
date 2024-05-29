@@ -138,14 +138,14 @@ PrefabInstance:
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
       propertyPath: bakedScriptType
-      value: Coherence.Generated.CoherenceSyncCupcake_0d27e1ad6d8e5ba4abca3216a92298f7,
+      value: Coherence.Generated.CoherenceSync_0d27e1ad6d8e5ba4abca3216a92298f7,
         Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
       propertyPath: coherenceSyncConfig
       value: 
-      objectReference: {fileID: 4022207869242487090, guid: a4aa0754334244480b83e41c327a4dee,
+      objectReference: {fileID: 11400000, guid: 6a6db1bdba4ab487284b5319ff01dbc5,
         type: 2}
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}

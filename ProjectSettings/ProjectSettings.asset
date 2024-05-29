@@ -135,7 +135,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 1.0.3
+  bundleVersion: 1.0.5
   preloadedAssets:
   - {fileID: 11400000, guid: a4aa0754334244480b83e41c327a4dee, type: 2}
   - {fileID: 11400000, guid: 05f52a426355b49ed9e1062c38c7cec9, type: 2}
@@ -450,7 +450,9 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 1
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1f3ff7473c7ad426f81ef39c83b52484, type: 3}
+      - {fileID: 2800000, guid: 5208310a75c994ec798c0e6f59408dda, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2

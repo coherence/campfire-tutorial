@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 579f4a509fd2f994fa391c0c78ea3f11, type: 3}
+  m_Name: Trashcan
+  m_EditorClassIdentifier: 
+  id: 451e73a8eddd14b2daf891b5ee6c2308
+  selfId: af3c62f56471441d0a35ead5219bd1f2
+  editorTarget: {fileID: 6855767038368754221, guid: 451e73a8eddd14b2daf891b5ee6c2308,
+    type: 3}
+  includeInSchema: 1
+  objectProvider:
+    rid: 8975624996118855683
+  objectInstantiator:
+    rid: 8975624723861602318
+  references:
+    version: 2
+    RefIds:
+    - rid: 8975624723861602318
+      type: {class: UniqueBurnableInstantiator, ns: , asm: Assembly-CSharp}
+      data: 
+    - rid: 8975624996118855683
+      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        prefab: {fileID: 6855767038368754221, guid: 451e73a8eddd14b2daf891b5ee6c2308,
+          type: 3}

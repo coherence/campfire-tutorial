@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Active: 1
   settings:
     passTag: WorldUI
-    Event: 1000
+    Event: 600
     filterSettings:
       RenderQueueType: 1
       LayerMask:

@@ -5292,13 +5292,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -6982,15 +6984,20 @@ MonoBehaviour:
   OnAuthorityRequestRejected:
     m_PersistentCalls:
       m_Calls: []
+  OnAuthTransferComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnConnectedEntityChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: 3494744314191850054, guid: a4aa0754334244480b83e41c327a4dee,
+  coherenceSyncConfig: {fileID: 11400000, guid: 172c22d80c3634c1aa39fc596ce79d1c,
     type: 2}
   archetype:
+    lodLevels:
+    - distance: 0
     boundComponents:
     - component: {fileID: 6621220932995602478}
       lodStepsActive: 1
@@ -7438,9 +7445,6 @@ MonoBehaviour:
       lodStepsActive: 1
     - component: {fileID: 4874302885197676216}
       lodStepsActive: 1
-    lodLevels:
-    - distance: 0
-    archetypeName: Player_cd9bcc1feead9419fac0c5981ce85c23
     GeneratesArchetypeDefinition: 1
   interpolationLocation: 4
   RigidbodyUpdateMode: 0
@@ -7456,7 +7460,7 @@ MonoBehaviour:
   OnRigidbody3DRotationUpdate:
     m_PersistentCalls:
       m_Calls: []
-  bakedScriptType: Coherence.Generated.CoherenceSyncPlayer_cd9bcc1feead9419fac0c5981ce85c23,
+  bakedScriptType: Coherence.Generated.CoherenceSync_cd9bcc1feead9419fac0c5981ce85c23,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
@@ -7505,6 +7509,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: 
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions:
@@ -7534,8 +7539,9 @@ MonoBehaviour:
           rid: 134368417253949441
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 3f725e0b-03bc-47c6-b9a9-e726699545a6
+        guid: 3f725e0b03bc47c6b9a9e726699545a6
         archetypeData:
           type: 0
           minRange: 0
@@ -7575,8 +7581,9 @@ MonoBehaviour:
           rid: 134368417253949444
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 6c9facfb-02c7-4024-92da-2e6e9e51ae3e
+        guid: 6c9facfb02c7402492da2e6e9e51ae3e
         archetypeData:
           type: 1
           minRange: -2147483648
@@ -7618,8 +7625,9 @@ MonoBehaviour:
           rid: 134368417253949446
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 665a00ac-fb6d-46d0-a9e9-276e9681a4ff
+        guid: 665a00acfb6d46d0a9e9276e9681a4ff
         archetypeData:
           type: 1
           minRange: -2147483648
@@ -7662,8 +7670,9 @@ MonoBehaviour:
           rid: 134368417253949449
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: b6102148-731e-4622-8bae-c06b4dd806c0
+        guid: b6102148731e46228baec06b4dd806c0
         archetypeData:
           type: 4
           minRange: 0
@@ -7708,8 +7717,9 @@ MonoBehaviour:
           rid: 134368417253949451
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 779cfe66-b425-4a80-89f5-17a1867b19aa
+        guid: 779cfe66b4254a8089f517a1867b19aa
         archetypeData:
           type: 3
           minRange: 0
@@ -7753,8 +7763,9 @@ MonoBehaviour:
           rid: 134368417253949455
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 787a2c4d-82f4-4358-ba8d-a3ebd14885aa
+        guid: 787a2c4d82f44358ba8da3ebd14885aa
         archetypeData:
           type: 3
           minRange: 0
@@ -7798,8 +7809,9 @@ MonoBehaviour:
           rid: 134368417253949457
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 3cfde664-4c5b-46d6-9583-102fdb4ad3d0
+        guid: 3cfde6644c5b46d69583102fdb4ad3d0
         archetypeData:
           type: 3
           minRange: 0
@@ -7868,8 +7880,9 @@ MonoBehaviour:
           rid: 134368711051051055
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 2c2f3f51-b6a9-480a-a62a-b1a234005a23
+        guid: 2c2f3f51b6a9480aa62ab1a234005a23
         archetypeData:
           type: 3
           minRange: 0
@@ -7927,8 +7940,9 @@ MonoBehaviour:
           rid: 2368829912872124505
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 35fe21b9-6141-49b4-8553-511c0683c2f9
+        guid: 35fe21b9614149b48553511c0683c2f9
         archetypeData:
           type: 1
           minRange: -2
@@ -7950,8 +7964,9 @@ MonoBehaviour:
           rid: 2368829912872124506
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 9730620f-6eb4-4d01-b04e-80e5fc5e4856
+        guid: 9730620f6eb44d01b04e80e5fc5e4856
         archetypeData:
           type: 1
           minRange: -2
@@ -7974,8 +7989,9 @@ MonoBehaviour:
           rid: 2368829912872124507
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 4d9a6244-2a07-4534-bca0-27258cca3b8c
+        guid: 4d9a62442a074534bca027258cca3b8c
         archetypeData:
           type: 7
           minRange: -100
@@ -8058,8 +8074,9 @@ MonoBehaviour:
           rid: 2368830072080302091
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 2ffecec9-e60b-43ea-89f0-a6e4bd8598b3
+        guid: 2ffecec9e60b43ea89f0a6e4bd8598b3
         archetypeData:
           type: 5
           minRange: 0
@@ -8102,8 +8119,9 @@ MonoBehaviour:
           rid: 2368830094440660995
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 60b57dc1-05e3-4765-bb24-9dbf96b35ed4
+        guid: 60b57dc105e34765bb249dbf96b35ed4
         archetypeData:
           type: 8
           minRange: 0
@@ -8146,8 +8164,9 @@ MonoBehaviour:
           rid: 3041628591939387414
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 6529ec93-596b-48d8-a68a-785189a35e85
+        guid: 6529ec93596b48d8a68a785189a35e85
         archetypeData:
           type: 5
           minRange: 0
@@ -8169,8 +8188,9 @@ MonoBehaviour:
           rid: 3041628591939387415
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 94d662d5-ece4-4c27-a497-9d590435d027
+        guid: 94d662d5ece44c27a4979d590435d027
         archetypeData:
           type: 1
           minRange: -2147483648
@@ -8233,8 +8253,9 @@ MonoBehaviour:
           rid: 3041628591939387496
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 9d071ea4-2a6e-41dc-9554-38febad4d202
+        guid: 9d071ea42a6e41dc955438febad4d202
         archetypeData:
           type: 7
           minRange: 0
@@ -8294,8 +8315,9 @@ MonoBehaviour:
           rid: 7887415022261371022
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: afb54d31-6be2-44a8-90e5-8fd53680e2d4
+        guid: afb54d316be244a890e58fd53680e2d4
         archetypeData:
           type: 1
           minRange: -2147483648
@@ -8337,8 +8359,9 @@ MonoBehaviour:
           rid: 8975624654701461556
         routing: 2
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 9072e960-68c9-4ef9-a783-ea24d7448bf8
+        guid: 9072e96068c94ef9a783ea24d7448bf8
         archetypeData:
           type: 0
           minRange: 0
@@ -8376,8 +8399,9 @@ MonoBehaviour:
           rid: 8975624654701461558
         routing: 2
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 9b336114-382d-4c8e-9176-71bfe4a6a142
+        guid: 9b336114382d4c8e917671bfe4a6a142
         archetypeData:
           type: 0
           minRange: 0
@@ -8415,8 +8439,9 @@ MonoBehaviour:
           rid: 8975624908920849400
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: a6362094-f44f-4918-a0b4-a6b21f19b61d
+        guid: a6362094f44f4918a0b4a6b21f19b61d
         archetypeData:
           type: 0
           minRange: 0
@@ -8454,8 +8479,9 @@ MonoBehaviour:
           rid: 8975624908920849402
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: c6cd65f2-d335-47e7-800e-9cd24ce9a96c
+        guid: c6cd65f2d33547e7800e9cd24ce9a96c
         archetypeData:
           type: 0
           minRange: 0
@@ -8493,8 +8519,9 @@ MonoBehaviour:
           rid: 8975624972854099969
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 344741bc-fef1-4e43-909a-3d3fe59aa829
+        guid: 344741bcfef14e43909a3d3fe59aa829
         archetypeData:
           type: 0
           minRange: 0
@@ -8537,8 +8564,9 @@ MonoBehaviour:
           rid: 8975624978862964807
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 2306915e-2284-4ead-bded-8e81dad23c41
+        guid: 2306915e22844eadbded8e81dad23c41
         archetypeData:
           type: 0
           minRange: 0
@@ -8576,8 +8604,9 @@ MonoBehaviour:
           rid: 8975624978862964809
         routing: 1
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: a44176ed-bb6f-4de8-8cf6-11e02b9b81a5
+        guid: a44176edbb6f4de88cf611e02b9b81a5
         archetypeData:
           type: 0
           minRange: 0
@@ -8615,8 +8644,9 @@ MonoBehaviour:
           rid: 8975625154910224445
         routing: 2
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: d80a9015-b884-4731-b2e0-4870faa56abe
+        guid: d80a9015b8844731b2e04870faa56abe
         archetypeData:
           type: 0
           minRange: 0
@@ -8656,8 +8686,9 @@ MonoBehaviour:
           rid: 9164619131893317723
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: e1e87976-a62a-499c-9c88-381bbdde8ec3
+        guid: e1e87976a62a499c9c88381bbdde8ec3
         archetypeData:
           type: 7
           minRange: -100

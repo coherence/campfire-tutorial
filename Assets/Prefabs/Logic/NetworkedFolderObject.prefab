@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3093582308865135207}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &-3156728205473848956
 MonoBehaviour:
@@ -59,21 +59,23 @@ MonoBehaviour:
   OnAuthorityRequestRejected:
     m_PersistentCalls:
       m_Calls: []
+  OnAuthTransferComplete:
+    m_PersistentCalls:
+      m_Calls: []
   OnConnectedEntityChanged:
     m_PersistentCalls:
       m_Calls: []
   OnInputSimulatorConnected:
     m_PersistentCalls:
       m_Calls: []
-  coherenceSyncConfig: {fileID: 6566137840443200145, guid: a4aa0754334244480b83e41c327a4dee,
+  coherenceSyncConfig: {fileID: 11400000, guid: ec6c7e2facb094da9afdf15dbe59aa68,
     type: 2}
   archetype:
+    lodLevels:
+    - distance: 0
     boundComponents:
     - component: {fileID: 8044904814215782244}
       lodStepsActive: 1
-    lodLevels:
-    - distance: 0
-    archetypeName: NetworkedFolderObject_b222c7ad94d9f44beb6d7a92a631da26
     GeneratesArchetypeDefinition: 0
   interpolationLocation: 0
   RigidbodyUpdateMode: 0
@@ -89,7 +91,7 @@ MonoBehaviour:
   OnRigidbody3DRotationUpdate:
     m_PersistentCalls:
       m_Calls: []
-  bakedScriptType: Coherence.Generated.CoherenceSyncNetworkedFolderObject_b222c7ad94d9f44beb6d7a92a631da26,
+  bakedScriptType: Coherence.Generated.CoherenceSync_b222c7ad94d9f44beb6d7a92a631da26,
     Assembly-CSharp
   approveAuthorityTransferRequests: 1
   simulationType: 0
@@ -113,6 +115,7 @@ MonoBehaviour:
       m_Calls: []
   scenePrefabInstanceUUID: 
   coherenceUUID: networked-folder
+  assetVersion: 
   usingReflection: 0
   coherenceTag: 
   componentActions: []
@@ -131,8 +134,9 @@ MonoBehaviour:
           rid: 134368711051051009
         routing: 0
         isPredicted: 0
+        predictionMode: 0
         defaultInterpolationPath: 
-        guid: 2098c804-0ea0-4eef-a25a-ed5596a0cdf5
+        guid: 2098c8040ea04eefa25aed5596a0cdf5
         archetypeData:
           type: 7
           minRange: 0
