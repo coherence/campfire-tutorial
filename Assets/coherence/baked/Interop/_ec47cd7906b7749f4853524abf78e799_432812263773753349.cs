@@ -49,9 +49,9 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.holdingForUUID = comp->holdingForUUID.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->holdingForUUID.Data, comp->holdingForUUID.Length) : null;
+            orig.holdingForUUID = comp->holdingForUUID.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->holdingForUUID.Data, (int)comp->holdingForUUID.Length) : null;
             orig.isObjectPresent = comp->isObjectPresent != 0;
-            orig.syncConfigId = comp->syncConfigId.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->syncConfigId.Data, comp->syncConfigId.Length) : null;
+            orig.syncConfigId = comp->syncConfigId.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->syncConfigId.Data, (int)comp->syncConfigId.Length) : null;
 
             return orig;
         }
@@ -128,22 +128,22 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                holdingForUUIDSimulationFrame = other.holdingForUUIDSimulationFrame;
-                holdingForUUID = other.holdingForUUID;
+                this.holdingForUUIDSimulationFrame = other.holdingForUUIDSimulationFrame;
+                this.holdingForUUID = other.holdingForUUID;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                isObjectPresentSimulationFrame = other.isObjectPresentSimulationFrame;
-                isObjectPresent = other.isObjectPresent;
+                this.isObjectPresentSimulationFrame = other.isObjectPresentSimulationFrame;
+                this.isObjectPresent = other.isObjectPresent;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                syncConfigIdSimulationFrame = other.syncConfigIdSimulationFrame;
-                syncConfigId = other.syncConfigId;
+                this.syncConfigIdSimulationFrame = other.syncConfigIdSimulationFrame;
+                this.syncConfigId = other.syncConfigId;
             }
 
             otherMask >>= 1;
@@ -219,19 +219,19 @@ namespace Coherence.Generated
             {
 
                 val.holdingForUUID = bitStream.ReadShortString();
-                val.FieldsMask |= holdingForUUIDMask;
+                val.FieldsMask |= _ec47cd7906b7749f4853524abf78e799_432812263773753349.holdingForUUIDMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.isObjectPresent = bitStream.ReadBool();
-                val.FieldsMask |= isObjectPresentMask;
+                val.FieldsMask |= _ec47cd7906b7749f4853524abf78e799_432812263773753349.isObjectPresentMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.syncConfigId = bitStream.ReadShortString();
-                val.FieldsMask |= syncConfigIdMask;
+                val.FieldsMask |= _ec47cd7906b7749f4853524abf78e799_432812263773753349.syncConfigIdMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -243,9 +243,9 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_ec47cd7906b7749f4853524abf78e799_432812263773753349(" +
-                $" holdingForUUID: { holdingForUUID }" +
-                $" isObjectPresent: { isObjectPresent }" +
-                $" syncConfigId: { syncConfigId }" +
+                $" holdingForUUID: { this.holdingForUUID }" +
+                $" isObjectPresent: { this.isObjectPresent }" +
+                $" syncConfigId: { this.syncConfigId }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(3, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(3, '0') })";
         }

@@ -116,8 +116,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                enabledSimulationFrame = other.enabledSimulationFrame;
-                enabled = other.enabled;
+                this.enabledSimulationFrame = other.enabledSimulationFrame;
+                this.enabled = other.enabled;
             }
 
             otherMask >>= 1;
@@ -169,7 +169,7 @@ namespace Coherence.Generated
             {
 
                 val.enabled = bitStream.ReadBool();
-                val.FieldsMask |= enabledMask;
+                val.FieldsMask |= _91ccee2338d92624a8021fda1c91e47c_1987083777327440787.enabledMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -181,7 +181,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_91ccee2338d92624a8021fda1c91e47c_1987083777327440787(" +
-                $" enabled: { enabled }" +
+                $" enabled: { this.enabled }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

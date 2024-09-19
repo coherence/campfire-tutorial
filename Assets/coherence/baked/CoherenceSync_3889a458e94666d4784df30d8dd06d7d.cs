@@ -34,6 +34,7 @@ namespace Coherence.Generated
     	    CastedUnityComponent = (global::UnityEngine.Transform)UnityComponent;
         }
 
+        public override global::System.Type CoherenceComponentType => typeof(WorldPosition);
         public override string CoherenceComponentName => "WorldPosition";
         public override uint FieldMask => 0b00000000000000000000000000000001;
 
@@ -56,7 +57,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (RuntimeInterpolationSettings.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone)
             {
                 update.value = Value;
             }
@@ -86,6 +87,7 @@ namespace Coherence.Generated
     	    CastedUnityComponent = (global::Campfire)UnityComponent;
         }
 
+        public override global::System.Type CoherenceComponentType => typeof(_3889a458e94666d4784df30d8dd06d7d_6540142254599110064);
         public override string CoherenceComponentName => "_3889a458e94666d4784df30d8dd06d7d_6540142254599110064";
         public override uint FieldMask => 0b00000000000000000000000000000001;
 
@@ -107,7 +109,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_3889a458e94666d4784df30d8dd06d7d_6540142254599110064)coherenceComponent;
-            if (RuntimeInterpolationSettings.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone)
             {
                 update.activeFireEffect = Value;
             }
@@ -137,6 +139,7 @@ namespace Coherence.Generated
     	    CastedUnityComponent = (global::Campfire)UnityComponent;
         }
 
+        public override global::System.Type CoherenceComponentType => typeof(_3889a458e94666d4784df30d8dd06d7d_6540142254599110064);
         public override string CoherenceComponentName => "_3889a458e94666d4784df30d8dd06d7d_6540142254599110064";
         public override uint FieldMask => 0b00000000000000000000000000000010;
 
@@ -158,7 +161,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_3889a458e94666d4784df30d8dd06d7d_6540142254599110064)coherenceComponent;
-            if (RuntimeInterpolationSettings.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone)
             {
                 update.fireTimer = Value;
             }
@@ -188,6 +191,7 @@ namespace Coherence.Generated
     	    CastedUnityComponent = (global::Campfire)UnityComponent;
         }
 
+        public override global::System.Type CoherenceComponentType => typeof(_3889a458e94666d4784df30d8dd06d7d_6540142254599110064);
         public override string CoherenceComponentName => "_3889a458e94666d4784df30d8dd06d7d_6540142254599110064";
         public override uint FieldMask => 0b00000000000000000000000000000100;
 
@@ -209,7 +213,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_3889a458e94666d4784df30d8dd06d7d_6540142254599110064)coherenceComponent;
-            if (RuntimeInterpolationSettings.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone)
             {
                 update.bigFireTimer = Value;
             }

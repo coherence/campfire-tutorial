@@ -118,8 +118,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                energySimulationFrame = other.energySimulationFrame;
-                energy = other.energy;
+                this.energySimulationFrame = other.energySimulationFrame;
+                this.energy = other.energy;
             }
 
             otherMask >>= 1;
@@ -174,7 +174,7 @@ namespace Coherence.Generated
             {
 
                 val.energy = bitStream.ReadIntegerRange(32, -2147483648);
-                val.FieldsMask |= energyMask;
+                val.FieldsMask |= _3d92447627afdfc419ceeb6b26251a87_1406947345458511524.energyMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -186,7 +186,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_3d92447627afdfc419ceeb6b26251a87_1406947345458511524(" +
-                $" energy: { energy }" +
+                $" energy: { this.energy }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

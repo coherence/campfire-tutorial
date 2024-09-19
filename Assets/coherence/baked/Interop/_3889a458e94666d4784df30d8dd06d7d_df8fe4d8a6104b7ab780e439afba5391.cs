@@ -40,7 +40,7 @@ namespace Coherence.Generated
             var comp = (Interop*)data;
             orig.oldEffectID = comp->oldEffectID;
             orig.newEffectID = comp->newEffectID;
-            orig.syncConfigID = comp->syncConfigID.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->syncConfigID.Data, comp->syncConfigID.Length) : null;
+            orig.syncConfigID = comp->syncConfigID.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->syncConfigID.Data, (int)comp->syncConfigID.Length) : null;
             return orig;
         }
 
