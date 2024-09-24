@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca0ffa7522f34dbfb8ca6e555f9e6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configRegistry: {fileID: 11400000, guid: a4aa0754334244480b83e41c327a4dee, type: 2}
+  configRegistry: {fileID: 0}
   animator: {fileID: 4667129514690375174}
   soundHandler: {fileID: 3791772795559446476}
   humLoop: {fileID: 11400000, guid: f65b23b17cdd74532b8f6d750e65fec6, type: 2}
@@ -325,7 +325,7 @@ MonoBehaviour:
   onNetworkedDestruction:
     m_PersistentCalls:
       m_Calls: []
-  scenePrefabInstanceUUID: 45780
+  scenePrefabInstanceUUID: 
   coherenceUUID: keeper-robot
   assetVersion: 
   usingReflection: 0
@@ -346,9 +346,9 @@ MonoBehaviour:
         descriptor:
           rid: 3041628591939387455
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 0174ef8a52ab48e6aee788bea243f7f5
         archetypeData:
           type: 3
@@ -377,6 +377,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Chair, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -390,9 +391,9 @@ MonoBehaviour:
         descriptor:
           rid: 3041628591939387481
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 7f3e0b9e3ab247f68ebb0067b5b4b6c4
         archetypeData:
           type: 0
@@ -418,6 +419,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Chair, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -432,9 +434,9 @@ MonoBehaviour:
         descriptor:
           rid: 8975625062529892392
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: aa3341ec45d847e3a6334d365bb6e8f6
         archetypeData:
           type: 7
@@ -464,6 +466,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -477,9 +480,9 @@ MonoBehaviour:
         descriptor:
           rid: 8975625062529892394
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: a08cbf1b7c0b489e9d34a142c88514c8
         archetypeData:
           type: 0
@@ -504,6 +507,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: KeeperRobot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -517,9 +521,9 @@ MonoBehaviour:
         descriptor:
           rid: 8975625062529892396
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: e584959f421448c0b118bf28bd4867b2
         archetypeData:
           type: 0
@@ -544,6 +548,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: KeeperRobot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -557,9 +562,9 @@ MonoBehaviour:
         descriptor:
           rid: 8975625062529892398
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 0f10acf8439d449385dbd33450d1f0fb
         archetypeData:
           type: 0
@@ -584,6 +589,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: KeeperRobot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -598,9 +604,9 @@ MonoBehaviour:
         descriptor:
           rid: 8975625062529892402
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 4cef7f16f6344b529a98ff11487873bc
         archetypeData:
           type: 8
@@ -630,6 +636,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -649,9 +656,9 @@ MonoBehaviour:
         descriptor:
           rid: 8975625062529892405
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: f4b199dae036494baf4943dea2b97d33
         archetypeData:
           type: 3
@@ -680,6 +687,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Animator, UnityEngine.AnimationModule,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -695,9 +703,9 @@ MonoBehaviour:
         descriptor:
           rid: 8975625062529892407
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 5735b03a1aa74d87a5f2e163eed89df2
         archetypeData:
           type: 3
@@ -726,6 +734,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Animator, UnityEngine.AnimationModule,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -745,9 +754,9 @@ MonoBehaviour:
         descriptor:
           rid: 8975625202164826114
         routing: 1
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: e86b8c2ff539476e96c5792baaad07d6
         archetypeData:
           type: 0
@@ -772,6 +781,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: KeeperRobot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:

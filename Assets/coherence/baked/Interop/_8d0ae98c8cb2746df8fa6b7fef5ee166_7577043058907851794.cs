@@ -116,8 +116,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                isBeingCarriedSimulationFrame = other.isBeingCarriedSimulationFrame;
-                isBeingCarried = other.isBeingCarried;
+                this.isBeingCarriedSimulationFrame = other.isBeingCarriedSimulationFrame;
+                this.isBeingCarried = other.isBeingCarried;
             }
 
             otherMask >>= 1;
@@ -169,7 +169,7 @@ namespace Coherence.Generated
             {
 
                 val.isBeingCarried = bitStream.ReadBool();
-                val.FieldsMask |= isBeingCarriedMask;
+                val.FieldsMask |= _8d0ae98c8cb2746df8fa6b7fef5ee166_7577043058907851794.isBeingCarriedMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -181,7 +181,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_8d0ae98c8cb2746df8fa6b7fef5ee166_7577043058907851794(" +
-                $" isBeingCarried: { isBeingCarried }" +
+                $" isBeingCarried: { this.isBeingCarried }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

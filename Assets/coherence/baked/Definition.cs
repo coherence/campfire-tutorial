@@ -20,7 +20,7 @@ namespace Coherence.Generated
 
     public class Definition : IDefinition
     {
-        public const string schemaId = "13fe6b1d80e3516db6c7f813448e8bc712ae5461";
+        public const string schemaId = "71604414093d374a927039513d29fb0fe0de11e9";
         public const uint InternalWorldPosition = 0;
         public const uint InternalWorldOrientation = 1;
         public const uint InternalLocalUserComponent = 2;
@@ -266,8 +266,8 @@ namespace Coherence.Generated
         public const uint Internal_e74854605b68b435280bc0ac73fef6c1_ad9e635638034d88b0c6dcd8a9c83286 = 37;
         public const uint Internal_ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d = 38;
         public const uint Internal_f446f3c484ae048c4ba11ef7b8642420_ad9e635638034d88b0c6dcd8a9c83286 = 39;
-    
-        private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>() 
+
+        private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>()
         {
             { 0, "WorldPosition" },
             { 1, "WorldOrientation" },
@@ -487,8 +487,8 @@ namespace Coherence.Generated
                 return "";
             }
         }
-        
-        public static readonly Dictionary<uint, MessageTarget> CommandRoutingByType = new Dictionary<uint, MessageTarget>() 
+
+        public static readonly Dictionary<uint, MessageTarget> CommandRoutingByType = new Dictionary<uint, MessageTarget>()
         {
             { Definition.InternalAuthorityRequest , MessageTarget.All },
             { Definition.InternalAuthorityTransfer , MessageTarget.All },
@@ -531,7 +531,7 @@ namespace Coherence.Generated
             { Definition.Internal_ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d , MessageTarget.AuthorityOnly },
             { Definition.Internal_f446f3c484ae048c4ba11ef7b8642420_ad9e635638034d88b0c6dcd8a9c83286 , MessageTarget.All },
         };
-        
+
         public ICoherenceComponentData ReadComponentUpdate(uint componentType, AbsoluteSimulationFrame referenceSimulationFrame,
             IInBitStream bitStream, Logger logger)
         {
@@ -1495,6 +1495,16 @@ namespace Coherence.Generated
             return inputData;
         }
 
+        public IEntityCommand ReadCommand(IInBitStream bitStream, Logger logger)
+        {
+            var entityID = DeserializerTools.DeserializeEntity(bitStream);
+            var messageTarget = DeserializerTools.DeserializeMessageTarget(bitStream);
+            var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
+            var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
+
+            return ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
+        }
+
         public void WriteCommand(IEntityCommand data, uint commandType, IOutProtocolBitStream bitStream, Logger logger)
         {
             switch (commandType)
@@ -1648,10 +1658,10 @@ namespace Coherence.Generated
             return new AdoptOrphan();
         }
 
-        public bool TryGetAuthorityRequestCommand(IEntityCommand entityCommand, 
+        public bool TryGetAuthorityRequestCommand(IEntityCommand entityCommand,
             out ClientID requester, out AuthorityType authType)
         {
-            if (entityCommand is AuthorityRequest request) 
+            if (entityCommand is AuthorityRequest request)
             {
                 requester = (ClientID)request.requester;
                 authType = (AuthorityType)request.authorityType;
@@ -1671,9 +1681,9 @@ namespace Coherence.Generated
         }
 
         public bool TryGetAuthorityTransferCommand(IEntityCommand entityCommand, out ClientID newAuthority,
-            out bool transferAccepted, out AuthorityType authType) 
+            out bool transferAccepted, out AuthorityType authType)
         {
-            if (entityCommand is AuthorityTransfer transfer) 
+            if (entityCommand is AuthorityTransfer transfer)
             {
                 newAuthority = (ClientID)transfer.newAuthority;
                 transferAccepted = transfer.accepted;
@@ -1737,7 +1747,7 @@ namespace Coherence.Generated
 
         public bool TryGetSceneIndexChangedCommand(IEntityCommand entityCommand, out int sceneIndex)
         {
-            if (entityCommand is SceneIndexChanged changed) 
+            if (entityCommand is SceneIndexChanged changed)
             {
                 sceneIndex = (int)changed.sceneIndex;
 
@@ -1765,7 +1775,7 @@ namespace Coherence.Generated
             }
         }
 }
-    
+
 
 
 }

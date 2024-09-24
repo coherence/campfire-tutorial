@@ -265,7 +265,7 @@
       "hash": "141b4e1e31966242a6fb7c495b52ac3d1221bc75"
     },
     "io.coherence.sdk": {
-      "version": "1.2.1",
+      "version": "1.3.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {

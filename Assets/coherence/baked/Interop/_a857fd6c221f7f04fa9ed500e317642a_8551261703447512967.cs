@@ -116,8 +116,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                isBusySimulationFrame = other.isBusySimulationFrame;
-                isBusy = other.isBusy;
+                this.isBusySimulationFrame = other.isBusySimulationFrame;
+                this.isBusy = other.isBusy;
             }
 
             otherMask >>= 1;
@@ -169,7 +169,7 @@ namespace Coherence.Generated
             {
 
                 val.isBusy = bitStream.ReadBool();
-                val.FieldsMask |= isBusyMask;
+                val.FieldsMask |= _a857fd6c221f7f04fa9ed500e317642a_8551261703447512967.isBusyMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -181,7 +181,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_a857fd6c221f7f04fa9ed500e317642a_8551261703447512967(" +
-                $" isBusy: { isBusy }" +
+                $" isBusy: { this.isBusy }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }
