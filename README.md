@@ -20,7 +20,7 @@ Currently the project is on Unity `2022.3.5f1`.
 ## Additional resources
 
 ### Documentation
-After downloading this Unity project, we suggest to open up the [documentation](https://docs.coherence.io/learning-coherence/campfire-project) as it's the perfect companion to explore the topics above.
+After downloading this Unity project, we suggest to open up the [documentation](https://docs.coherence.io/getting-started/samples-and-tutorials/campfire-project) as it's the perfect companion to explore the topics above.
 
 ### Trying a pre-made build
 To quickly try a pre-built version of the game, head to [this link](https://coherence.io/games/coherence/campfire-tutorial) and either play the WebGL build in the browser, or download one of the available desktop versions.
