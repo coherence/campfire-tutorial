@@ -157,22 +157,22 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                activeFireEffectSimulationFrame = other.activeFireEffectSimulationFrame;
-                activeFireEffect = other.activeFireEffect;
+                this.activeFireEffectSimulationFrame = other.activeFireEffectSimulationFrame;
+                this.activeFireEffect = other.activeFireEffect;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                fireTimerSimulationFrame = other.fireTimerSimulationFrame;
-                fireTimer = other.fireTimer;
+                this.fireTimerSimulationFrame = other.fireTimerSimulationFrame;
+                this.fireTimer = other.fireTimer;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                bigFireTimerSimulationFrame = other.bigFireTimerSimulationFrame;
-                bigFireTimer = other.bigFireTimer;
+                this.bigFireTimerSimulationFrame = other.bigFireTimerSimulationFrame;
+                this.bigFireTimer = other.bigFireTimer;
             }
 
             otherMask >>= 1;
@@ -255,19 +255,19 @@ namespace Coherence.Generated
             {
 
                 val.activeFireEffect = bitStream.ReadIntegerRange(4, -1);
-                val.FieldsMask |= activeFireEffectMask;
+                val.FieldsMask |= _3889a458e94666d4784df30d8dd06d7d_6540142254599110064.activeFireEffectMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.fireTimer = bitStream.ReadFloat(FloatMeta.ForFixedPoint(-5, 100, 0.001d));
-                val.FieldsMask |= fireTimerMask;
+                val.FieldsMask |= _3889a458e94666d4784df30d8dd06d7d_6540142254599110064.fireTimerMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.bigFireTimer = bitStream.ReadFloat(FloatMeta.ForFixedPoint(-5, 100, 0.001d));
-                val.FieldsMask |= bigFireTimerMask;
+                val.FieldsMask |= _3889a458e94666d4784df30d8dd06d7d_6540142254599110064.bigFireTimerMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -311,9 +311,9 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_3889a458e94666d4784df30d8dd06d7d_6540142254599110064(" +
-                $" activeFireEffect: { activeFireEffect }" +
-                $" fireTimer: { fireTimer }" +
-                $" bigFireTimer: { bigFireTimer }" +
+                $" activeFireEffect: { this.activeFireEffect }" +
+                $" fireTimer: { this.fireTimer }" +
+                $" bigFireTimer: { this.bigFireTimer }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(3, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(3, '0') })";
         }

@@ -77,7 +77,7 @@ namespace Coherence.Generated
         {
             return new HashSet<Entity>()
             {
-                objectAnchorSync,
+                this.objectAnchorSync,
             };
         }
 
@@ -85,9 +85,9 @@ namespace Coherence.Generated
         {
             uint refsMask = 0;
 
-            if (objectAnchorSync == fromEntity)
+            if (this.objectAnchorSync == fromEntity)
             {
-                objectAnchorSync = toEntity;
+                this.objectAnchorSync = toEntity;
                 refsMask |= 1 << 0;
             }
 
@@ -100,14 +100,14 @@ namespace Coherence.Generated
         {
             Entity absoluteEntity;
             IEntityMapper.Error err;
-            err = mapper.MapToAbsoluteEntity(objectAnchorSync, false, out absoluteEntity);
+            err = mapper.MapToAbsoluteEntity(this.objectAnchorSync, false, out absoluteEntity);
 
             if (err != IEntityMapper.Error.None)
             {
                 return err;
             }
 
-            objectAnchorSync = absoluteEntity;
+            this.objectAnchorSync = absoluteEntity;
             return IEntityMapper.Error.None;
         }
 
@@ -120,7 +120,7 @@ namespace Coherence.Generated
             // meaning there's no mapping for the parent yet. This wouldn't be necessary if mapping creation would happen
             // in the clientWorld via create/destroy requests while here we would only check whether mapping exists or not.
             var createParentMapping_objectAnchorSync = true;
-            err = mapper.MapToRelativeEntity(objectAnchorSync, createParentMapping_objectAnchorSync,
+            err = mapper.MapToRelativeEntity(this.objectAnchorSync, createParentMapping_objectAnchorSync,
              out relativeEntity);
 
             if (err != IEntityMapper.Error.None)
@@ -128,7 +128,7 @@ namespace Coherence.Generated
                 return err;
             }
 
-            objectAnchorSync = relativeEntity;
+            this.objectAnchorSync = relativeEntity;
             return IEntityMapper.Error.None;
         }
 
@@ -155,8 +155,8 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                objectAnchorSyncSimulationFrame = other.objectAnchorSyncSimulationFrame;
-                objectAnchorSync = other.objectAnchorSync;
+                this.objectAnchorSyncSimulationFrame = other.objectAnchorSyncSimulationFrame;
+                this.objectAnchorSync = other.objectAnchorSync;
             }
 
             otherMask >>= 1;
@@ -208,7 +208,7 @@ namespace Coherence.Generated
             {
 
                 val.objectAnchorSync = bitStream.ReadEntity();
-                val.FieldsMask |= objectAnchorSyncMask;
+                val.FieldsMask |= _e74854605b68b435280bc0ac73fef6c1_6806255523165594879.objectAnchorSyncMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -220,7 +220,7 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_e74854605b68b435280bc0ac73fef6c1_6806255523165594879(" +
-                $" objectAnchorSync: { objectAnchorSync }" +
+                $" objectAnchorSync: { this.objectAnchorSync }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(1, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(1, '0') })";
         }

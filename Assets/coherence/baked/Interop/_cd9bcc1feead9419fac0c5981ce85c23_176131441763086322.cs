@@ -161,9 +161,9 @@ namespace Coherence.Generated
         {
             AbsoluteSimulationFrame? min = null;
 
-            if ((FieldsMask & MoveSpeedMask) != 0 && (min == null || MoveSpeedSimulationFrame < min))
+            if ((FieldsMask & _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.MoveSpeedMask) != 0 && (min == null || this.MoveSpeedSimulationFrame < min))
             {
-                min = MoveSpeedSimulationFrame;
+                min = this.MoveSpeedSimulationFrame;
             }
 
             return min;
@@ -179,36 +179,36 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                MoveSpeedSimulationFrame = other.MoveSpeedSimulationFrame;
-                MoveSpeed = other.MoveSpeed;
+                this.MoveSpeedSimulationFrame = other.MoveSpeedSimulationFrame;
+                this.MoveSpeed = other.MoveSpeed;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                GroundedSimulationFrame = other.GroundedSimulationFrame;
-                Grounded = other.Grounded;
+                this.GroundedSimulationFrame = other.GroundedSimulationFrame;
+                this.Grounded = other.Grounded;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                CarryingBigSimulationFrame = other.CarryingBigSimulationFrame;
-                CarryingBig = other.CarryingBig;
+                this.CarryingBigSimulationFrame = other.CarryingBigSimulationFrame;
+                this.CarryingBig = other.CarryingBig;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                IsChoppingSimulationFrame = other.IsChoppingSimulationFrame;
-                IsChopping = other.IsChopping;
+                this.IsChoppingSimulationFrame = other.IsChoppingSimulationFrame;
+                this.IsChopping = other.IsChopping;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                IsSittingSimulationFrame = other.IsSittingSimulationFrame;
-                IsSitting = other.IsSitting;
+                this.IsSittingSimulationFrame = other.IsSittingSimulationFrame;
+                this.IsSitting = other.IsSitting;
             }
 
             otherMask >>= 1;
@@ -319,31 +319,31 @@ namespace Coherence.Generated
                 val.MoveSpeedSimulationFrame = referenceSimulationFrame + DeserializerTools.ReadFieldSimFrameDelta(bitStream);
 
                 val.MoveSpeed = bitStream.ReadFloat(FloatMeta.NoCompression());
-                val.FieldsMask |= MoveSpeedMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.MoveSpeedMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.Grounded = bitStream.ReadBool();
-                val.FieldsMask |= GroundedMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.GroundedMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.CarryingBig = bitStream.ReadBool();
-                val.FieldsMask |= CarryingBigMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.CarryingBigMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.IsChopping = bitStream.ReadBool();
-                val.FieldsMask |= IsChoppingMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.IsChoppingMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.IsSitting = bitStream.ReadBool();
-                val.FieldsMask |= IsSittingMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.IsSittingMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -400,12 +400,12 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_cd9bcc1feead9419fac0c5981ce85c23_176131441763086322(" +
-                $" MoveSpeed: { MoveSpeed }" +
-                $", MoveSpeedSimFrame: { MoveSpeedSimulationFrame }" +
-                $" Grounded: { Grounded }" +
-                $" CarryingBig: { CarryingBig }" +
-                $" IsChopping: { IsChopping }" +
-                $" IsSitting: { IsSitting }" +
+                $" MoveSpeed: { this.MoveSpeed }" +
+                $", MoveSpeedSimFrame: { this.MoveSpeedSimulationFrame }" +
+                $" Grounded: { this.Grounded }" +
+                $" CarryingBig: { this.CarryingBig }" +
+                $" IsChopping: { this.IsChopping }" +
+                $" IsSitting: { this.IsSitting }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(5, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(5, '0') })";
         }

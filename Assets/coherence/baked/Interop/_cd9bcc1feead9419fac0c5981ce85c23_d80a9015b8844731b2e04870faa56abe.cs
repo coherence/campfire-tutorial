@@ -34,7 +34,7 @@ namespace Coherence.Generated
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe();
             var comp = (Interop*)data;
-            orig.encodedMessage = new byte[comp->encodedMessage.Length]; Marshal.Copy((System.IntPtr)comp->encodedMessage.Data, orig.encodedMessage, 0, comp->encodedMessage.Length);
+            orig.encodedMessage = new byte[comp->encodedMessage.Length]; Marshal.Copy((System.IntPtr)comp->encodedMessage.Data, orig.encodedMessage, 0, (int)comp->encodedMessage.Length);
             return orig;
         }
 

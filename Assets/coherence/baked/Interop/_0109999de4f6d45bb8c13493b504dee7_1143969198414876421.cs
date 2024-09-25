@@ -47,7 +47,7 @@ namespace Coherence.Generated
 
             var comp = (Interop*)data;
 
-            orig.path = comp->path.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->path.Data, comp->path.Length) : null;
+            orig.path = comp->path.Data != null ? System.Text.Encoding.UTF8.GetString((byte*)comp->path.Data, (int)comp->path.Length) : null;
             orig.pathDirtyCounter = comp->pathDirtyCounter;
 
             return orig;
@@ -124,15 +124,15 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                pathSimulationFrame = other.pathSimulationFrame;
-                path = other.path;
+                this.pathSimulationFrame = other.pathSimulationFrame;
+                this.path = other.path;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                pathDirtyCounterSimulationFrame = other.pathDirtyCounterSimulationFrame;
-                pathDirtyCounter = other.pathDirtyCounter;
+                this.pathDirtyCounterSimulationFrame = other.pathDirtyCounterSimulationFrame;
+                this.pathDirtyCounter = other.pathDirtyCounter;
             }
 
             otherMask >>= 1;
@@ -199,13 +199,13 @@ namespace Coherence.Generated
             {
 
                 val.path = bitStream.ReadShortString();
-                val.FieldsMask |= pathMask;
+                val.FieldsMask |= _0109999de4f6d45bb8c13493b504dee7_1143969198414876421.pathMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.pathDirtyCounter = bitStream.ReadIntegerRange(32, -2147483648);
-                val.FieldsMask |= pathDirtyCounterMask;
+                val.FieldsMask |= _0109999de4f6d45bb8c13493b504dee7_1143969198414876421.pathDirtyCounterMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -217,8 +217,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_0109999de4f6d45bb8c13493b504dee7_1143969198414876421(" +
-                $" path: { path }" +
-                $" pathDirtyCounter: { pathDirtyCounter }" +
+                $" path: { this.path }" +
+                $" pathDirtyCounter: { this.pathDirtyCounter }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }

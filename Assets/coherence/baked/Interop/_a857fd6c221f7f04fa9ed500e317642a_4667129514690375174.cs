@@ -122,15 +122,15 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                IsFlailingSimulationFrame = other.IsFlailingSimulationFrame;
-                IsFlailing = other.IsFlailing;
+                this.IsFlailingSimulationFrame = other.IsFlailingSimulationFrame;
+                this.IsFlailing = other.IsFlailing;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                IsCarryingSimulationFrame = other.IsCarryingSimulationFrame;
-                IsCarrying = other.IsCarrying;
+                this.IsCarryingSimulationFrame = other.IsCarryingSimulationFrame;
+                this.IsCarrying = other.IsCarrying;
             }
 
             otherMask >>= 1;
@@ -194,13 +194,13 @@ namespace Coherence.Generated
             {
 
                 val.IsFlailing = bitStream.ReadBool();
-                val.FieldsMask |= IsFlailingMask;
+                val.FieldsMask |= _a857fd6c221f7f04fa9ed500e317642a_4667129514690375174.IsFlailingMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.IsCarrying = bitStream.ReadBool();
-                val.FieldsMask |= IsCarryingMask;
+                val.FieldsMask |= _a857fd6c221f7f04fa9ed500e317642a_4667129514690375174.IsCarryingMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -212,8 +212,8 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_a857fd6c221f7f04fa9ed500e317642a_4667129514690375174(" +
-                $" IsFlailing: { IsFlailing }" +
-                $" IsCarrying: { IsCarrying }" +
+                $" IsFlailing: { this.IsFlailing }" +
+                $" IsCarrying: { this.IsCarrying }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(2, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(2, '0') })";
         }

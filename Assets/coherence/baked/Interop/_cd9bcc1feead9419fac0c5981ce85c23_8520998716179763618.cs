@@ -175,36 +175,36 @@ namespace Coherence.Generated
 
             if ((otherMask & 0x01) != 0)
             {
-                currentBackpackSimulationFrame = other.currentBackpackSimulationFrame;
-                currentBackpack = other.currentBackpack;
+                this.currentBackpackSimulationFrame = other.currentBackpackSimulationFrame;
+                this.currentBackpack = other.currentBackpack;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                currentSkinToneSimulationFrame = other.currentSkinToneSimulationFrame;
-                currentSkinTone = other.currentSkinTone;
+                this.currentSkinToneSimulationFrame = other.currentSkinToneSimulationFrame;
+                this.currentSkinTone = other.currentSkinTone;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                currentClothesSimulationFrame = other.currentClothesSimulationFrame;
-                currentClothes = other.currentClothes;
+                this.currentClothesSimulationFrame = other.currentClothesSimulationFrame;
+                this.currentClothes = other.currentClothes;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                currentBodySimulationFrame = other.currentBodySimulationFrame;
-                currentBody = other.currentBody;
+                this.currentBodySimulationFrame = other.currentBodySimulationFrame;
+                this.currentBody = other.currentBody;
             }
 
             otherMask >>= 1;
             if ((otherMask & 0x01) != 0)
             {
-                currentHairstyleSimulationFrame = other.currentHairstyleSimulationFrame;
-                currentHairstyle = other.currentHairstyle;
+                this.currentHairstyleSimulationFrame = other.currentHairstyleSimulationFrame;
+                this.currentHairstyle = other.currentHairstyle;
             }
 
             otherMask >>= 1;
@@ -319,31 +319,31 @@ namespace Coherence.Generated
             {
 
                 val.currentBackpack = bitStream.ReadIntegerRange(3, -2);
-                val.FieldsMask |= currentBackpackMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentBackpackMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.currentSkinTone = bitStream.ReadIntegerRange(5, -2);
-                val.FieldsMask |= currentSkinToneMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentSkinToneMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.currentClothes = bitStream.ReadIntegerRange(32, -2147483648);
-                val.FieldsMask |= currentClothesMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentClothesMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.currentBody = bitStream.ReadIntegerRange(32, -2147483648);
-                val.FieldsMask |= currentBodyMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentBodyMask;
             }
             if (bitStream.ReadMask())
             {
 
                 val.currentHairstyle = bitStream.ReadIntegerRange(32, -2147483648);
-                val.FieldsMask |= currentHairstyleMask;
+                val.FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentHairstyleMask;
             }
 
             val.StoppedMask = stoppedMask;
@@ -399,11 +399,11 @@ namespace Coherence.Generated
         public override string ToString()
         {
             return $"_cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618(" +
-                $" currentBackpack: { currentBackpack }" +
-                $" currentSkinTone: { currentSkinTone }" +
-                $" currentClothes: { currentClothes }" +
-                $" currentBody: { currentBody }" +
-                $" currentHairstyle: { currentHairstyle }" +
+                $" currentBackpack: { this.currentBackpack }" +
+                $" currentSkinTone: { this.currentSkinTone }" +
+                $" currentClothes: { this.currentClothes }" +
+                $" currentBody: { this.currentBody }" +
+                $" currentHairstyle: { this.currentHairstyle }" +
                 $" Mask: { System.Convert.ToString(FieldsMask, 2).PadLeft(5, '0') }, " +
                 $"Stopped: { System.Convert.ToString(StoppedMask, 2).PadLeft(5, '0') })";
         }
