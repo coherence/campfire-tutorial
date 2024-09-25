@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca0ffa7522f34dbfb8ca6e555f9e6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configRegistry: {fileID: 0}
+  configRegistry: {fileID: 11400000, guid: a4aa0754334244480b83e41c327a4dee, type: 2}
   animator: {fileID: 4667129514690375174}
   soundHandler: {fileID: 3791772795559446476}
   humLoop: {fileID: 11400000, guid: f65b23b17cdd74532b8f6d750e65fec6, type: 2}
