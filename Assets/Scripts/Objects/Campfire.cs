@@ -58,6 +58,7 @@ public class Campfire : MonoBehaviour
         {
             // If this client has state authority on first sync of the live query, it's because
             // they are the first to connect ever, they are the one bringing the campfire into the network simulation
+            FireStateChanged((int)FireEffect.EffectType.SmolderingEmbers, (int)FireEffect.EffectType.SmolderingEmbers, "");
         }
         else
         {
