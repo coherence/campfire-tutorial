@@ -37,6 +37,20 @@ namespace Coherence.Generated
             public System.Byte IsSitting;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.MoveSpeedMask;
+            MoveSpeedSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.GroundedMask;
+            GroundedSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.CarryingBigMask;
+            CarryingBigSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.IsChoppingMask;
+            IsChoppingSimulationFrame = frame;
+            FieldsMask |= _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322.IsSittingMask;
+            IsSittingSimulationFrame = frame;
+        }
+
         public static unsafe _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 8) {

@@ -426,9 +426,9 @@ MonoBehaviour:
         descriptor:
           rid: 3041628591939387459
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: af57f962994c4ec7887c2f2f6b67f68a
         archetypeData:
           type: 7
@@ -458,6 +458,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -471,9 +472,9 @@ MonoBehaviour:
         descriptor:
           rid: 3041628591939387461
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 6653d280b1864071bb3815f49a73d029
         archetypeData:
           type: 3
@@ -502,6 +503,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Chair, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -515,9 +517,9 @@ MonoBehaviour:
         descriptor:
           rid: 3041628591939387483
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: da4067b1fcd34e8a93ae914a3b0df2f9
         archetypeData:
           type: 0
@@ -543,6 +545,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: Chair, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
             PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:
@@ -556,9 +559,9 @@ MonoBehaviour:
         descriptor:
           rid: 3041628591939387489
         routing: 0
+        syncMode: 0
         isPredicted: 0
         predictionMode: 0
-        defaultInterpolationPath: 
         guid: 85ff4db8c33a45dfab7139834053c3e6
         archetypeData:
           type: 3
@@ -587,6 +590,7 @@ MonoBehaviour:
         ownerType:
           assemblyQualifiedName: UnityEngine.CapsuleCollider, UnityEngine.PhysicsModule,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
         CustomData:
           rid: -2
         bindingType:

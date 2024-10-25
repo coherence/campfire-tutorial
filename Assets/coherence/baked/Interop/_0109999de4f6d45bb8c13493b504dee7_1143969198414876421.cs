@@ -31,6 +31,14 @@ namespace Coherence.Generated
             public System.Int32 pathDirtyCounter;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _0109999de4f6d45bb8c13493b504dee7_1143969198414876421.pathMask;
+            pathSimulationFrame = frame;
+            FieldsMask |= _0109999de4f6d45bb8c13493b504dee7_1143969198414876421.pathDirtyCounterMask;
+            pathDirtyCounterSimulationFrame = frame;
+        }
+
         public static unsafe _0109999de4f6d45bb8c13493b504dee7_1143969198414876421 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 20) {
