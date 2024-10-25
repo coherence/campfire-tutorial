@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Int32 energy;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _3d92447627afdfc419ceeb6b26251a87_1406947345458511524.energyMask;
+            energySimulationFrame = frame;
+        }
+
         public static unsafe _3d92447627afdfc419ceeb6b26251a87_1406947345458511524 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {

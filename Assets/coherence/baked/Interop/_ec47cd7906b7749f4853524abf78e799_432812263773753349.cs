@@ -33,6 +33,16 @@ namespace Coherence.Generated
             public ByteArray syncConfigId;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _ec47cd7906b7749f4853524abf78e799_432812263773753349.holdingForUUIDMask;
+            holdingForUUIDSimulationFrame = frame;
+            FieldsMask |= _ec47cd7906b7749f4853524abf78e799_432812263773753349.isObjectPresentMask;
+            isObjectPresentSimulationFrame = frame;
+            FieldsMask |= _ec47cd7906b7749f4853524abf78e799_432812263773753349.syncConfigIdMask;
+            syncConfigIdSimulationFrame = frame;
+        }
+
         public static unsafe _ec47cd7906b7749f4853524abf78e799_432812263773753349 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 33) {

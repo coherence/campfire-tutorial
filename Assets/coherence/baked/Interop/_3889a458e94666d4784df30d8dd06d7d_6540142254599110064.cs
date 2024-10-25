@@ -33,6 +33,16 @@ namespace Coherence.Generated
             public System.Single bigFireTimer;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _3889a458e94666d4784df30d8dd06d7d_6540142254599110064.activeFireEffectMask;
+            activeFireEffectSimulationFrame = frame;
+            FieldsMask |= _3889a458e94666d4784df30d8dd06d7d_6540142254599110064.fireTimerMask;
+            fireTimerSimulationFrame = frame;
+            FieldsMask |= _3889a458e94666d4784df30d8dd06d7d_6540142254599110064.bigFireTimerMask;
+            bigFireTimerSimulationFrame = frame;
+        }
+
         public static unsafe _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 12) {

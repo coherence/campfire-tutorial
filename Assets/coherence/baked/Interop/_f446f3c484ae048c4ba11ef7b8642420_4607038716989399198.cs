@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public System.Byte isBeingCarried;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _f446f3c484ae048c4ba11ef7b8642420_4607038716989399198.isBeingCarriedMask;
+            isBeingCarriedSimulationFrame = frame;
+        }
+
         public static unsafe _f446f3c484ae048c4ba11ef7b8642420_4607038716989399198 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 1) {

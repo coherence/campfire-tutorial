@@ -29,6 +29,12 @@ namespace Coherence.Generated
             public Entity objectAnchorSync;
         }
 
+        public void ResetFrame(AbsoluteSimulationFrame frame)
+        {
+            FieldsMask |= _c76bd173fbfcfba44982ec0a19f9c897_4384992023136877932.objectAnchorSyncMask;
+            objectAnchorSyncSimulationFrame = frame;
+        }
+
         public static unsafe _c76bd173fbfcfba44982ec0a19f9c897_4384992023136877932 FromInterop(IntPtr data, Int32 dataSize, InteropAbsoluteSimulationFrame* simFrames, Int32 simFramesCount)
         {
             if (dataSize != 4) {
