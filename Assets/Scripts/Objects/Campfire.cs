@@ -62,12 +62,12 @@ public class Campfire : MonoBehaviour
 
     private void Awake()
     {
-        _instance = this;
         _collider = GetComponent<Collider>();
         _sync = GetComponent<CoherenceSync>();
-        
         _sync.CoherenceBridge.onLiveQuerySynced.AddListener(OnLiveQuerySynced);
     }
+
+    private void OnEnable() => _instance = this;
 
     /// <summary>
     /// If this build is being run as a Simulator, the Simulator takes authority over the campfire.
@@ -144,7 +144,7 @@ public class Campfire : MonoBehaviour
             }
         }
     }
-    
+
     private void OnDisable() => _instance = null;
 
     /// <summary>
