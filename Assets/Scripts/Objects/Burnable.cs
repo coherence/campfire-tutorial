@@ -19,18 +19,18 @@ public class Burnable : MonoBehaviour
 
     public event UnityAction Burned;
 
-    private Campfire _campfire;
     private Collider _collider;
     private CoherenceSync _sync;
     private bool _hasBurned;
     private float _creationTime;
     private readonly float _selfDestructTime = 1800f;
 
+    private Campfire Campfire => Campfire.Instance;
+
     private void Awake()
     {
         _sync = GetComponent<CoherenceSync>();
         _collider = GetComponent<Collider>();
-        _campfire = FindObjectOfType<Campfire>();
     }
 
     private void OnEnable()
@@ -51,7 +51,7 @@ public class Burnable : MonoBehaviour
 
     private void CheckFireplaceCollisions()
     {
-        if (_collider.bounds.Intersects(_campfire.CollisionBounds))
+        if (_collider.bounds.Intersects(Campfire.CollisionBounds))
         {
             GetBurned();
         }
@@ -59,7 +59,7 @@ public class Burnable : MonoBehaviour
 
     private void GetBurned()
     {
-        _campfire.BurnObjectLocal(_sync);
+        Campfire.BurnObjectLocal(_sync);
         Remove();
     }
 

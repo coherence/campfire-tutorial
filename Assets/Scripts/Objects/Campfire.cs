@@ -9,6 +9,26 @@ using Coherence.Toolkit;
 /// </summary>
 public class Campfire : MonoBehaviour
 {
+    private static Campfire _instance;
+
+    public static Campfire Instance
+    {
+        get
+        {
+            if(!_instance)
+            {
+                _instance =
+#if UNITY_6000_0_OR_NEWER || UNITY_2022_3 || UNITY_2021_3
+                    FindAnyObjectByType<Campfire>(FindObjectsInactive.Exclude);
+#else
+                    FindObjectOfType<Campfire>();
+#endif
+            }
+
+            return _instance;
+        }
+    }
+
     [Header("Runtime state")]
     [Sync] public int activeFireEffect;
     [Sync] public float fireTimer; // Time left to burn before fire goes off
@@ -37,16 +57,17 @@ public class Campfire : MonoBehaviour
     private Collider _collider;
     private CoherenceSync _sync;
     private float _teamEffortTimer; // Time left to put another item on the fire, to provoke a big fire 
-    
+
     private bool IsBigFireOn => bigFireTimer > 0;
 
     private void Awake()
     {
         _collider = GetComponent<Collider>();
         _sync = GetComponent<CoherenceSync>();
-        
         _sync.CoherenceBridge.onLiveQuerySynced.AddListener(OnLiveQuerySynced);
     }
+
+    private void OnEnable() => _instance = this;
 
     /// <summary>
     /// If this build is being run as a Simulator, the Simulator takes authority over the campfire.
@@ -123,6 +144,8 @@ public class Campfire : MonoBehaviour
             }
         }
     }
+
+    private void OnDisable() => _instance = null;
 
     /// <summary>
     /// Invoked locally by a <see cref="Burnable"/> that collided with the campfire. Can be on the campfire authority, or not.
