@@ -25,8 +25,6 @@ public class Burnable : MonoBehaviour
     private float _creationTime;
     private readonly float _selfDestructTime = 1800f;
 
-    private Campfire Campfire => Campfire.Instance;
-
     private void Awake()
     {
         _sync = GetComponent<CoherenceSync>();
@@ -51,15 +49,15 @@ public class Burnable : MonoBehaviour
 
     private void CheckFireplaceCollisions()
     {
-        if (_collider.bounds.Intersects(Campfire.CollisionBounds))
+        if (Campfire.TryGet(out var campfire) && _collider.bounds.Intersects(campfire.CollisionBounds))
         {
-            GetBurned();
+            Burn(campfire);
         }
     }
 
-    private void GetBurned()
+    private void Burn(Campfire campfire)
     {
-        Campfire.BurnObjectLocal(_sync);
+	    campfire.BurnObjectLocal(_sync);
         Remove();
     }
 
@@ -68,7 +66,7 @@ public class Burnable : MonoBehaviour
         // Informs GrabAction to invoke LetGo,
         // so if a player is carrying the object it will be as if they had released it
         Burned?.Invoke();
-        
+
         _hasBurned = true; // Prevents more campfire collisions
         GetComponent<Grabbable>().isBeingCarried = true; // Prevents pickup requests (GrabAction)
         GetComponentInChildren<Interactable>().SetCollider(false); // Prevents object highlighting (InteractionInput)

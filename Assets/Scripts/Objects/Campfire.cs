@@ -11,24 +11,6 @@ public class Campfire : MonoBehaviour
 {
     private static Campfire _instance;
 
-    public static Campfire Instance
-    {
-        get
-        {
-            if(!_instance)
-            {
-                _instance =
-#if UNITY_6000_0_OR_NEWER || UNITY_2022_3 || UNITY_2021_3
-                    FindAnyObjectByType<Campfire>(FindObjectsInactive.Exclude);
-#else
-                    FindObjectOfType<Campfire>();
-#endif
-            }
-
-            return _instance;
-        }
-    }
-
     [Header("Runtime state")]
     [Sync] public int activeFireEffect;
     [Sync] public float fireTimer; // Time left to burn before fire goes off
@@ -59,6 +41,21 @@ public class Campfire : MonoBehaviour
     private float _teamEffortTimer; // Time left to put another item on the fire, to provoke a big fire 
 
     private bool IsBigFireOn => bigFireTimer > 0;
+    
+    public static bool TryGet(out Campfire campfire)
+    {
+        if(!_instance)
+        {
+            _instance =
+#if UNITY_6000_0_OR_NEWER || UNITY_2022_3 || UNITY_2021_3
+                FindAnyObjectByType<Campfire>(FindObjectsInactive.Exclude);
+#else
+                FindObjectOfType<Campfire>();
+#endif
+        }
+
+        return campfire = _instance;
+    }
 
     private void Awake()
     {
