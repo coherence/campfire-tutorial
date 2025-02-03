@@ -16,7 +16,7 @@ public class PlayerInput : MonoBehaviour
     {
         _characterController = GetComponent<Move>();
         _body = GetComponent<Rigidbody>();
-        _cameraTransform = FindObjectOfType<Camera>().transform;
+        _cameraTransform = FindFirstObjectByType<Camera>().transform;
     }
 
     private void OnEnable()

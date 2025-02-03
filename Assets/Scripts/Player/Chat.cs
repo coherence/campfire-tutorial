@@ -19,7 +19,7 @@ public class Chat : MonoBehaviour
 
     private void Awake()
     {
-        _chatComposer = FindObjectOfType<ChatComposerUI>();
+        _chatComposer = FindFirstObjectByType<ChatComposerUI>();
     }
 
     private void OnEnable()

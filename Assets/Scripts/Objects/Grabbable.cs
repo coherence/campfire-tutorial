@@ -75,7 +75,7 @@ public class Grabbable : MonoBehaviour
             float waterDiff = _rigidbody.position.y - _floatingY;
             if (waterDiff < 0)
             {
-                _rigidbody.velocity *= .9f;
+                _rigidbody.linearVelocity *= .9f;
                 _rigidbody.angularVelocity *= .97f;
                 _rigidbody.AddForce(Vector3.up * -waterDiff * _floatingForce, ForceMode.Acceleration);
             }

@@ -18,11 +18,11 @@ public class PlayerHandler : MonoBehaviour
 
     private void Awake()
     {
-        _coherenceBridge = FindObjectOfType<CoherenceBridge>();
+        _coherenceBridge = FindFirstObjectByType<CoherenceBridge>();
         _coherenceBridge.onConnected.AddListener(OnBridgeConnection);
         _coherenceBridge.onDisconnected.AddListener(OnBridgeDisconnection);
 
-        _vCams = FindObjectOfType<CinemachineVCams>();
+        _vCams = FindFirstObjectByType<CinemachineVCams>();
     }
 
     private void OnBridgeConnection(CoherenceBridge arg0)
