@@ -1351,7 +1351,7 @@ namespace Coherence.Generated
                 case Internal_f446f3c484ae048c4ba11ef7b8642420_7643438469673120224:
                     return _f446f3c484ae048c4ba11ef7b8642420_7643438469673120224.Serialize((_f446f3c484ae048c4ba11ef7b8642420_7643438469673120224)data, isRefSimFrameValid, referenceSimulationFrame, protocolStream, logger);
                 default:
-                    logger.Error("Missing serialization implementation for a component.", ("component", data.GetComponentType()));
+                    logger.Error(Coherence.Log.Error.DefinitionMissingComponentImplementation, ("component", data.GetComponentType()));
                     return 0;
             }
         }
@@ -1630,7 +1630,7 @@ namespace Coherence.Generated
                     _f446f3c484ae048c4ba11ef7b8642420_ad9e635638034d88b0c6dcd8a9c83286.Serialize((_f446f3c484ae048c4ba11ef7b8642420_ad9e635638034d88b0c6dcd8a9c83286)data, bitStream);
                     break;
                 default:
-                    logger.Error("Missing serialization implementation for a command.", ("command", commandType));
+                    logger.Error(Coherence.Log.Error.DefinitionMissingCommandImplementation, ("command", commandType));
                     break;
             }
         }
@@ -1643,7 +1643,7 @@ namespace Coherence.Generated
             switch (inputType)
             {
                 default:
-                    logger.Error("Missing serialization implementation for an input.", ("input", inputType));
+                    logger.Error(Coherence.Log.Error.DefinitionMissingInputImplementation, ("input", inputType));
                     break;
             }
         }
@@ -1775,7 +1775,6 @@ namespace Coherence.Generated
             }
         }
 }
-
 
 
 }

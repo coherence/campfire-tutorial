@@ -304,5 +304,4 @@ namespace Coherence.Generated
         }
     }
 
-
 }

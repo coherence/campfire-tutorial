@@ -41,6 +41,7 @@ namespace Coherence.Generated
         public System.Boolean toUp;
         
         public Entity Entity { get; set; }
+        public Coherence.ChannelID ChannelID { get; set; }
         public MessageTarget Routing { get; set; }
         public uint Sender { get; set; }
         public uint GetComponentType() => 14;
@@ -87,6 +88,7 @@ namespace Coherence.Generated
 )
         {
             Entity = entity;
+            ChannelID = Coherence.ChannelID.Default;
             Routing = MessageTarget.Other;
             Sender = 0;
             

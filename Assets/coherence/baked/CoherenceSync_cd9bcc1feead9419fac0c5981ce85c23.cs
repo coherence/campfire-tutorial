@@ -990,17 +990,17 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("UnityEngine.Animator.SetTrigger", "(System.String)", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6, MessageTarget.All, _cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6();
             
             int i = 0;
             command.name = (System.String)args[i++];
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6();
             
@@ -1023,15 +1023,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("ChopAction.PlayChopSound", "()", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8, MessageTarget.Other, _cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8();
             
@@ -1052,15 +1052,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("SitAction.PlaySitSound", "()", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142, MessageTarget.Other, _cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142();
             
@@ -1081,15 +1081,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("Emotes.PlayYesSound", "()", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d, MessageTarget.All, _cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d();
             
@@ -1110,15 +1110,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("Emotes.PlayNoSound", "()", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c, MessageTarget.All, _cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c();
             
@@ -1139,15 +1139,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("Emotes.PlayHeySound", "()", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829, MessageTarget.All, _cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829();
             
@@ -1168,15 +1168,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("GrabAction.PlayPickUpSound", "()", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41, MessageTarget.All, _cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41();
             
@@ -1197,15 +1197,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("GrabAction.PlayDropSound", "()", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5, MessageTarget.All, _cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5();
             
@@ -1226,17 +1226,17 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("Chat.SendChatMessage", "(System.Byte[])", SendCommand__cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe, ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe, MessageTarget.Other, _cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe_CommandTarget, false);
         }
         
-        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe(MessageTarget target, object[] args)
+        private void SendCommand__cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe();
             
             int i = 0;
             command.encodedMessage = (System.Byte[])args[i++];
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe();
             
@@ -1285,7 +1285,8 @@ namespace Coherence.Generated
                     ReceiveCommand__cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe(castedCommand);
                     break;
                 default:
-                    logger.Warning($"CoherenceSync_cd9bcc1feead9419fac0c5981ce85c23 Unhandled command: {command.GetType()}.");
+                    logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncReceiveCommandUnhandled,
+                        $"CoherenceSync_cd9bcc1feead9419fac0c5981ce85c23 Unhandled command: {command.GetType()}.");
                     break;
             }
         }
@@ -1312,7 +1313,8 @@ namespace Coherence.Generated
                 return components;
             }
     
-            logger.Warning($"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
+            logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
+                $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
             
             return null;
         }
@@ -1329,5 +1331,4 @@ namespace Coherence.Generated
             this.client = client;        
         }
     }
-
 }

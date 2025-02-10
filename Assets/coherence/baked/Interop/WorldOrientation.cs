@@ -261,5 +261,4 @@ namespace Coherence.Generated
         }
     }
 
-
 }
