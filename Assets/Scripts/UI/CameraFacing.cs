@@ -28,7 +28,7 @@ public class CameraFacing : MonoBehaviour
 
     private void FindCamera()
     {
-        Camera c = FindObjectOfType<Camera>();
+        Camera c = FindFirstObjectByType<Camera>();
         if (c != null)
         {
             _camera = c.transform;
