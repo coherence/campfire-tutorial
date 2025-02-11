@@ -41,6 +41,7 @@ namespace Coherence.Generated
         public System.Boolean newBusyState;
         
         public Entity Entity { get; set; }
+        public Coherence.ChannelID ChannelID { get; set; }
         public MessageTarget Routing { get; set; }
         public uint Sender { get; set; }
         public uint GetComponentType() => 17;
@@ -87,6 +88,7 @@ namespace Coherence.Generated
 )
         {
             Entity = entity;
+            ChannelID = Coherence.ChannelID.Default;
             Routing = MessageTarget.AuthorityOnly;
             Sender = 0;
             

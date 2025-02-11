@@ -183,15 +183,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("ChoppableTree.Chop", "()", SendCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6, ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6, MessageTarget.AuthorityOnly, _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6_CommandTarget, false);
         }
         
-        private void SendCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6(MessageTarget target, object[] args)
+        private void SendCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6();
             
@@ -212,17 +212,17 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("ChoppableTree.ChangeState", "(System.Boolean)", SendCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7, ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7, MessageTarget.Other, _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7_CommandTarget, false);
         }
         
-        private void SendCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7(MessageTarget target, object[] args)
+        private void SendCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7();
             
             int i = 0;
             command.toUp = (System.Boolean)args[i++];
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7();
             
@@ -245,15 +245,15 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("ChoppableTree.PlayChopEffect", "()", SendCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09, ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09, MessageTarget.Other, _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09_CommandTarget, false);
         }
         
-        private void SendCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09(MessageTarget target, object[] args)
+        private void SendCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09();
             
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09();
             
@@ -282,7 +282,8 @@ namespace Coherence.Generated
                     ReceiveCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09(castedCommand);
                     break;
                 default:
-                    logger.Warning($"CoherenceSync_3d92447627afdfc419ceeb6b26251a87 Unhandled command: {command.GetType()}.");
+                    logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncReceiveCommandUnhandled,
+                        $"CoherenceSync_3d92447627afdfc419ceeb6b26251a87 Unhandled command: {command.GetType()}.");
                     break;
             }
         }
@@ -309,7 +310,8 @@ namespace Coherence.Generated
                 return components;
             }
     
-            logger.Warning($"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
+            logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
+                $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
             
             return null;
         }
@@ -326,5 +328,4 @@ namespace Coherence.Generated
             this.client = client;        
         }
     }
-
 }

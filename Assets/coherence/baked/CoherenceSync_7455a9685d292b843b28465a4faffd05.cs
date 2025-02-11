@@ -232,17 +232,17 @@ namespace Coherence.Generated
             commandsHandler.AddBakedCommand("Chair.ChangeState", "(System.Boolean)", SendCommand__7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff, ReceiveLocalCommand__7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff, MessageTarget.AuthorityOnly, _7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff_CommandTarget, false);
         }
         
-        private void SendCommand__7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff(MessageTarget target, object[] args)
+        private void SendCommand__7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff(MessageTarget target, ChannelID channelID, object[] args)
         {
             var command = new _7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff();
             
             int i = 0;
             command.newBusyState = (System.Boolean)args[i++];
         
-            client.SendCommand(command, target, entityId);
+            client.SendCommand(command, target, entityId, channelID);
         }
         
-        private void ReceiveLocalCommand__7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff(MessageTarget target, object[] args)
+        private void ReceiveLocalCommand__7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff(MessageTarget target, ChannelID _, object[] args)
         {
             var command = new _7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff();
             
@@ -267,7 +267,8 @@ namespace Coherence.Generated
                     ReceiveCommand__7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff(castedCommand);
                     break;
                 default:
-                    logger.Warning($"CoherenceSync_7455a9685d292b843b28465a4faffd05 Unhandled command: {command.GetType()}.");
+                    logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncReceiveCommandUnhandled,
+                        $"CoherenceSync_7455a9685d292b843b28465a4faffd05 Unhandled command: {command.GetType()}.");
                     break;
             }
         }
@@ -294,7 +295,8 @@ namespace Coherence.Generated
                 return components;
             }
     
-            logger.Warning($"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
+            logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
+                $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
             
             return null;
         }
@@ -311,5 +313,4 @@ namespace Coherence.Generated
             this.client = client;        
         }
     }
-
 }
