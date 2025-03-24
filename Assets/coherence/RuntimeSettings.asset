@@ -33,6 +33,12 @@ MonoBehaviour:
   projectName: Campfire sample
   transportType: 0
   transportConfiguration: 0
+  advancedSettings:
+    ThreadResumer:
+      Enabled: 0
+      SearchIntervalMs: 50
+      LongSearchWarnThresholdMs: 50
+      WarnOnSuspension: 1
   replicationServerToken: 
   playApiEndpoint: https://api.prod.coherence.io/v1/play
   schemas:
