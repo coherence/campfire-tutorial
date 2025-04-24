@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -47,12 +46,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 159");
+                    "for component with ID 24");
             }
 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 159");
+                    "for component with ID 24");
             }
 
             var orig = new _3889a458e94666d4784df30d8dd06d7d_6540142254599110064();
@@ -70,13 +69,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 196");
+                    "for component with ID 61");
             }
 
                 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 196");
+                    "for component with ID 61");
             }
 
             var orig = new _3889a458e94666d4784df30d8dd06d7d_6540142254599110064();
@@ -102,7 +101,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 159;
+        public uint GetComponentType() => 24;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000111;

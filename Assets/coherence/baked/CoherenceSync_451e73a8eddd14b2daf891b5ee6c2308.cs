@@ -23,7 +23,6 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_451e73a8eddd14b2daf891b5ee6c2308_0d09d827e9dc48d48234312ff3610eb4 : PositionBinding
     {   
@@ -76,7 +75,6 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_451e73a8eddd14b2daf891b5ee6c2308_ea22c661324048629b36fc289800b247 : RotationBinding
     {   
@@ -128,7 +126,6 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_451e73a8eddd14b2daf891b5ee6c2308_abd6ea830b7b416c8a6dd35eb11f2a4f : ScaleBinding
     {   
@@ -180,7 +177,6 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_451e73a8eddd14b2daf891b5ee6c2308_59b52bcb476d404a94c7b0a30cfbaf19 : StringBinding
     {   
@@ -232,7 +228,6 @@ namespace Coherence.Generated
             return new _451e73a8eddd14b2daf891b5ee6c2308_6267697520601458368();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_451e73a8eddd14b2daf891b5ee6c2308_cc845b8866124cb082e0181af5e7f681 : IntBinding
     {   
@@ -284,7 +279,6 @@ namespace Coherence.Generated
             return new _451e73a8eddd14b2daf891b5ee6c2308_6267697520601458368();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_451e73a8eddd14b2daf891b5ee6c2308_2ef575fde1d84535b83a10a14e8b6cd0 : BoolBinding
     {   
@@ -336,7 +330,6 @@ namespace Coherence.Generated
             return new _451e73a8eddd14b2daf891b5ee6c2308_5879086033831766519();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_451e73a8eddd14b2daf891b5ee6c2308_f2d1c22c30b044c8bb3dddc445e2c67a : ReferenceBinding
     {   
@@ -403,13 +396,13 @@ namespace Coherence.Generated
         
         private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
         {
-            ["0d09d827e9dc48d48234312ff3610eb4"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_0d09d827e9dc48d48234312ff3610eb4(),
-            ["ea22c661324048629b36fc289800b247"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_ea22c661324048629b36fc289800b247(),
-            ["abd6ea830b7b416c8a6dd35eb11f2a4f"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_abd6ea830b7b416c8a6dd35eb11f2a4f(),
-            ["59b52bcb476d404a94c7b0a30cfbaf19"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_59b52bcb476d404a94c7b0a30cfbaf19(),
-            ["cc845b8866124cb082e0181af5e7f681"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_cc845b8866124cb082e0181af5e7f681(),
-            ["2ef575fde1d84535b83a10a14e8b6cd0"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_2ef575fde1d84535b83a10a14e8b6cd0(),
-            ["f2d1c22c30b044c8bb3dddc445e2c67a"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_f2d1c22c30b044c8bb3dddc445e2c67a(),
+			["0d09d827e9dc48d48234312ff3610eb4"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_0d09d827e9dc48d48234312ff3610eb4(),
+			["ea22c661324048629b36fc289800b247"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_ea22c661324048629b36fc289800b247(),
+			["abd6ea830b7b416c8a6dd35eb11f2a4f"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_abd6ea830b7b416c8a6dd35eb11f2a4f(),
+			["59b52bcb476d404a94c7b0a30cfbaf19"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_59b52bcb476d404a94c7b0a30cfbaf19(),
+			["cc845b8866124cb082e0181af5e7f681"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_cc845b8866124cb082e0181af5e7f681(),
+			["2ef575fde1d84535b83a10a14e8b6cd0"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_2ef575fde1d84535b83a10a14e8b6cd0(),
+			["f2d1c22c30b044c8bb3dddc445e2c67a"] = new Binding_451e73a8eddd14b2daf891b5ee6c2308_f2d1c22c30b044c8bb3dddc445e2c67a(),
         };
         
         private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings = new Dictionary<string, Action<CommandBinding, CommandsHandler>>();
@@ -437,7 +430,6 @@ namespace Coherence.Generated
                 commandBindingBaker.Invoke(commandBinding, commandsHandler);
             }
         }
-    
         private void BakeCommandBinding__451e73a8eddd14b2daf891b5ee6c2308_ad9e635638034d88b0c6dcd8a9c83286(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _451e73a8eddd14b2daf891b5ee6c2308_ad9e635638034d88b0c6dcd8a9c83286_CommandTarget = (global::PositionedObject)commandBinding.UnityComponent;
@@ -481,32 +473,29 @@ namespace Coherence.Generated
             }
         }
         
-        public override List<ICoherenceComponentData> CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame)
+        public override void CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame, List<ICoherenceComponentData> components)
         {
+
             if (!usesLodsAtRuntime)
             {
-                return null;
+                return;
             }
             
             if (Archetypes.IndexForName.TryGetValue(archetypeName, out int archetypeIndex))
             {
-                var components = new List<ICoherenceComponentData>()
-                {
-                    new ArchetypeComponent
+                components.Add(new ArchetypeComponent
                     {
                         index = archetypeIndex,
                         indexSimulationFrame = simFrame,
                         FieldsMask = 0b1
                     }
-                };
+                );
 
-                return components;
+                return;                
             }
     
             logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
                 $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
-            
-            return null;
         }
         
         public override void Dispose()

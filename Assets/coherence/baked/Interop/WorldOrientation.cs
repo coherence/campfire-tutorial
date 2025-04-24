@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct WorldOrientation : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -61,13 +60,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 16) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
-                    "for component with ID 198");
+                    "for component with ID 63");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 198");
+                    "for component with ID 63");
             }
 
             var orig = new WorldOrientation();

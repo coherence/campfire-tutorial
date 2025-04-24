@@ -23,7 +23,6 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_060eae84e0a5489aa3f32d7c800cf950 : PositionBinding
     {   
@@ -76,7 +75,6 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_750f70418bae4108b1e74427fb548aae : RotationBinding
     {   
@@ -128,7 +126,6 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_df5c2e4904154244b2afff47f563beea : ScaleBinding
     {   
@@ -180,7 +177,6 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_189625fefb07446aac7880b2b0dbf320 : StringBinding
     {   
@@ -232,7 +228,6 @@ namespace Coherence.Generated
             return new _ec47cd7906b7749f4853524abf78e799_432812263773753349();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_120b91f3d4bd4bc3ae37cce0009abd40 : BoolBinding
     {   
@@ -284,7 +279,6 @@ namespace Coherence.Generated
             return new _ec47cd7906b7749f4853524abf78e799_432812263773753349();
         }    
     }
-    
     [UnityEngine.Scripting.Preserve]
     public class Binding_ec47cd7906b7749f4853524abf78e799_74c49d2eed9146be872d431e635e3816 : StringBinding
     {   
@@ -351,12 +345,12 @@ namespace Coherence.Generated
         
         private readonly Dictionary<string, Binding> bakedValueBindings = new Dictionary<string, Binding>()
         {
-            ["060eae84e0a5489aa3f32d7c800cf950"] = new Binding_ec47cd7906b7749f4853524abf78e799_060eae84e0a5489aa3f32d7c800cf950(),
-            ["750f70418bae4108b1e74427fb548aae"] = new Binding_ec47cd7906b7749f4853524abf78e799_750f70418bae4108b1e74427fb548aae(),
-            ["df5c2e4904154244b2afff47f563beea"] = new Binding_ec47cd7906b7749f4853524abf78e799_df5c2e4904154244b2afff47f563beea(),
-            ["189625fefb07446aac7880b2b0dbf320"] = new Binding_ec47cd7906b7749f4853524abf78e799_189625fefb07446aac7880b2b0dbf320(),
-            ["120b91f3d4bd4bc3ae37cce0009abd40"] = new Binding_ec47cd7906b7749f4853524abf78e799_120b91f3d4bd4bc3ae37cce0009abd40(),
-            ["74c49d2eed9146be872d431e635e3816"] = new Binding_ec47cd7906b7749f4853524abf78e799_74c49d2eed9146be872d431e635e3816(),
+			["060eae84e0a5489aa3f32d7c800cf950"] = new Binding_ec47cd7906b7749f4853524abf78e799_060eae84e0a5489aa3f32d7c800cf950(),
+			["750f70418bae4108b1e74427fb548aae"] = new Binding_ec47cd7906b7749f4853524abf78e799_750f70418bae4108b1e74427fb548aae(),
+			["df5c2e4904154244b2afff47f563beea"] = new Binding_ec47cd7906b7749f4853524abf78e799_df5c2e4904154244b2afff47f563beea(),
+			["189625fefb07446aac7880b2b0dbf320"] = new Binding_ec47cd7906b7749f4853524abf78e799_189625fefb07446aac7880b2b0dbf320(),
+			["120b91f3d4bd4bc3ae37cce0009abd40"] = new Binding_ec47cd7906b7749f4853524abf78e799_120b91f3d4bd4bc3ae37cce0009abd40(),
+			["74c49d2eed9146be872d431e635e3816"] = new Binding_ec47cd7906b7749f4853524abf78e799_74c49d2eed9146be872d431e635e3816(),
         };
         
         private Dictionary<string, Action<CommandBinding, CommandsHandler>> bakedCommandBindings = new Dictionary<string, Action<CommandBinding, CommandsHandler>>();
@@ -384,7 +378,6 @@ namespace Coherence.Generated
                 commandBindingBaker.Invoke(commandBinding, commandsHandler);
             }
         }
-    
         private void BakeCommandBinding__ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d_CommandTarget = (global::ObjectAnchor)commandBinding.UnityComponent;
@@ -432,32 +425,29 @@ namespace Coherence.Generated
             }
         }
         
-        public override List<ICoherenceComponentData> CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame)
+        public override void CreateEntity(bool usesLodsAtRuntime, string archetypeName, AbsoluteSimulationFrame simFrame, List<ICoherenceComponentData> components)
         {
+
             if (!usesLodsAtRuntime)
             {
-                return null;
+                return;
             }
             
             if (Archetypes.IndexForName.TryGetValue(archetypeName, out int archetypeIndex))
             {
-                var components = new List<ICoherenceComponentData>()
-                {
-                    new ArchetypeComponent
+                components.Add(new ArchetypeComponent
                     {
                         index = archetypeIndex,
                         indexSimulationFrame = simFrame,
                         FieldsMask = 0b1
                     }
-                };
+                );
 
-                return components;
+                return;                
             }
     
             logger.Warning(Coherence.Log.Warning.ToolkitBakedSyncCreateEntityMissingArchetype,
                 $"Unable to find archetype {archetypeName} in dictionary. Please, bake manually (coherence > Bake)");
-            
-            return null;
         }
         
         public override void Dispose()
