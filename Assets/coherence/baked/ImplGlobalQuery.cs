@@ -16,19 +16,8 @@ namespace Coherence.Generated
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void OnRuntimeMethodLoad()
         {
-            Impl.CreateGlobalQuery = CreateGlobalQuery;
             Impl.AddGlobalQuery = AddGlobalQuery;
             Impl.RemoveGlobalQuery = RemoveGlobalQuery;
-        }
-
-        private static Entity CreateGlobalQuery(IClient client) 
-        {
-            var components = new ICoherenceComponentData[] 
-            {
-                new GlobalQuery { }
-            };
-
-            return client.CreateEntity(components, false);
         }
 
         private static void AddGlobalQuery(IClient client, Entity query)

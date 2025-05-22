@@ -15,7 +15,7 @@ MonoBehaviour:
   schemaID: c84903806b884690f25e4085129bea720d2c36cb
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: dfd8f781fadc4c13bdbe782e793e52f1
-  simulatorSlug: 
+  simulatorSlug: may 21, 1.7.0_rc2
   localHost: 127.0.0.1
   localWorldUDPPort: 32001
   localWorldWebPort: 32002
@@ -48,3 +48,4 @@ MonoBehaviour:
   extraSchemas: []
   defaultTransportMode: 0
   defaultTransportModeMigrated: 1
+  defaultAuthorityTransferType: 2

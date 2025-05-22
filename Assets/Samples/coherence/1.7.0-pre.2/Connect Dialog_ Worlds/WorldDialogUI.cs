@@ -250,24 +250,14 @@ namespace Coherence.Samples.WorldDialog
             popupDialog.SetActive(false);
         }
 
-        private void OnConnectionError(CoherenceBridge bridge, ConnectionException connectionException)
+        private void OnConnectionError(CoherenceBridge bridge, ConnectionException exception)
         {
             HideLoadingState();
 
-            Debug.LogException(connectionException);
-            var errorMessage = GetConnectionError(connectionException);
-            ShowError("Connection error", errorMessage);
-        }
+            var (title, message) = exception.GetPrettyMessage();
 
-        private static string GetConnectionError(ConnectionException connectionException)
-        {
-            return connectionException switch
-            {
-                ConnectionClosedException closedException => "Connection closed unexpectedly.",
-                ConnectionTimeoutException timeoutException => $"Connection timed out after {timeoutException.After:g}.",
-                ConnectionDeniedException deniedException => $"Connection denied: {deniedException.CloseReason}.",
-                _ => connectionException.Message,
-            };
+            Debug.LogError(message);
+            ShowError(title, message);
         }
 
         private static string GetErrorFromResponse<T>(RequestResponse<T> requestResponse)

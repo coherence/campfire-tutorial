@@ -480,9 +480,10 @@ MonoBehaviour:
       m_Calls: []
   bakedScriptType: Coherence.Generated.CoherenceSync_7eef8177eb732314fb850470094a70c9,
     Assembly-CSharp
+  isGlobal: 0
   approveAuthorityTransferRequests: 1
   simulationType: 0
-  authorityTransferType: 2
+  authorityTransferConfig: 2
   orphanedBehavior: 1
   lifetimeType: 1
   uniquenessType: 1
@@ -506,7 +507,6 @@ MonoBehaviour:
   scenePrefabInstanceUUID: 
   coherenceUUID: 
   assetVersion: 
-  usingReflection: 0
   coherenceTag: 
   componentActions: []
   floatingOriginMode: 0
