@@ -27,7 +27,7 @@ namespace Coherence.Generated
                         ComponentReplacement = new Dictionary<uint, uint>
                         {
                             { 0, Definition.InternalArchetype_3889a458e94666d4784df30d8dd06d7d_WorldPosition_LOD0 },
-                            { 159, Definition.InternalArchetype_3889a458e94666d4784df30d8dd06d7d__3889a458e94666d4784df30d8dd06d7d_6540142254599110064_LOD0 },
+                            { 24, Definition.InternalArchetype_3889a458e94666d4784df30d8dd06d7d__3889a458e94666d4784df30d8dd06d7d_6540142254599110064_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {
@@ -48,11 +48,11 @@ namespace Coherence.Generated
                             { 0, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 },
                             { 1, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldOrientation_LOD0 },
                             { 17, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_GenericScale_LOD0 },
-                            { 187, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618_LOD0 },
-                            { 184, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181_LOD0 },
-                            { 186, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408_LOD0 },
-                            { 183, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_176131441763086322_LOD0 },
-                            { 185, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216_LOD0 },
+                            { 52, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618_LOD0 },
+                            { 49, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181_LOD0 },
+                            { 51, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408_LOD0 },
+                            { 48, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_176131441763086322_LOD0 },
+                            { 50, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23__cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216_LOD0 },
                         },
                         ComponentsExcluded = new uint[] 
                         {

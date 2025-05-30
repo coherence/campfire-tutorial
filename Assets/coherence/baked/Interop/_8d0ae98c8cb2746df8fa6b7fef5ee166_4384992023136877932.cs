@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct _8d0ae98c8cb2746df8fa6b7fef5ee166_4384992023136877932 : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -39,12 +38,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 4) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 4) " +
-                    "for component with ID 171");
+                    "for component with ID 36");
             }
 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 171");
+                    "for component with ID 36");
             }
 
             var orig = new _8d0ae98c8cb2746df8fa6b7fef5ee166_4384992023136877932();
@@ -63,7 +62,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 171;
+        public uint GetComponentType() => 36;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000001;

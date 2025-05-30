@@ -1,266 +1,266 @@
-component _0109999de4f6d45bb8c13493b504dee7_1143969198414876421 [id "153"]
+component _0109999de4f6d45bb8c13493b504dee7_1143969198414876421 [id "18"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _0109999de4f6d45bb8c13493b504dee7_616379459864002610 [id "154"]
+component _0109999de4f6d45bb8c13493b504dee7_616379459864002610 [id "19"]
   isBeingCarried Bool [bits "1"]
 
-component _0109999de4f6d45bb8c13493b504dee7_6732985197249073484 [id "155"]
+component _0109999de4f6d45bb8c13493b504dee7_6732985197249073484 [id "20"]
   objectAnchorSync Entity [bits "20", client-type "Coherence.Toolkit.CoherenceSync"]
 
-component _0d27e1ad6d8e5ba4abca3216a92298f7_4384992023136877932 [id "156"]
+component _0d27e1ad6d8e5ba4abca3216a92298f7_4384992023136877932 [id "21"]
   objectAnchorSync Entity [bits "20", client-type "Coherence.Toolkit.CoherenceSync"]
 
-component _0d27e1ad6d8e5ba4abca3216a92298f7_7577043058907851794 [id "157"]
+component _0d27e1ad6d8e5ba4abca3216a92298f7_7577043058907851794 [id "22"]
   isBeingCarried Bool [bits "1"]
 
-component _0d27e1ad6d8e5ba4abca3216a92298f7_7947429143224902437 [id "158"]
+component _0d27e1ad6d8e5ba4abca3216a92298f7_7947429143224902437 [id "23"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 [id "159"]
+component _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 [id "24"]
   activeFireEffect Int [bits "4", range-min "-1", range-max "10"]
   fireTimer Float [bits "17", range-min "-5", range-max "100", compression "FixedPoint", precision "0.001"]
   bigFireTimer Float [bits "17", range-min "-5", range-max "100", compression "FixedPoint", precision "0.001"]
 
-component _3d92447627afdfc419ceeb6b26251a87_1406947345458511524 [id "160"]
+component _3d92447627afdfc419ceeb6b26251a87_1406947345458511524 [id "25"]
   energy Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _451e73a8eddd14b2daf891b5ee6c2308_318412099543152777 [id "161"]
+component _451e73a8eddd14b2daf891b5ee6c2308_318412099543152777 [id "26"]
   objectAnchorSync Entity [bits "20", client-type "Coherence.Toolkit.CoherenceSync"]
 
-component _451e73a8eddd14b2daf891b5ee6c2308_5879086033831766519 [id "162"]
+component _451e73a8eddd14b2daf891b5ee6c2308_5879086033831766519 [id "27"]
   isBeingCarried Bool [bits "1"]
 
-component _451e73a8eddd14b2daf891b5ee6c2308_6267697520601458368 [id "163"]
+component _451e73a8eddd14b2daf891b5ee6c2308_6267697520601458368 [id "28"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _7455a9685d292b843b28465a4faffd05_4295192434143702777 [id "164"]
+component _7455a9685d292b843b28465a4faffd05_4295192434143702777 [id "29"]
   enabled Bool [bits "1"]
 
-component _7455a9685d292b843b28465a4faffd05_486810980 [id "165"]
+component _7455a9685d292b843b28465a4faffd05_486810980 [id "30"]
   isBusy Bool [bits "1"]
 
-component _7eef8177eb732314fb850470094a70c9_468635231 [id "166"]
+component _7eef8177eb732314fb850470094a70c9_468635231 [id "31"]
   enabled Bool [bits "1"]
 
-component _7eef8177eb732314fb850470094a70c9_468635232 [id "167"]
+component _7eef8177eb732314fb850470094a70c9_468635232 [id "32"]
   isBusy Bool [bits "1"]
 
-component _89bb435d615753b4f86caa89fd2a5d9d_4071990166734286761 [id "168"]
+component _89bb435d615753b4f86caa89fd2a5d9d_4071990166734286761 [id "33"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _89bb435d615753b4f86caa89fd2a5d9d_4607038716989399198 [id "169"]
+component _89bb435d615753b4f86caa89fd2a5d9d_4607038716989399198 [id "34"]
   isBeingCarried Bool [bits "1"]
 
-component _89bb435d615753b4f86caa89fd2a5d9d_7643438469673120224 [id "170"]
+component _89bb435d615753b4f86caa89fd2a5d9d_7643438469673120224 [id "35"]
   objectAnchorSync Entity [bits "20", client-type "Coherence.Toolkit.CoherenceSync"]
 
-component _8d0ae98c8cb2746df8fa6b7fef5ee166_4384992023136877932 [id "171"]
+component _8d0ae98c8cb2746df8fa6b7fef5ee166_4384992023136877932 [id "36"]
   objectAnchorSync Entity [bits "20", client-type "Coherence.Toolkit.CoherenceSync"]
 
-component _8d0ae98c8cb2746df8fa6b7fef5ee166_7577043058907851794 [id "172"]
+component _8d0ae98c8cb2746df8fa6b7fef5ee166_7577043058907851794 [id "37"]
   isBeingCarried Bool [bits "1"]
 
-component _8d0ae98c8cb2746df8fa6b7fef5ee166_7947429143224902437 [id "173"]
+component _8d0ae98c8cb2746df8fa6b7fef5ee166_7947429143224902437 [id "38"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _91ccee2338d92624a8021fda1c91e47c_1987083777327440787 [id "174"]
+component _91ccee2338d92624a8021fda1c91e47c_1987083777327440787 [id "39"]
   enabled Bool [bits "1"]
 
-component _91ccee2338d92624a8021fda1c91e47c_4713251173614319484 [id "175"]
+component _91ccee2338d92624a8021fda1c91e47c_4713251173614319484 [id "40"]
   isBusy Bool [bits "1"]
 
-component _9ea9c7ad1465c4769a67e80391f1158b_2975753946441600970 [id "176"]
+component _9ea9c7ad1465c4769a67e80391f1158b_2975753946441600970 [id "41"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _9ea9c7ad1465c4769a67e80391f1158b_3324184583126450429 [id "177"]
+component _9ea9c7ad1465c4769a67e80391f1158b_3324184583126450429 [id "42"]
   isBeingCarried Bool [bits "1"]
 
-component _a857fd6c221f7f04fa9ed500e317642a_4667129514690375174 [id "178"]
+component _a857fd6c221f7f04fa9ed500e317642a_4667129514690375174 [id "43"]
   IsFlailing Bool [bits "1"]
   IsCarrying Bool [bits "1"]
 
-component _a857fd6c221f7f04fa9ed500e317642a_8551261703447512967 [id "179"]
+component _a857fd6c221f7f04fa9ed500e317642a_8551261703447512967 [id "44"]
   isBusy Bool [bits "1"]
 
-component _c76bd173fbfcfba44982ec0a19f9c897_4384992023136877932 [id "180"]
+component _c76bd173fbfcfba44982ec0a19f9c897_4384992023136877932 [id "45"]
   objectAnchorSync Entity [bits "20", client-type "Coherence.Toolkit.CoherenceSync"]
 
-component _c76bd173fbfcfba44982ec0a19f9c897_7577043058907851794 [id "181"]
+component _c76bd173fbfcfba44982ec0a19f9c897_7577043058907851794 [id "46"]
   isBeingCarried Bool [bits "1"]
 
-component _c76bd173fbfcfba44982ec0a19f9c897_7947429143224902437 [id "182"]
+component _c76bd173fbfcfba44982ec0a19f9c897_7947429143224902437 [id "47"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 [id "183"]
+component _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 [id "48"]
   MoveSpeed Float [sim-frames "true", compression "None"]
   Grounded Bool [bits "1"]
   CarryingBig Bool [bits "1"]
   IsChopping Bool [bits "1"]
   IsSitting Bool [bits "1"]
 
-component _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181 [id "184"]
+component _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181 [id "49"]
   text String [bits "6"]
 
-component _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216 [id "185"]
+component _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216 [id "50"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 [id "186"]
+component _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 [id "51"]
   position Vector3 [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01", sim-frames "true"]
 
-component _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618 [id "187"]
+component _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618 [id "52"]
   currentBackpack Int [bits "3", range-min "-2", range-max "3"]
   currentSkinTone Int [bits "5", range-min "-2", range-max "20"]
   currentClothes Int [bits "32", range-min "-2147483648", range-max "2147483647"]
   currentBody Int [bits "32", range-min "-2147483648", range-max "2147483647"]
   currentHairstyle Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _e74854605b68b435280bc0ac73fef6c1_6806255523165594879 [id "188"]
+component _e74854605b68b435280bc0ac73fef6c1_6806255523165594879 [id "53"]
   objectAnchorSync Entity [bits "20", client-type "Coherence.Toolkit.CoherenceSync"]
 
-component _e74854605b68b435280bc0ac73fef6c1_831233887725647233 [id "189"]
+component _e74854605b68b435280bc0ac73fef6c1_831233887725647233 [id "54"]
   isBeingCarried Bool [bits "1"]
 
-component _e74854605b68b435280bc0ac73fef6c1_929081723536030390 [id "190"]
+component _e74854605b68b435280bc0ac73fef6c1_929081723536030390 [id "55"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _ec47cd7906b7749f4853524abf78e799_432812263773753349 [id "191"]
+component _ec47cd7906b7749f4853524abf78e799_432812263773753349 [id "56"]
   holdingForUUID String [bits "6"]
   isObjectPresent Bool [bits "1"]
   syncConfigId String [bits "6"]
 
-component _f446f3c484ae048c4ba11ef7b8642420_4071990166734286761 [id "192"]
+component _f446f3c484ae048c4ba11ef7b8642420_4071990166734286761 [id "57"]
   path String [bits "6"]
   pathDirtyCounter Int [bits "32", range-min "-2147483648", range-max "2147483647"]
 
-component _f446f3c484ae048c4ba11ef7b8642420_4607038716989399198 [id "193"]
+component _f446f3c484ae048c4ba11ef7b8642420_4607038716989399198 [id "58"]
   isBeingCarried Bool [bits "1"]
 
-component _f446f3c484ae048c4ba11ef7b8642420_7643438469673120224 [id "194"]
+component _f446f3c484ae048c4ba11ef7b8642420_7643438469673120224 [id "59"]
   objectAnchorSync Entity [bits "20", client-type "Coherence.Toolkit.CoherenceSync"]
 
-command _0109999de4f6d45bb8c13493b504dee7_ad9e635638034d88b0c6dcd8a9c83286 [id "7", routing "All"]
+command _0109999de4f6d45bb8c13493b504dee7_ad9e635638034d88b0c6dcd8a9c83286 [id "6", routing "All"]
 
-command _0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286 [id "8", routing "All"]
+command _0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286 [id "7", routing "All"]
 
-command _3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38 [id "9", routing "All"]
+command _3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38 [id "8", routing "All"]
   oldEffectID Int 
   newEffectID Int 
 
-command _3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db [id "10", routing "All"]
+command _3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db [id "9", routing "All"]
 
-command _3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391 [id "11", routing "All"]
+command _3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391 [id "10", routing "All"]
   oldEffectID Int 
   newEffectID Int 
   syncConfigID String 
 
-command _3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4 [id "12", routing "AuthorityOnly"]
+command _3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4 [id "11", routing "AuthorityOnly"]
   syncConfigID String 
 
-command _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09 [id "13", routing "Other"]
+command _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09 [id "12", routing "Other"]
 
-command _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7 [id "14", routing "Other"]
+command _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7 [id "13", routing "Other"]
   toUp Bool 
 
-command _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6 [id "15", routing "AuthorityOnly"]
+command _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6 [id "14", routing "AuthorityOnly"]
 
-command _451e73a8eddd14b2daf891b5ee6c2308_ad9e635638034d88b0c6dcd8a9c83286 [id "16", routing "All"]
+command _451e73a8eddd14b2daf891b5ee6c2308_ad9e635638034d88b0c6dcd8a9c83286 [id "15", routing "All"]
 
-command _7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff [id "17", routing "AuthorityOnly"]
+command _7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff [id "16", routing "AuthorityOnly"]
   newBusyState Bool 
 
-command _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187 [id "18", routing "AuthorityOnly"]
+command _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187 [id "17", routing "AuthorityOnly"]
   newBusyState Bool 
 
-command _89bb435d615753b4f86caa89fd2a5d9d_ad9e635638034d88b0c6dcd8a9c83286 [id "19", routing "All"]
+command _89bb435d615753b4f86caa89fd2a5d9d_ad9e635638034d88b0c6dcd8a9c83286 [id "18", routing "All"]
 
-command _8d0ae98c8cb2746df8fa6b7fef5ee166_ad9e635638034d88b0c6dcd8a9c83286 [id "20", routing "All"]
+command _8d0ae98c8cb2746df8fa6b7fef5ee166_ad9e635638034d88b0c6dcd8a9c83286 [id "19", routing "All"]
 
-command _91ccee2338d92624a8021fda1c91e47c_da4067b1fcd34e8a93ae914a3b0df2f9 [id "21", routing "AuthorityOnly"]
+command _91ccee2338d92624a8021fda1c91e47c_da4067b1fcd34e8a93ae914a3b0df2f9 [id "20", routing "AuthorityOnly"]
   newBusyState Bool 
 
-command _a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb [id "22", routing "All"]
+command _a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb [id "21", routing "All"]
 
-command _a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4 [id "23", routing "AuthorityOnly"]
+command _a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4 [id "22", routing "AuthorityOnly"]
   newBusyState Bool 
 
-command _a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8 [id "24", routing "All"]
+command _a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8 [id "23", routing "All"]
 
-command _a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2 [id "25", routing "All"]
+command _a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2 [id "24", routing "All"]
 
-command _a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6 [id "26", routing "All"]
+command _a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6 [id "25", routing "All"]
 
-command _c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286 [id "27", routing "All"]
+command _c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286 [id "26", routing "All"]
 
-command _cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41 [id "28", routing "All"]
+command _cd9bcc1feead9419fac0c5981ce85c23_2306915e22844eadbded8e81dad23c41 [id "27", routing "All"]
 
-command _cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829 [id "29", routing "All"]
+command _cd9bcc1feead9419fac0c5981ce85c23_344741bcfef14e43909a3d3fe59aa829 [id "28", routing "All"]
 
-command _cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6 [id "30", routing "All"]
+command _cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6 [id "29", routing "All"]
   name String 
 
-command _cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8 [id "31", routing "Other"]
+command _cd9bcc1feead9419fac0c5981ce85c23_9072e96068c94ef9a783ea24d7448bf8 [id "30", routing "Other"]
 
-command _cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142 [id "32", routing "Other"]
+command _cd9bcc1feead9419fac0c5981ce85c23_9b336114382d4c8e917671bfe4a6a142 [id "31", routing "Other"]
 
-command _cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5 [id "33", routing "All"]
+command _cd9bcc1feead9419fac0c5981ce85c23_a44176edbb6f4de88cf611e02b9b81a5 [id "32", routing "All"]
 
-command _cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d [id "34", routing "All"]
+command _cd9bcc1feead9419fac0c5981ce85c23_a6362094f44f4918a0b4a6b21f19b61d [id "33", routing "All"]
 
-command _cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c [id "35", routing "All"]
+command _cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c [id "34", routing "All"]
 
-command _cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe [id "36", routing "Other"]
+command _cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe [id "35", routing "Other"]
   encodedMessage Bytes 
 
-command _e74854605b68b435280bc0ac73fef6c1_ad9e635638034d88b0c6dcd8a9c83286 [id "37", routing "All"]
+command _e74854605b68b435280bc0ac73fef6c1_ad9e635638034d88b0c6dcd8a9c83286 [id "36", routing "All"]
 
-command _ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d [id "38", routing "AuthorityOnly"]
+command _ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d [id "37", routing "AuthorityOnly"]
   newState Bool 
 
-command _f446f3c484ae048c4ba11ef7b8642420_ad9e635638034d88b0c6dcd8a9c83286 [id "39", routing "All"]
+command _f446f3c484ae048c4ba11ef7b8642420_ad9e635638034d88b0c6dcd8a9c83286 [id "38", routing "All"]
 
 archetype _3889a458e94666d4784df30d8dd06d7d [id "0"]
   lod 0
-    WorldPosition [id "195", base-id "0"]
+    WorldPosition [id "60", base-id "0"]
       archetype_field value [sim-frames "true", compression "None"]
-    _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 [id "196", base-id "159"]
+    _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 [id "61", base-id "24"]
       archetype_field activeFireEffect [bits "4", range-min "-1", range-max "10"]
       archetype_field fireTimer [bits "17", range-min "-5", range-max "100", compression "FixedPoint", precision "0.001"]
       archetype_field bigFireTimer [bits "17", range-min "-5", range-max "100", compression "FixedPoint", precision "0.001"]
 
 archetype _cd9bcc1feead9419fac0c5981ce85c23 [id "1"]
   lod 0
-    WorldPosition [id "197", base-id "0"]
+    WorldPosition [id "62", base-id "0"]
       archetype_field value [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01", sim-frames "true"]
-    WorldOrientation [id "198", base-id "1"]
+    WorldOrientation [id "63", base-id "1"]
       archetype_field value [bits "12", sim-frames "true"]
-    GenericScale [id "199", base-id "17"]
+    GenericScale [id "64", base-id "17"]
       archetype_field value [sim-frames "true", compression "None"]
-    _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618 [id "200", base-id "187"]
+    _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618 [id "65", base-id "52"]
       archetype_field currentBackpack [bits "3", range-min "-2", range-max "3"]
       archetype_field currentSkinTone [bits "5", range-min "-2", range-max "20"]
       archetype_field currentClothes [bits "32", range-min "-2147483648", range-max "2147483647"]
       archetype_field currentBody [bits "32", range-min "-2147483648", range-max "2147483647"]
       archetype_field currentHairstyle [bits "32", range-min "-2147483648", range-max "2147483647"]
-    _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181 [id "201", base-id "184"]
+    _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181 [id "66", base-id "49"]
       archetype_field text [bits "6"]
-    _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 [id "202", base-id "186"]
+    _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 [id "67", base-id "51"]
       archetype_field position [bits "17", range-min "-100", range-max "600", compression "FixedPoint", precision "0.01", sim-frames "true"]
-    _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 [id "203", base-id "183"]
+    _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 [id "68", base-id "48"]
       archetype_field MoveSpeed [sim-frames "true", compression "None"]
       archetype_field Grounded [bits "1"]
       archetype_field CarryingBig [bits "1"]
       archetype_field IsChopping [bits "1"]
       archetype_field IsSitting [bits "1"]
-    _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216 [id "204", base-id "185"]
+    _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216 [id "69", base-id "50"]
       archetype_field path [bits "6"]
       archetype_field pathDirtyCounter [bits "32", range-min "-2147483648", range-max "2147483647"]
 

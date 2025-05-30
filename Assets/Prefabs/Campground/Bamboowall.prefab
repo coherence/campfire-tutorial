@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1542249833488516506}
   - component: {fileID: 8905114411819996440}
   - component: {fileID: 7107478622081098083}
-  - component: {fileID: 8687875857351073738}
+  - component: {fileID: 6194314060727976685}
   m_Layer: 7
   m_Name: Group34816
   m_TagString: Untagged
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076858714892699898}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8793791400618031881}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8905114411819996440
 MeshFilter:
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8687875857351073738
+--- !u!65 &6194314060727976685
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,19 +92,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076858714892699898}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.25758, y: 4.895288, z: 0.5729004}
-  m_Center: {x: 0.008062009, y: 2.5632787, z: 0.053141426}
+  serializedVersion: 2
+  m_Size: {x: 5.3775244, y: 5.159973, z: 0.72007596}
+  m_Center: {x: 0.008062005, y: 2.5739555, z: 0.09611599}
 --- !u!1 &8161087688469422515
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +120,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8161087688469422515}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.1, y: 0.00999999, z: -6.7}
   m_LocalScale: {x: 0.70832, y: 0.70832, z: 0.70832}
@@ -136,4 +127,5 @@ Transform:
   m_Children:
   - {fileID: 1542249833488516506}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
