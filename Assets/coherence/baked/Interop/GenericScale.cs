@@ -60,13 +60,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 64");
+                    "for component with ID 69");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 64");
+                    "for component with ID 69");
             }
 
             var orig = new GenericScale();
@@ -192,15 +192,9 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = (data.value.ToCoreVector3());
-
-
-
                 bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
             }
-
             mask >>= 1;
 
             return mask;

@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: Banjo
   m_EditorClassIdentifier: 
   id: e74854605b68b435280bc0ac73fef6c1
-  selfId: 2cdaad91620c4439b92884967fde9f30
+  selfId: 05334cdfc0a0e44b2bec68fc8516144f
   editorTarget: {fileID: 376899958955767387, guid: e74854605b68b435280bc0ac73fef6c1,
     type: 3}
   includeInSchema: 1
   objectProvider:
-    rid: 8975624996118855680
+    rid: 1142646141646274590
   objectInstantiator:
-    rid: 8975624723861602319
+    rid: 1142646141646274591
   references:
     version: 2
     RefIds:
-    - rid: 8975624723861602319
-      type: {class: UniqueBurnableInstantiator, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 8975624996118855680
+    - rid: 1142646141646274590
       type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data:
         prefab: {fileID: 376899958955767387, guid: e74854605b68b435280bc0ac73fef6c1,
           type: 3}
+    - rid: 1142646141646274591
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 

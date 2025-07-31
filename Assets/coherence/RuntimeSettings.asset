@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b91f942a5214496b0e11eaedb54c36, type: 3}
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
-  schemaID: c84903806b884690f25e4085129bea720d2c36cb
+  schemaID: d9280ec024b77d50d05bec6dfb79381ceef79de4
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: dfd8f781fadc4c13bdbe782e793e52f1
   simulatorSlug: may 22, 1.7.0_rc2
@@ -49,3 +49,5 @@ MonoBehaviour:
   defaultTransportMode: 0
   defaultTransportModeMigrated: 1
   defaultAuthorityTransferType: 2
+  simulatorLockTargetFramerate: 1
+  simulatorTargetFramerate: 30

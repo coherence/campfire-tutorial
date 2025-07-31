@@ -18,17 +18,16 @@ MonoBehaviour:
     type: 3}
   includeInSchema: 1
   objectProvider:
-    rid: 3041628591939387472
+    rid: 1142646141646274576
   objectInstantiator:
     rid: 3041628591939387473
   references:
     version: 2
     RefIds:
-    - rid: 3041628591939387472
-      type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+    - rid: 1142646141646274576
+      type: {class: ResourcesProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data:
-        prefab: {fileID: 8181717766106267377, guid: 7455a9685d292b843b28465a4faffd05,
-          type: 3}
+        resourcesPath: Barstool
     - rid: 3041628591939387473
       type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data: 

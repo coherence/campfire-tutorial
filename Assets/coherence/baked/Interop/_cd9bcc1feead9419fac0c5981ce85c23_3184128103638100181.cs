@@ -38,12 +38,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 16) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
-                    "for component with ID 49");
+                    "for component with ID 54");
             }
 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 49");
+                    "for component with ID 54");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181();
@@ -59,13 +59,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 16) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
-                    "for component with ID 66");
+                    "for component with ID 71");
             }
 
                 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 66");
+                    "for component with ID 71");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181();
@@ -83,7 +83,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 49;
+        public uint GetComponentType() => 54;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
@@ -168,15 +168,9 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.text;
-
-
-
                 bitStream.WriteShortString(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

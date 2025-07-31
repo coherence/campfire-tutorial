@@ -13,24 +13,22 @@ MonoBehaviour:
   m_Name: Log
   m_EditorClassIdentifier: 
   id: 9ea9c7ad1465c4769a67e80391f1158b
-  selfId: 4c3a77d27d3c1475391d6532d5882c37
+  selfId: 289c8b430cb5b4090b0d3486d659d06e
   editorTarget: {fileID: 2347437607364363047, guid: 9ea9c7ad1465c4769a67e80391f1158b,
     type: 3}
   includeInSchema: 1
   objectProvider:
-    rid: 8975624996118855689
+    rid: 1142646141646274564
   objectInstantiator:
-    rid: 8975624841989980457
+    rid: 1142646141646274565
   references:
     version: 2
     RefIds:
-    - rid: 8975624841989980457
-      type: {class: NetworkPool, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
-      data:
-        maxSize: 20
-        initialSize: 10
-    - rid: 8975624996118855689
+    - rid: 1142646141646274564
       type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data:
         prefab: {fileID: 2347437607364363047, guid: 9ea9c7ad1465c4769a67e80391f1158b,
           type: 3}
+    - rid: 1142646141646274565
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 

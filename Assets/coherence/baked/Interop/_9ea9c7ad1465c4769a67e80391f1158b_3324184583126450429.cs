@@ -38,12 +38,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 1) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 1) " +
-                    "for component with ID 42");
+                    "for component with ID 47");
             }
 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 42");
+                    "for component with ID 47");
             }
 
             var orig = new _9ea9c7ad1465c4769a67e80391f1158b_3324184583126450429();
@@ -62,7 +62,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 42;
+        public uint GetComponentType() => 47;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
@@ -147,15 +147,9 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.isBeingCarried;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

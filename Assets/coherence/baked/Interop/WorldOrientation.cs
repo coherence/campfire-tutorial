@@ -60,13 +60,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 16) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
-                    "for component with ID 63");
+                    "for component with ID 68");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 63");
+                    "for component with ID 68");
             }
 
             var orig = new WorldOrientation();
@@ -192,15 +192,9 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = (data.value.ToCoreQuaternion());
-
-
-
                 bitStream.WriteQuaternion(fieldValue, 32);
             }
-
             mask >>= 1;
 
             return mask;

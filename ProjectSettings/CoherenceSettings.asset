@@ -22,11 +22,17 @@ MonoBehaviour:
   recvFrequency: 60
   localRoomsCleanupTimeSeconds: 120
   localWorldHostAuthority: 0
-  rsConsoleLogLevel: 2
-  rsLogToFile: 0
+  rsConsoleLogLevel: 0
+  rsLogToFile: 1
   rsLogFilePath: Logs/rs_logs.txt
-  rsFileLogLevel: 1
+  rsFileLogLevel: 0
   reportAnalytics: 1
   RSBundlingEnabled: 1
   keepConnectionAlive: 1
   activeSchemas: []
+  organization:
+    id: c1mnh99rn6r9re0fhp00
+    name: 
+    slug: 
+    projects: []
+  multipleProjects: []

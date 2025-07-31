@@ -38,12 +38,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 4) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 4) " +
-                    "for component with ID 21");
+                    "for component with ID 23");
             }
 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 21");
+                    "for component with ID 23");
             }
 
             var orig = new _0d27e1ad6d8e5ba4abca3216a92298f7_4384992023136877932();
@@ -62,7 +62,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 21;
+        public uint GetComponentType() => 23;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
@@ -186,15 +186,9 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.objectAnchorSync;
-
-
-
                 bitStream.WriteEntity(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: Banana
   m_EditorClassIdentifier: 
   id: c76bd173fbfcfba44982ec0a19f9c897
-  selfId: 73960bab4eb0d4bf1ad6ad30e70c6b9d
+  selfId: 3230ba21157404df99b1fb8813537ff2
   editorTarget: {fileID: 7463932230663352264, guid: c76bd173fbfcfba44982ec0a19f9c897,
     type: 3}
   includeInSchema: 1
   objectProvider:
-    rid: 8975624996118855681
+    rid: 1142646141646274562
   objectInstantiator:
-    rid: 8975624723861602317
+    rid: 1142646141646274584
   references:
     version: 2
     RefIds:
-    - rid: 8975624723861602317
-      type: {class: UniqueBurnableInstantiator, ns: , asm: Assembly-CSharp}
-      data: 
-    - rid: 8975624996118855681
+    - rid: 1142646141646274562
       type: {class: DirectReferenceProvider, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
       data:
         prefab: {fileID: 7463932230663352264, guid: c76bd173fbfcfba44982ec0a19f9c897,
           type: 3}
+    - rid: 1142646141646274584
+      type: {class: DefaultInstantiator, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data: 
