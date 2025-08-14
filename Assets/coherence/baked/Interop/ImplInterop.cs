@@ -146,8 +146,9 @@ namespace Coherence.Generated
 
                     val.position = orig.position;
                     val.radius = orig.radius;
+                    val.buffer = orig.buffer;
 
-                    updater.UpdateComponent(entity, componentType, val, 16, component.FieldsMask, component.StoppedMask, frames);
+                    updater.UpdateComponent(entity, componentType, val, 20, component.FieldsMask, component.StoppedMask, frames);
 
                     return;
                 }

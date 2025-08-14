@@ -162,7 +162,7 @@ command _3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391 [id "
   newEffectID Int 
   syncConfigID String 
 
-command _3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4 [id "11", routing "AuthorityOnly"]
+command _3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4 [id "11", routing "StateAuthorityOnly"]
   syncConfigID String 
 
 command _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09 [id "12", routing "Other"]
@@ -170,26 +170,26 @@ command _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09 [id "
 command _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7 [id "13", routing "Other"]
   toUp Bool 
 
-command _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6 [id "14", routing "AuthorityOnly"]
+command _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6 [id "14", routing "StateAuthorityOnly"]
 
 command _451e73a8eddd14b2daf891b5ee6c2308_ad9e635638034d88b0c6dcd8a9c83286 [id "15", routing "All"]
 
-command _7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff [id "16", routing "AuthorityOnly"]
+command _7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff [id "16", routing "StateAuthorityOnly"]
   newBusyState Bool 
 
-command _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187 [id "17", routing "AuthorityOnly"]
+command _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187 [id "17", routing "StateAuthorityOnly"]
   newBusyState Bool 
 
 command _89bb435d615753b4f86caa89fd2a5d9d_ad9e635638034d88b0c6dcd8a9c83286 [id "18", routing "All"]
 
 command _8d0ae98c8cb2746df8fa6b7fef5ee166_ad9e635638034d88b0c6dcd8a9c83286 [id "19", routing "All"]
 
-command _91ccee2338d92624a8021fda1c91e47c_da4067b1fcd34e8a93ae914a3b0df2f9 [id "20", routing "AuthorityOnly"]
+command _91ccee2338d92624a8021fda1c91e47c_da4067b1fcd34e8a93ae914a3b0df2f9 [id "20", routing "StateAuthorityOnly"]
   newBusyState Bool 
 
 command _a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb [id "21", routing "All"]
 
-command _a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4 [id "22", routing "AuthorityOnly"]
+command _a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4 [id "22", routing "StateAuthorityOnly"]
   newBusyState Bool 
 
 command _a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8 [id "23", routing "All"]
@@ -222,7 +222,7 @@ command _cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe [id "
 
 command _e74854605b68b435280bc0ac73fef6c1_ad9e635638034d88b0c6dcd8a9c83286 [id "36", routing "All"]
 
-command _ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d [id "37", routing "AuthorityOnly"]
+command _ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d [id "37", routing "StateAuthorityOnly"]
   newState Bool 
 
 command _f446f3c484ae048c4ba11ef7b8642420_ad9e635638034d88b0c6dcd8a9c83286 [id "38", routing "All"]

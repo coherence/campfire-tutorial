@@ -20,7 +20,7 @@ namespace Coherence.Generated
 
     public class Definition : IDefinition
     {
-        public const string schemaId = "c84903806b884690f25e4085129bea720d2c36cb";
+        public const string schemaId = "9990d66f3e6f7cea6e814a5dd497ef6bbbf7cf87";
         public const uint InternalWorldPosition = 0;
         public const uint InternalWorldOrientation = 1;
         public const uint InternalLocalUserComponent = 2;
@@ -230,18 +230,18 @@ namespace Coherence.Generated
             { Definition.Internal_3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38 , MessageTarget.All },
             { Definition.Internal_3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db , MessageTarget.All },
             { Definition.Internal_3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391 , MessageTarget.All },
-            { Definition.Internal_3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4 , MessageTarget.AuthorityOnly },
+            { Definition.Internal_3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4 , MessageTarget.StateAuthorityOnly },
             { Definition.Internal_3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09 , MessageTarget.Other },
             { Definition.Internal_3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7 , MessageTarget.Other },
-            { Definition.Internal_3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6 , MessageTarget.AuthorityOnly },
+            { Definition.Internal_3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6 , MessageTarget.StateAuthorityOnly },
             { Definition.Internal_451e73a8eddd14b2daf891b5ee6c2308_ad9e635638034d88b0c6dcd8a9c83286 , MessageTarget.All },
-            { Definition.Internal_7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff , MessageTarget.AuthorityOnly },
-            { Definition.Internal_7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187 , MessageTarget.AuthorityOnly },
+            { Definition.Internal_7455a9685d292b843b28465a4faffd05_4f5f31474cef489f91936637c9eefcff , MessageTarget.StateAuthorityOnly },
+            { Definition.Internal_7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187 , MessageTarget.StateAuthorityOnly },
             { Definition.Internal_89bb435d615753b4f86caa89fd2a5d9d_ad9e635638034d88b0c6dcd8a9c83286 , MessageTarget.All },
             { Definition.Internal_8d0ae98c8cb2746df8fa6b7fef5ee166_ad9e635638034d88b0c6dcd8a9c83286 , MessageTarget.All },
-            { Definition.Internal_91ccee2338d92624a8021fda1c91e47c_da4067b1fcd34e8a93ae914a3b0df2f9 , MessageTarget.AuthorityOnly },
+            { Definition.Internal_91ccee2338d92624a8021fda1c91e47c_da4067b1fcd34e8a93ae914a3b0df2f9 , MessageTarget.StateAuthorityOnly },
             { Definition.Internal_a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb , MessageTarget.All },
-            { Definition.Internal_a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4 , MessageTarget.AuthorityOnly },
+            { Definition.Internal_a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4 , MessageTarget.StateAuthorityOnly },
             { Definition.Internal_a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8 , MessageTarget.All },
             { Definition.Internal_a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2 , MessageTarget.All },
             { Definition.Internal_a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6 , MessageTarget.All },
@@ -256,7 +256,7 @@ namespace Coherence.Generated
             { Definition.Internal_cd9bcc1feead9419fac0c5981ce85c23_c6cd65f2d33547e7800e9cd24ce9a96c , MessageTarget.All },
             { Definition.Internal_cd9bcc1feead9419fac0c5981ce85c23_d80a9015b8844731b2e04870faa56abe , MessageTarget.Other },
             { Definition.Internal_e74854605b68b435280bc0ac73fef6c1_ad9e635638034d88b0c6dcd8a9c83286 , MessageTarget.All },
-            { Definition.Internal_ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d , MessageTarget.AuthorityOnly },
+            { Definition.Internal_ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d , MessageTarget.StateAuthorityOnly },
             { Definition.Internal_f446f3c484ae048c4ba11ef7b8642420_ad9e635638034d88b0c6dcd8a9c83286 , MessageTarget.All },
         };
 
@@ -650,11 +650,7 @@ namespace Coherence.Generated
 
             for (var i = 0; i < numMessages; i++)
             {
-                var entityID = DeserializerTools.DeserializeEntity(bitStream);
-                var messageTarget = DeserializerTools.DeserializeMessageTarget(bitStream);
-                var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
-                var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
-                commandData[i] = ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
+            	commandData[i] = ReadCommand(bitStream, logger);
             }
 
             return commandData;
@@ -686,9 +682,18 @@ namespace Coherence.Generated
             var entityID = DeserializerTools.DeserializeEntity(bitStream);
             var messageTarget = DeserializerTools.DeserializeMessageTarget(bitStream);
             var componentType = DeserializerTools.DeserializeComponentTypeID(bitStream);
+            var meta = DeserializerTools.DeserializeCommandMeta(bitStream);
             var inBitStream = new Coherence.Serializer.InProtocolBitStream(bitStream);
 
-            return ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
+			var command = ReadCommand(componentType, entityID, messageTarget, inBitStream, logger);
+			if (meta.HasValue)
+			{
+				command.UsesMeta = true;
+				command.SenderClientID = new ClientID(meta.Value.SenderID);
+				command.Frame = meta.Value.Frame;
+			}
+
+            return command;
         }
 
         public void WriteCommand(IEntityCommand data, uint commandType, IOutProtocolBitStream bitStream, Logger logger)
@@ -821,7 +826,6 @@ namespace Coherence.Generated
         public void WriteInput(IEntityInput data, uint inputType, IOutProtocolBitStream bitStream, Logger logger)
         {
             var inputData = (InputData)data;
-            bitStream.WriteLong(inputData.Frame);
 
             switch (inputType)
             {
@@ -833,12 +837,19 @@ namespace Coherence.Generated
 
         public IEntityCommand CreateAuthorityRequest(Entity entity, ClientID requester, AuthorityType authType)
         {
-            return new AuthorityRequest(entity, (uint)requester, (int)authType);
+            return new AuthorityRequest(entity, (uint)requester, (int)authType)
+			{
+				Target = MessageTarget.StateAuthorityOnly,
+			};
         }
 
-        public IEntityCommand CreateAdoptOrphanCommand()
+        public IEntityCommand CreateAdoptOrphanCommand(Entity entity)
         {
-            return new AdoptOrphan();
+            return new AdoptOrphan
+            {
+                Entity = entity,
+                Target = MessageTarget.StateAuthorityOnly,
+            };
         }
 
         public bool TryGetAuthorityRequestCommand(IEntityCommand entityCommand,
@@ -860,7 +871,10 @@ namespace Coherence.Generated
 
         public IEntityCommand CreateAuthorityTransfer(Entity entity, ClientID newAuthority, bool accepted, AuthorityType authType)
         {
-            return new AuthorityTransfer(entity, (uint)newAuthority, accepted, (int)authType);
+            return new AuthorityTransfer(entity, (uint)newAuthority, accepted, (int)authType)
+			{
+				Target = MessageTarget.Other,
+			};
         }
 
         public bool TryGetAuthorityTransferCommand(IEntityCommand entityCommand, out ClientID newAuthority,
@@ -949,7 +963,10 @@ namespace Coherence.Generated
 
         public IEntityCommand CreateSceneIndexChangedCommand(Entity entity, int sceneIndex)
         {
-            return new SceneIndexChanged(entity, sceneIndex);
+            return new SceneIndexChanged(entity, sceneIndex)
+			{
+				Target = MessageTarget.StateAuthorityOnly,
+			};
         }
 
         public bool IsSendOrderedComponent(uint componentID)

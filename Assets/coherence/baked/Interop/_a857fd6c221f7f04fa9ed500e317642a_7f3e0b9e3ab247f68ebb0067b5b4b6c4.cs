@@ -12,6 +12,7 @@ namespace Coherence.Generated
     using Coherence.Entities;
     using Coherence.Log;
     using Coherence.Core;
+    using Coherence.Connection;
     using System.Collections.Generic;
     using System.Runtime.InteropServices;
     using UnityEngine;
@@ -42,10 +43,14 @@ namespace Coherence.Generated
         
         public Entity Entity { get; set; }
         public Coherence.ChannelID ChannelID { get; set; }
+        public MessageTarget Target { get; set; }
         public MessageTarget Routing { get; set; }
-        public uint Sender { get; set; }
+        public uint SenderParticipant { get; set; }
+        public ClientID SenderClientID { get; set; }
+        public long Frame { get; set; }
         public uint GetComponentType() => 22;
-        
+        public bool UsesMeta { get; set; }
+
         public IEntityMessage Clone()
         {
             // This is a struct, so we can safely return
@@ -83,15 +88,19 @@ namespace Coherence.Generated
         }
         
         public _a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4(
-        Entity entity,
-        System.Boolean newBusyState
-)
+            Entity entity,
+            System.Boolean newBusyState
+        )
         {
             Entity = entity;
             ChannelID = Coherence.ChannelID.Default;
-            Routing = MessageTarget.AuthorityOnly;
-            Sender = 0;
-            
+            Target = default;
+            Routing = MessageTarget.StateAuthorityOnly;
+            SenderParticipant = 0;
+            SenderClientID = default;
+            Frame = 0;
+            UsesMeta = false;
+
             this.newBusyState = newBusyState; 
         }
         
@@ -108,6 +117,7 @@ namespace Coherence.Generated
             {
                 Entity = entity,
                 Routing = target,
+                Target = target,
                 newBusyState = datanewBusyState
             };   
         }

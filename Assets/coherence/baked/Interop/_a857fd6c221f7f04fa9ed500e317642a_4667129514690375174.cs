@@ -162,27 +162,15 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.IsFlailing;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.IsCarrying;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

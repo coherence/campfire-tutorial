@@ -12,6 +12,7 @@ namespace Coherence.Generated
     using Coherence.Entities;
     using Coherence.Log;
     using Coherence.Core;
+    using Coherence.Connection;
     using System.Collections.Generic;
     using System.Runtime.InteropServices;
     using UnityEngine;
@@ -42,10 +43,14 @@ namespace Coherence.Generated
         
         public Entity Entity { get; set; }
         public Coherence.ChannelID ChannelID { get; set; }
+        public MessageTarget Target { get; set; }
         public MessageTarget Routing { get; set; }
-        public uint Sender { get; set; }
+        public uint SenderParticipant { get; set; }
+        public ClientID SenderClientID { get; set; }
+        public long Frame { get; set; }
         public uint GetComponentType() => 13;
-        
+        public bool UsesMeta { get; set; }
+
         public IEntityMessage Clone()
         {
             // This is a struct, so we can safely return
@@ -83,15 +88,19 @@ namespace Coherence.Generated
         }
         
         public _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7(
-        Entity entity,
-        System.Boolean toUp
-)
+            Entity entity,
+            System.Boolean toUp
+        )
         {
             Entity = entity;
             ChannelID = Coherence.ChannelID.Default;
+            Target = default;
             Routing = MessageTarget.Other;
-            Sender = 0;
-            
+            SenderParticipant = 0;
+            SenderClientID = default;
+            Frame = 0;
+            UsesMeta = false;
+
             this.toUp = toUp; 
         }
         
@@ -108,6 +117,7 @@ namespace Coherence.Generated
             {
                 Entity = entity,
                 Routing = target,
+                Target = target,
                 toUp = datatoUp
             };   
         }

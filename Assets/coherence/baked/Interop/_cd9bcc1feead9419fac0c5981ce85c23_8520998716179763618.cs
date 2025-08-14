@@ -242,78 +242,43 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentBackpack, _currentBackpack_Min, _currentBackpack_Max, "_cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentBackpack", logger);
-
                 data.currentBackpack = Coherence.Utils.Bounds.Clamp(data.currentBackpack, _currentBackpack_Min, _currentBackpack_Max);
-
                 var fieldValue = data.currentBackpack;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 3, -2);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentSkinTone, _currentSkinTone_Min, _currentSkinTone_Max, "_cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentSkinTone", logger);
-
                 data.currentSkinTone = Coherence.Utils.Bounds.Clamp(data.currentSkinTone, _currentSkinTone_Min, _currentSkinTone_Max);
-
                 var fieldValue = data.currentSkinTone;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 5, -2);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentClothes, _currentClothes_Min, _currentClothes_Max, "_cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentClothes", logger);
-
                 data.currentClothes = Coherence.Utils.Bounds.Clamp(data.currentClothes, _currentClothes_Min, _currentClothes_Max);
-
                 var fieldValue = data.currentClothes;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentBody, _currentBody_Min, _currentBody_Max, "_cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentBody", logger);
-
                 data.currentBody = Coherence.Utils.Bounds.Clamp(data.currentBody, _currentBody_Min, _currentBody_Max);
-
                 var fieldValue = data.currentBody;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.currentHairstyle, _currentHairstyle_Min, _currentHairstyle_Max, "_cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618.currentHairstyle", logger);
-
                 data.currentHairstyle = Coherence.Utils.Bounds.Clamp(data.currentHairstyle, _currentHairstyle_Min, _currentHairstyle_Max);
-
                 var fieldValue = data.currentHairstyle;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
 
             return mask;

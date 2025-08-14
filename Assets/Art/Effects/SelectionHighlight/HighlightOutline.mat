@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HighlightOutline
-  m_Shader: {fileID: -6465566751694194690, guid: da929e4a5ec894e5da78762c53a465d3,
+  m_Shader: {fileID: -6465566751694194690, guid: abcf3ae5e7fa4422da83e0d051f08dea,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -62,7 +62,7 @@ Material:
     - _Strength_t: 1
     - _Strength_w: 1
     - _Surface: 0
-    - _Thickness: 0.8
+    - _Thickness: 0.4
     - _World_space_Variation: 3
     - _ZTest: 8
     - _ZWrite: 1

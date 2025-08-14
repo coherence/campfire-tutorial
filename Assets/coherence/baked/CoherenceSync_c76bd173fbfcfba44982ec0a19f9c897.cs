@@ -433,30 +433,43 @@ namespace Coherence.Generated
         private void BakeCommandBinding__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286_CommandTarget = (global::PositionedObject)commandBinding.UnityComponent;
-            commandsHandler.AddBakedCommand("PositionedObject.PlayReappearShaderEffect", "()", SendCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286, ReceiveLocalCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286, MessageTarget.All, _c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286_CommandTarget, false);
+            commandsHandler.AddBakedCommand(
+            	"PositionedObject.PlayReappearShaderEffect",
+            	"()",
+            	SendCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286,
+            	ReceiveLocalCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286,
+            	MessageTarget.All,
+            	_c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286_CommandTarget,
+            	commandBinding.UsesMeta());
         }
         
-        private void SendCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286(MessageTarget target, ChannelID channelID, object[] args)
+        private void SendCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286(GenericCommandRequestArgs requestArgs)
         {
             var command = new _c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286();
-            
-        
-            client.SendCommand(command, target, entityId, channelID);
+            command.Frame = requestArgs.Frame;
+            command.SenderClientID = requestArgs.Sender;
+            command.UsesMeta = requestArgs.UsesMeta;
+            command.Target = requestArgs.Target;
+            command.Entity = entityId;
+
+
+            client.SendCommand(command, requestArgs.ChannelID);
         }
         
-        private void ReceiveLocalCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286(MessageTarget target, ChannelID _, object[] args)
+        private void ReceiveLocalCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286(GenericCommandRequestArgs requestArgs)
         {
             var command = new _c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286();
-            
-            
+            command.Frame = requestArgs.Frame;
+            command.SenderClientID = requestArgs.Sender;
+
+
             ReceiveCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286(command);
         }
 
         private void ReceiveCommand__c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286(_c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286 command)
         {
             var target = _c76bd173fbfcfba44982ec0a19f9c897_ad9e635638034d88b0c6dcd8a9c83286_CommandTarget;
-            
-            target.PlayReappearShaderEffect();
+			target.PlayReappearShaderEffect();
         }
         
         public override void ReceiveCommand(IEntityCommand command)

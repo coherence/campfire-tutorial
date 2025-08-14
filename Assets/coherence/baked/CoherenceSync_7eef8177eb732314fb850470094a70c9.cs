@@ -225,34 +225,45 @@ namespace Coherence.Generated
         private void BakeCommandBinding__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187_CommandTarget = (global::Chair)commandBinding.UnityComponent;
-            commandsHandler.AddBakedCommand("Chair.ChangeState", "(System.Boolean)", SendCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187, ReceiveLocalCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187, MessageTarget.AuthorityOnly, _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187_CommandTarget, false);
+            commandsHandler.AddBakedCommand(
+            	"Chair.ChangeState",
+            	"(System.Boolean)",
+            	SendCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187,
+            	ReceiveLocalCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187,
+            	MessageTarget.StateAuthorityOnly,
+            	_7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187_CommandTarget,
+            	commandBinding.UsesMeta());
         }
         
-        private void SendCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187(MessageTarget target, ChannelID channelID, object[] args)
+        private void SendCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187(GenericCommandRequestArgs requestArgs)
         {
             var command = new _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187();
-            
-            int i = 0;
-            command.newBusyState = (System.Boolean)args[i++];
-        
-            client.SendCommand(command, target, entityId, channelID);
+            command.Frame = requestArgs.Frame;
+            command.SenderClientID = requestArgs.Sender;
+            command.UsesMeta = requestArgs.UsesMeta;
+            command.Target = requestArgs.Target;
+            command.Entity = entityId;
+
+            command.newBusyState = (System.Boolean)requestArgs.Args[0];
+
+            client.SendCommand(command, requestArgs.ChannelID);
         }
         
-        private void ReceiveLocalCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187(MessageTarget target, ChannelID _, object[] args)
+        private void ReceiveLocalCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187(GenericCommandRequestArgs requestArgs)
         {
             var command = new _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187();
-            
-            int i = 0;
-            command.newBusyState = (System.Boolean)args[i++];
-            
+            command.Frame = requestArgs.Frame;
+            command.SenderClientID = requestArgs.Sender;
+
+            command.newBusyState = (System.Boolean)requestArgs.Args[0];
+
             ReceiveCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187(command);
         }
 
         private void ReceiveCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187(_7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187 command)
         {
             var target = _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187_CommandTarget;
-            
-            target.ChangeState((System.Boolean)(command.newBusyState));
+			target.ChangeState((System.Boolean)(command.newBusyState));
         }
         
         public override void ReceiveCommand(IEntityCommand command)

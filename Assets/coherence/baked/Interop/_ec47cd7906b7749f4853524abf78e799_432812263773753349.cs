@@ -177,39 +177,21 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.holdingForUUID;
-
-
-
                 bitStream.WriteShortString(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.isObjectPresent;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.syncConfigId;
-
-
-
                 bitStream.WriteShortString(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

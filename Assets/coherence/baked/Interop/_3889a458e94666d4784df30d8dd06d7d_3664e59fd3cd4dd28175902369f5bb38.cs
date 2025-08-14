@@ -12,6 +12,7 @@ namespace Coherence.Generated
     using Coherence.Entities;
     using Coherence.Log;
     using Coherence.Core;
+    using Coherence.Connection;
     using System.Collections.Generic;
     using System.Runtime.InteropServices;
     using UnityEngine;
@@ -46,10 +47,14 @@ namespace Coherence.Generated
         
         public Entity Entity { get; set; }
         public Coherence.ChannelID ChannelID { get; set; }
+        public MessageTarget Target { get; set; }
         public MessageTarget Routing { get; set; }
-        public uint Sender { get; set; }
+        public uint SenderParticipant { get; set; }
+        public ClientID SenderClientID { get; set; }
+        public long Frame { get; set; }
         public uint GetComponentType() => 8;
-        
+        public bool UsesMeta { get; set; }
+
         public IEntityMessage Clone()
         {
             // This is a struct, so we can safely return
@@ -87,16 +92,20 @@ namespace Coherence.Generated
         }
         
         public _3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38(
-        Entity entity,
-        System.Int32 oldEffectID,
-        System.Int32 newEffectID
-)
+            Entity entity,
+            System.Int32 oldEffectID,
+            System.Int32 newEffectID
+        )
         {
             Entity = entity;
             ChannelID = Coherence.ChannelID.Default;
+            Target = default;
             Routing = MessageTarget.All;
-            Sender = 0;
-            
+            SenderParticipant = 0;
+            SenderClientID = default;
+            Frame = 0;
+            UsesMeta = false;
+
             this.oldEffectID = oldEffectID; 
             this.newEffectID = newEffectID; 
         }
@@ -116,6 +125,7 @@ namespace Coherence.Generated
             {
                 Entity = entity,
                 Routing = target,
+                Target = target,
                 oldEffectID = dataoldEffectID,
                 newEffectID = datanewEffectID
             };   

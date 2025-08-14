@@ -256,63 +256,33 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
-
                 var fieldValue = data.MoveSpeed;
-
-
-
                 bitStream.WriteFloat(fieldValue, FloatMeta.NoCompression());
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.Grounded;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.CarryingBig;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.IsChopping;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.IsSitting;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

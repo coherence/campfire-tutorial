@@ -149,18 +149,11 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.energy, _energy_Min, _energy_Max, "_3d92447627afdfc419ceeb6b26251a87_1406947345458511524.energy", logger);
-
                 data.energy = Coherence.Utils.Bounds.Clamp(data.energy, _energy_Min, _energy_Max);
-
                 var fieldValue = data.energy;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
 
             return mask;
