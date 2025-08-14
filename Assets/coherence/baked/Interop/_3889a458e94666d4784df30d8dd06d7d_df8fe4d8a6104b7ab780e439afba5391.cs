@@ -12,6 +12,7 @@ namespace Coherence.Generated
     using Coherence.Entities;
     using Coherence.Log;
     using Coherence.Core;
+    using Coherence.Connection;
     using System.Collections.Generic;
     using System.Runtime.InteropServices;
     using UnityEngine;
@@ -33,7 +34,7 @@ namespace Coherence.Generated
         {
             if (dataSize != 24) {
                 throw new System.Exception($"Given data size is not equal to the struct size. ({dataSize} != 24) " +
-                    "for command with ID 11");
+                    "for command with ID 10");
             }
 
             var orig = new _3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391();
@@ -50,10 +51,14 @@ namespace Coherence.Generated
         
         public Entity Entity { get; set; }
         public Coherence.ChannelID ChannelID { get; set; }
+        public MessageTarget Target { get; set; }
         public MessageTarget Routing { get; set; }
-        public uint Sender { get; set; }
-        public uint GetComponentType() => 11;
-        
+        public uint SenderParticipant { get; set; }
+        public ClientID SenderClientID { get; set; }
+        public long Frame { get; set; }
+        public uint GetComponentType() => 10;
+        public bool UsesMeta { get; set; }
+
         public IEntityMessage Clone()
         {
             // This is a struct, so we can safely return
@@ -91,17 +96,21 @@ namespace Coherence.Generated
         }
         
         public _3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391(
-        Entity entity,
-        System.Int32 oldEffectID,
-        System.Int32 newEffectID,
-        System.String syncConfigID
-)
+            Entity entity,
+            System.Int32 oldEffectID,
+            System.Int32 newEffectID,
+            System.String syncConfigID
+        )
         {
             Entity = entity;
             ChannelID = Coherence.ChannelID.Default;
+            Target = default;
             Routing = MessageTarget.All;
-            Sender = 0;
-            
+            SenderParticipant = 0;
+            SenderClientID = default;
+            Frame = 0;
+            UsesMeta = false;
+
             this.oldEffectID = oldEffectID; 
             this.newEffectID = newEffectID; 
             this.syncConfigID = syncConfigID; 
@@ -124,6 +133,7 @@ namespace Coherence.Generated
             {
                 Entity = entity,
                 Routing = target,
+                Target = target,
                 oldEffectID = dataoldEffectID,
                 newEffectID = datanewEffectID,
                 syncConfigID = datasyncConfigID

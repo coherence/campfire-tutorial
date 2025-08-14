@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct LocalUserComponent : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -150,18 +149,11 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.localIndex, _localIndex_Min, _localIndex_Max, "LocalUserComponent.localIndex", logger);
-
                 data.localIndex = Coherence.Utils.Bounds.Clamp(data.localIndex, _localIndex_Min, _localIndex_Max);
-
                 var fieldValue = data.localIndex;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
 
             return mask;

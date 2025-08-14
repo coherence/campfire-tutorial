@@ -10,7 +10,7 @@ public class Grabbable : MonoBehaviour
     /// This is a flag used to check if a Grabbable can be picked up or not, set to sync.
     /// However, since syncing over the network takes time, it might still be false when
     /// a remote player is trying to pick the Grabbable up, so we also filter authority
-    /// requests with the <see cref="OnAuthorityRequested"/> callback.
+    /// requests with the <see cref="OnAuthorityRequest"/> callback.
     /// </summary>
     [Sync] public bool isBeingCarried;
 
@@ -23,7 +23,7 @@ public class Grabbable : MonoBehaviour
     private bool _collisionHappened;
     private float _lastAuthorityChangeTime;
     private float _floatingForce = 40f;
-    private float _floatingY = -7.5f; //the water level
+    private float _floatingY = -7.5f; // the water level
 
     private void Awake()
     {
@@ -34,7 +34,7 @@ public class Grabbable : MonoBehaviour
 
     private void OnEnable()
     {
-        _sync.OnAuthorityRequested += OnAuthorityRequested;
+        _sync.OnAuthorityRequest.AddListener(OnAuthorityRequest);
         _sync.OnStateAuthority.AddListener(OnStateAuthority);
         _sync.OnStateRemote.AddListener(OnStateRemote);
 
@@ -52,7 +52,7 @@ public class Grabbable : MonoBehaviour
         _rigidbody.isKinematic = false;
         _collider.enabled = true;
 
-        _sync.OnAuthorityRequested -= OnAuthorityRequested;
+        _sync.OnAuthorityRequest.RemoveListener(OnAuthorityRequest);
         _sync.OnStateAuthority.RemoveListener(OnStateAuthority);
         _sync.OnStateRemote.RemoveListener(OnStateRemote);
     }
@@ -61,11 +61,12 @@ public class Grabbable : MonoBehaviour
     /// This method is called when another client requests authority. It will reject it if the grabbable
     /// has just been picked up by the local player. This avoids many race conditions,
     /// where another player would request authority in the same frame that the local player is picking
-    /// the Grabbable up, leading to a the object being in a broken state.
+    /// the Grabbable up, leading to the object being in a broken state.
     /// </summary>
-    private bool OnAuthorityRequested(ClientID requesterid, AuthorityType authoritytype, CoherenceSync sync)
+    private void OnAuthorityRequest(AuthorityRequest request, CoherenceSync sync)
     {
-        return !isBeingCarried;
+        var accept = !isBeingCarried;
+        request.Respond(accept);
     }
 
     private void FixedUpdate()
@@ -77,7 +78,7 @@ public class Grabbable : MonoBehaviour
             {
                 _rigidbody.velocity *= .9f;
                 _rigidbody.angularVelocity *= .97f;
-                _rigidbody.AddForce(Vector3.up * -waterDiff * _floatingForce, ForceMode.Acceleration);
+                _rigidbody.AddForce(Vector3.up * (-waterDiff * _floatingForce), ForceMode.Acceleration);
             }
         }
     }

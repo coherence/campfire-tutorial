@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct AssetId : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -163,27 +162,15 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.value;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 32, -2147483648);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.isFromGroup;
-
-
-
                 bitStream.WriteBool(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

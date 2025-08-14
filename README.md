@@ -14,9 +14,6 @@ The Campfire project explores these topics:
 - Playing audio and particles over the network
 - Creating a simple chat feature
 
-### Unity version
-Currently the project is on Unity `2022.3.5f1`.
-
 ## Additional resources
 
 ### Documentation
@@ -26,4 +23,4 @@ After downloading this Unity project, we suggest to open up the [documentation](
 To quickly try a pre-built version of the game, head to [this link](https://coherence.io/games/coherence/campfire-tutorial) and either play the WebGL build in the browser, or download one of the available desktop versions.
 
 ## Bug reporting
-Feel free to open an issue right here on Github if you find anything that is not working in Campfire. Please include also any suggestion you migth have on how to improve it. We appreciate all contributions!
+Feel free to open an issue right here on GitHub if you find anything that is not working in Campfire. Please include also any suggestion you migth have on how to improve it. We appreciate all contributions!

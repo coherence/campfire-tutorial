@@ -12,6 +12,7 @@ namespace Coherence.Generated
     using Coherence.Entities;
     using Coherence.Log;
     using Coherence.Core;
+    using Coherence.Connection;
     using System.Collections.Generic;
     using System.Runtime.InteropServices;
     using UnityEngine;
@@ -29,7 +30,7 @@ namespace Coherence.Generated
         {
             if (dataSize != 16) {
                 throw new System.Exception($"Given data size is not equal to the struct size. ({dataSize} != 16) " +
-                    "for command with ID 30");
+                    "for command with ID 29");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6();
@@ -42,10 +43,14 @@ namespace Coherence.Generated
         
         public Entity Entity { get; set; }
         public Coherence.ChannelID ChannelID { get; set; }
+        public MessageTarget Target { get; set; }
         public MessageTarget Routing { get; set; }
-        public uint Sender { get; set; }
-        public uint GetComponentType() => 30;
-        
+        public uint SenderParticipant { get; set; }
+        public ClientID SenderClientID { get; set; }
+        public long Frame { get; set; }
+        public uint GetComponentType() => 29;
+        public bool UsesMeta { get; set; }
+
         public IEntityMessage Clone()
         {
             // This is a struct, so we can safely return
@@ -83,15 +88,19 @@ namespace Coherence.Generated
         }
         
         public _cd9bcc1feead9419fac0c5981ce85c23_3f725e0b03bc47c6b9a9e726699545a6(
-        Entity entity,
-        System.String name
-)
+            Entity entity,
+            System.String name
+        )
         {
             Entity = entity;
             ChannelID = Coherence.ChannelID.Default;
+            Target = default;
             Routing = MessageTarget.All;
-            Sender = 0;
-            
+            SenderParticipant = 0;
+            SenderClientID = default;
+            Frame = 0;
+            UsesMeta = false;
+
             this.name = name; 
         }
         
@@ -108,6 +117,7 @@ namespace Coherence.Generated
             {
                 Entity = entity,
                 Routing = target,
+                Target = target,
                 name = dataname
             };   
         }

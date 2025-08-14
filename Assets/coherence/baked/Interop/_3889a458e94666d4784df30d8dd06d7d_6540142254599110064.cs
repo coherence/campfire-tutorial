@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -47,12 +46,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 159");
+                    "for component with ID 24");
             }
 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 159");
+                    "for component with ID 24");
             }
 
             var orig = new _3889a458e94666d4784df30d8dd06d7d_6540142254599110064();
@@ -70,13 +69,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 196");
+                    "for component with ID 61");
             }
 
                 
             if (simFramesCount != 0) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 0) " +
-                    "for component with ID 196");
+                    "for component with ID 61");
             }
 
             var orig = new _3889a458e94666d4784df30d8dd06d7d_6540142254599110064();
@@ -102,7 +101,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 159;
+        public uint GetComponentType() => 24;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000111;
@@ -207,46 +206,25 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.activeFireEffect, _activeFireEffect_Min, _activeFireEffect_Max, "_3889a458e94666d4784df30d8dd06d7d_6540142254599110064.activeFireEffect", logger);
-
                 data.activeFireEffect = Coherence.Utils.Bounds.Clamp(data.activeFireEffect, _activeFireEffect_Min, _activeFireEffect_Max);
-
                 var fieldValue = data.activeFireEffect;
-
-
-
                 bitStream.WriteIntegerRange(fieldValue, 4, -1);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.fireTimer, _fireTimer_Min, _fireTimer_Max, "_3889a458e94666d4784df30d8dd06d7d_6540142254599110064.fireTimer", logger);
-
-
                 var fieldValue = data.fireTimer;
-
-
-
                 bitStream.WriteFloat(fieldValue, FloatMeta.ForFixedPoint(-5, 100, 0.001d));
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
                 Coherence.Utils.Bounds.Check(data.bigFireTimer, _bigFireTimer_Min, _bigFireTimer_Max, "_3889a458e94666d4784df30d8dd06d7d_6540142254599110064.bigFireTimer", logger);
-
-
                 var fieldValue = data.bigFireTimer;
-
-
-
                 bitStream.WriteFloat(fieldValue, FloatMeta.ForFixedPoint(-5, 100, 0.001d));
             }
-
             mask >>= 1;
 
             return mask;

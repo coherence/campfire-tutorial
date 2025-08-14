@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct ConnectedEntity : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -232,51 +231,27 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.value;
-
-
-
                 bitStream.WriteEntity(fieldValue);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = (data.pos.ToCoreVector3());
-
-
-
                 bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = (data.rot.ToCoreQuaternion());
-
-
-
                 bitStream.WriteQuaternion(fieldValue, 32);
             }
-
             mask >>= 1;
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = (data.scale.ToCoreVector3());
-
-
-
                 bitStream.WriteVector3(fieldValue, FloatMeta.NoCompression());
             }
-
             mask >>= 1;
 
             return mask;

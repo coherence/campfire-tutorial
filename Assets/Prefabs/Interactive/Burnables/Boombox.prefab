@@ -5,7 +5,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8405135365688493461, guid: 8833df0ce8b904a2c930b33acfa5fd13,
@@ -22,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 1498616242359619048, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1498616242359619048, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
@@ -279,17 +278,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4620371565644370732, guid: 8833df0ce8b904a2c930b33acfa5fd13, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2272056274626123602, guid: 8833df0ce8b904a2c930b33acfa5fd13,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 951772715029035854}
-    - targetCorrespondingSourceObject: {fileID: 1269269562991978131, guid: 8833df0ce8b904a2c930b33acfa5fd13,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6912384444159909088}
   m_SourcePrefab: {fileID: 100100000, guid: 8833df0ce8b904a2c930b33acfa5fd13, type: 3}
 --- !u!4 &47818945088573820 stripped
 Transform:
@@ -311,18 +299,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450350683229979624}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.5192106, y: 1.5076998, z: 0.63735723}
+  serializedVersion: 2
+  m_Size: {x: 2.519211, y: 1.5077, z: 0.6373572}
   m_Center: {x: 0, y: 0.25384992, z: -0.05007924}
 --- !u!1 &586973573664780841 stripped
 GameObject:
@@ -338,18 +318,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586973573664780841}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.519936, y: 1.5085139, z: 0.6348671}
+  serializedVersion: 2
+  m_Size: {x: 3.85, y: 2.36, z: 2}
   m_Center: {x: 0, y: 0.25425696, z: -0.05085139}
 --- !u!198 &1018015160200443417 stripped
 ParticleSystem:

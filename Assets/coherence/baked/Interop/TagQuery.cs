@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct TagQuery : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -148,15 +147,9 @@ namespace Coherence.Generated
 
             if (bitStream.WriteMask((mask & 0x01) != 0))
             {
-
-
                 var fieldValue = data.tag;
-
-
-
                 bitStream.WriteShortString(fieldValue);
             }
-
             mask >>= 1;
 
             return mask;

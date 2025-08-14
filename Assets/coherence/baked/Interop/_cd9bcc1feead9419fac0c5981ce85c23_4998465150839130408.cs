@@ -19,7 +19,6 @@ namespace Coherence.Generated
     using Logger = Coherence.Log.Logger;
     using UnityEngine;
     using Coherence.Toolkit;
-
     public struct _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 : ICoherenceComponentData
     {
         [StructLayout(LayoutKind.Explicit)]
@@ -39,12 +38,12 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 186");
+                    "for component with ID 51");
             }
 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 186");
+                    "for component with ID 51");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408();
@@ -61,13 +60,13 @@ namespace Coherence.Generated
         {
             if (dataSize != 12) {
                 throw new Exception($"Given data size is not equal to the struct size. ({dataSize} != 12) " +
-                    "for component with ID 202");
+                    "for component with ID 67");
             }
 
                 
             if (simFramesCount != 1) {
                 throw new Exception($"Given simFrames size is not equal to the expected length. ({simFramesCount} != 1) " +
-                    "for component with ID 202");
+                    "for component with ID 67");
             }
 
             var orig = new _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408();
@@ -86,7 +85,7 @@ namespace Coherence.Generated
 
         public uint FieldsMask { get; set; }
         public uint StoppedMask { get; set; }
-        public uint GetComponentType() => 186;
+        public uint GetComponentType() => 51;
         public int PriorityLevel() => 100;
         public const int order = 0;
         public uint InitialFieldsMask() => 0b00000000000000000000000000000001;
@@ -195,19 +194,12 @@ namespace Coherence.Generated
                 } else {
                     SerializeTools.WriteFieldSimFrameDelta(bitStream, 0);
                 }
-
                 Coherence.Utils.Bounds.Check(data.position.x, _position_Min, _position_Max, "_cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408.position.x", logger);
                 Coherence.Utils.Bounds.Check(data.position.y, _position_Min, _position_Max, "_cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408.position.y", logger);
                 Coherence.Utils.Bounds.Check(data.position.z, _position_Min, _position_Max, "_cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408.position.z", logger);
-
-
                 var fieldValue = (data.position.ToCoreVector3());
-
-
-
                 bitStream.WriteVector3(fieldValue, FloatMeta.ForFixedPoint(-100, 600, 0.01d));
             }
-
             mask >>= 1;
 
             return mask;

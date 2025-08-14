@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b91f942a5214496b0e11eaedb54c36, type: 3}
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
-  schemaID: 71604414093d374a927039513d29fb0fe0de11e9
+  schemaID: 9990d66f3e6f7cea6e814a5dd497ef6bbbf7cf87
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: 3f2154ade8334278aac056f46461c185
-  simulatorSlug: 1.4.2
+  simulatorSlug: apr 23 1.6.1_2 v1
   localHost: 127.0.0.1
   localWorldUDPPort: 32001
   localWorldWebPort: 32002
@@ -30,7 +30,8 @@ MonoBehaviour:
   useDebugStreams: 0
   organizationID: c1ho23prn6r43hh5tc40
   projectID: cgqlbqlbo1hvlpolchog
-  projectName: Campfire sample
+  projectName: Campfire tutorial
+  organizationName: coherence
   transportType: 0
   transportConfiguration: 0
   advancedSettings:
@@ -47,3 +48,6 @@ MonoBehaviour:
   extraSchemas: []
   defaultTransportMode: 0
   defaultTransportModeMigrated: 1
+  defaultAuthorityTransferType: 2
+  simulatorLockTargetFramerate: 1
+  simulatorTargetFramerate: 30
