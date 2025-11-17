@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_0109999de4f6d45bb8c13493b504dee7_0d09d827e9dc48d48234312ff3610eb4 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_0109999de4f6d45bb8c13493b504dee7_ea22c661324048629b36fc289800b247 : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -126,7 +126,7 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_0109999de4f6d45bb8c13493b504dee7_abd6ea830b7b416c8a6dd35eb11f2a4f : ScaleBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -177,7 +177,7 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_0109999de4f6d45bb8c13493b504dee7_59b52bcb476d404a94c7b0a30cfbaf19 : StringBinding
     {   
         private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
@@ -228,7 +228,7 @@ namespace Coherence.Generated
             return new _0109999de4f6d45bb8c13493b504dee7_1143969198414876421();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_0109999de4f6d45bb8c13493b504dee7_cc845b8866124cb082e0181af5e7f681 : IntBinding
     {   
         private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
@@ -279,7 +279,7 @@ namespace Coherence.Generated
             return new _0109999de4f6d45bb8c13493b504dee7_1143969198414876421();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_0109999de4f6d45bb8c13493b504dee7_2ef575fde1d84535b83a10a14e8b6cd0 : BoolBinding
     {   
         private global::Grabbable CastedUnityComponent;
@@ -330,7 +330,7 @@ namespace Coherence.Generated
             return new _0109999de4f6d45bb8c13493b504dee7_616379459864002610();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_0109999de4f6d45bb8c13493b504dee7_f2d1c22c30b044c8bb3dddc445e2c67a : ReferenceBinding
     {   
         private global::PositionedObject CastedUnityComponent;

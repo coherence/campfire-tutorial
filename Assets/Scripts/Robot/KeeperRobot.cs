@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using Coherence;
 using Coherence.Toolkit;

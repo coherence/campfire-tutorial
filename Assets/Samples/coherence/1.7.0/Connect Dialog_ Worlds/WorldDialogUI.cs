@@ -250,7 +250,7 @@ namespace Coherence.Samples.WorldDialog
             popupDialog.SetActive(false);
         }
 
-        private void OnConnectionError(CoherenceBridge bridge, ConnectionException exception)
+        private void OnConnectionError(CoherenceBridge _, ConnectionException exception)
         {
             HideLoadingState();
 

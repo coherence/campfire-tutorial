@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_35fe21b9614149b48553511c0683c2f9 : IntBinding
     {   
         private global::CosmeticsChanger CastedUnityComponent;
@@ -74,7 +74,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_9730620f6eb44d01b04e80e5fc5e4856 : IntBinding
     {   
         private global::CosmeticsChanger CastedUnityComponent;
@@ -125,7 +125,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_6c9facfb02c7402492da2e6e9e51ae3e : IntBinding
     {   
         private global::CosmeticsChanger CastedUnityComponent;
@@ -176,7 +176,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_665a00acfb6d46d0a9e9276e9681a4ff : IntBinding
     {   
         private global::CosmeticsChanger CastedUnityComponent;
@@ -227,7 +227,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_afb54d316be244a890e58fd53680e2d4 : IntBinding
     {   
         private global::CosmeticsChanger CastedUnityComponent;
@@ -278,7 +278,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_4d9a62442a074534bca027258cca3b8c : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -330,7 +330,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_60b57dc105e34765bb249dbf96b35ed4 : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -381,7 +381,7 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_9d071ea42a6e41dc955438febad4d202 : ScaleBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -432,7 +432,7 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_2ffecec9e60b43ea89f0a6e4bd8598b3 : StringBinding
     {   
         private global::TMPro.TextMeshProUGUI CastedUnityComponent;
@@ -483,7 +483,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_e1e87976a62a499c9c88381bbdde8ec3 : DeepPositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -534,7 +534,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_b6102148731e46228baec06b4dd806c0 : FloatAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -585,7 +585,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_779cfe66b4254a8089f517a1867b19aa : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -636,7 +636,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_787a2c4d82f44358ba8da3ebd14885aa : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -687,7 +687,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_3cfde6644c5b46d69583102fdb4ad3d0 : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -738,7 +738,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_2c2f3f51b6a9480aa62ab1a234005a23 : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -789,7 +789,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_6529ec93596b48d8a68a785189a35e85 : StringBinding
     {   
         private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
@@ -840,7 +840,7 @@ namespace Coherence.Generated
             return new _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_cd9bcc1feead9419fac0c5981ce85c23_94d662d5ece44c27a4979d590435d027 : IntBinding
     {   
         private global::Coherence.Toolkit.CoherenceNode CastedUnityComponent;
