@@ -23,7 +23,7 @@ public class AuthorityBasedLayer : MonoBehaviour
 
     private void OnStateRemote()
     {
-        if (referenceSync.EntityState.IsOrphaned)
+        if (referenceSync?.EntityState?.IsOrphaned ?? false)
             SetObjectsToLayer(LayerMask.NameToLayer(orphanedLayerName));
         else
             SetObjectsToLayer(LayerMask.NameToLayer(stateRemoteLayer));

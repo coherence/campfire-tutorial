@@ -125,8 +125,7 @@ public class ChoppableTree : MonoBehaviour
         Vector3 randomRotation =
                 new(0f, Random.Range(0f, 360f),
                     70f); // Random Y, and a Z that is not exactly 90 so the log falls sideways
-        CoherenceSync newLog =
-            logSyncConfig.GetInstance(transform.position + Vector3.up * 2f, Quaternion.Euler(randomRotation));
+        _ = logSyncConfig.GetInstance(transform.position + Vector3.up * 2f, Quaternion.Euler(randomRotation));
     }
 
     /// <summary>

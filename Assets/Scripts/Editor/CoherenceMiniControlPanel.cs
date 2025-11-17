@@ -2,7 +2,6 @@ using UnityEditor;
 using UnityEngine;
 using Coherence.Editor;
 using Coherence.Editor.ReplicationServer;
-using Coherence.Editor.Toolkit;
 
 namespace Editor
 {

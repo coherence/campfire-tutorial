@@ -5,7 +5,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8405135365688493461, guid: 8833df0ce8b904a2c930b33acfa5fd13,
@@ -147,6 +146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
+      propertyPath: assetVersion
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+        type: 3}
       propertyPath: bakedScriptType
       value: Coherence.Generated.CoherenceSync_c76bd173fbfcfba44982ec0a19f9c897,
         Assembly-CSharp
@@ -177,19 +181,17 @@ PrefabInstance:
       propertyPath: archetype.boundComponents.Array.data[30].lodStepsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6375189795360318608, guid: 8833df0ce8b904a2c930b33acfa5fd13,
+        type: 3}
+      propertyPath: managedReferences[8975625062529892426].archetypeData.sampleRate
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8111638725544808720, guid: 8833df0ce8b904a2c930b33acfa5fd13,
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2272056274626123602, guid: 8833df0ce8b904a2c930b33acfa5fd13,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2939}
   m_SourcePrefab: {fileID: 100100000, guid: 8833df0ce8b904a2c930b33acfa5fd13, type: 3}
 --- !u!1 &7463932230663352264 stripped
 GameObject:
@@ -205,17 +207,8 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7463932230663352264}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.3
   m_Height: 2
   m_Direction: 0

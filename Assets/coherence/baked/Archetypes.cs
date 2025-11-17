@@ -23,7 +23,7 @@ namespace Coherence.Generated
                     new EntityArchetypeLOD
                     {
                         Level = 0,
-                        Distance = 0,
+                        Distance = 0f,
                         ComponentReplacement = new Dictionary<uint, uint>
                         {
                             { 0, Definition.InternalArchetype_3889a458e94666d4784df30d8dd06d7d_WorldPosition_LOD0 },
@@ -42,7 +42,7 @@ namespace Coherence.Generated
                     new EntityArchetypeLOD
                     {
                         Level = 0,
-                        Distance = 0,
+                        Distance = 0f,
                         ComponentReplacement = new Dictionary<uint, uint>
                         {
                             { 0, Definition.InternalArchetype_cd9bcc1feead9419fac0c5981ce85c23_WorldPosition_LOD0 },

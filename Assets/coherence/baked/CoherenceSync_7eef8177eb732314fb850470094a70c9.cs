@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_7eef8177eb732314fb850470094a70c9_3c6dd2a1004a48f9882846782165be86 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_7eef8177eb732314fb850470094a70c9_8f5fdae3bab74f309565b69548451c75 : BoolBinding
     {   
         private global::Chair CastedUnityComponent;
@@ -126,7 +126,7 @@ namespace Coherence.Generated
             return new _7eef8177eb732314fb850470094a70c9_468635232();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_7eef8177eb732314fb850470094a70c9_96deafb267de4576b43f8958e112ee4d : BoolBinding
     {   
         private global::UnityEngine.CapsuleCollider CastedUnityComponent;

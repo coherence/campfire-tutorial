@@ -469,11 +469,12 @@ MonoBehaviour:
   - rid: 3041628591939387490
   scenePrefabInstanceUUID: 
   coherenceUUID: 
-  assetVersion: 
+  assetVersion: 20
   coherenceTag: 
   componentActions: []
   floatingOriginMode: 0
   floatingOriginParentedMode: 1
+  synchronizationChannel: Default
   references:
     version: 2
     RefIds:
@@ -585,7 +586,7 @@ MonoBehaviour:
           type: 0
           minRange: 0
           maxRange: 0
-          sampleRate: 0
+          sampleRate: 20
           floatCompression: 0
           fields: []
         unityComponent: {fileID: 468635232}

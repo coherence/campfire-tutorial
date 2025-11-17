@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_3889a458e94666d4784df30d8dd06d7d_05ba497e2c7b4bf99d98348ae880439b : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_3889a458e94666d4784df30d8dd06d7d_3d7b0de09c2348ebabdb8c4aa943ce3b : IntBinding
     {   
         private global::Campfire CastedUnityComponent;
@@ -126,7 +126,7 @@ namespace Coherence.Generated
             return new _3889a458e94666d4784df30d8dd06d7d_6540142254599110064();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_3889a458e94666d4784df30d8dd06d7d_f16a85076b0d47e8872375cb715fc67e : FloatBinding
     {   
         private global::Campfire CastedUnityComponent;
@@ -177,7 +177,7 @@ namespace Coherence.Generated
             return new _3889a458e94666d4784df30d8dd06d7d_6540142254599110064();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_3889a458e94666d4784df30d8dd06d7d_d8d012f4196145caa10c8e40b2bd3e06 : FloatBinding
     {   
         private global::Campfire CastedUnityComponent;

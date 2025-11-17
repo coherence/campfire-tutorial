@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_aa3341ec45d847e3a6334d365bb6e8f6 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_4cef7f16f6344b529a98ff11487873bc : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -126,7 +126,7 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_f4b199dae036494baf4943dea2b97d33 : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -177,7 +177,7 @@ namespace Coherence.Generated
             return new _a857fd6c221f7f04fa9ed500e317642a_4667129514690375174();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_5735b03a1aa74d87a5f2e163eed89df2 : BoolAnimatorParameterBinding
     {   
         private global::UnityEngine.Animator CastedUnityComponent;
@@ -228,7 +228,7 @@ namespace Coherence.Generated
             return new _a857fd6c221f7f04fa9ed500e317642a_4667129514690375174();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_a857fd6c221f7f04fa9ed500e317642a_0174ef8a52ab48e6aee788bea243f7f5 : BoolBinding
     {   
         private global::Chair CastedUnityComponent;

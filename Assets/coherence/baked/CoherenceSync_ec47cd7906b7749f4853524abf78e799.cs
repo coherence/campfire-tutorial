@@ -23,7 +23,7 @@ namespace Coherence.Generated
     using Coherence.Log;
     using Logger = Coherence.Log.Logger;
     using UnityEngine.Scripting;
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_ec47cd7906b7749f4853524abf78e799_060eae84e0a5489aa3f32d7c800cf950 : PositionBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -75,7 +75,7 @@ namespace Coherence.Generated
             return new WorldPosition();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_ec47cd7906b7749f4853524abf78e799_750f70418bae4108b1e74427fb548aae : RotationBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -126,7 +126,7 @@ namespace Coherence.Generated
             return new WorldOrientation();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_ec47cd7906b7749f4853524abf78e799_df5c2e4904154244b2afff47f563beea : ScaleBinding
     {   
         private global::UnityEngine.Transform CastedUnityComponent;
@@ -177,7 +177,7 @@ namespace Coherence.Generated
             return new GenericScale();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_ec47cd7906b7749f4853524abf78e799_189625fefb07446aac7880b2b0dbf320 : StringBinding
     {   
         private global::ObjectAnchor CastedUnityComponent;
@@ -228,7 +228,7 @@ namespace Coherence.Generated
             return new _ec47cd7906b7749f4853524abf78e799_432812263773753349();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_ec47cd7906b7749f4853524abf78e799_120b91f3d4bd4bc3ae37cce0009abd40 : BoolBinding
     {   
         private global::ObjectAnchor CastedUnityComponent;
@@ -279,7 +279,7 @@ namespace Coherence.Generated
             return new _ec47cd7906b7749f4853524abf78e799_432812263773753349();
         }    
     }
-    [UnityEngine.Scripting.Preserve]
+    [UnityEngine.Scripting.Preserve, System.Serializable]
     public class Binding_ec47cd7906b7749f4853524abf78e799_74c49d2eed9146be872d431e635e3816 : StringBinding
     {   
         private global::ObjectAnchor CastedUnityComponent;

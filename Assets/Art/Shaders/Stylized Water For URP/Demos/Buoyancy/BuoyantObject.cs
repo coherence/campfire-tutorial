@@ -21,7 +21,7 @@ public class BuoyantObject : MonoBehaviour
     private float[] directions = new float[4];
 
     [Header("Water Object")]
-    public StylizedWater.StylizedWaterURP water;
+    public StylizedWaterURP water;
 
     [Header("Buoyancy")]
     [Range(1, 5)] public float strength = 1f;

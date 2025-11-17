@@ -21,7 +21,7 @@ public static class Comparison
     }
 
     /// <summary>
-    /// Returns whether or not a <= b.
+    /// Returns whether or not a is less than or equal to b.
     /// </summary>
     public static bool TolerantLesserThanOrEquals(float a, float b)
     {
