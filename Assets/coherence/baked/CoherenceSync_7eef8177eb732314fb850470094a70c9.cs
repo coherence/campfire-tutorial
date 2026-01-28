@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_7eef8177eb732314fb850470094a70c9_468635232)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.isBusy = Value;
             }
@@ -158,7 +158,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_7eef8177eb732314fb850470094a70c9_468635231)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.enabled = Value;
             }
@@ -226,7 +226,7 @@ namespace Coherence.Generated
         {
             _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187_CommandTarget = (global::Chair)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"Chair.ChangeState",
+				"Chair.ChangeState",
             	"(System.Boolean)",
             	SendCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187,
             	ReceiveLocalCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187,
@@ -262,7 +262,7 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187(_7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187 command)
         {
-            var target = _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187_CommandTarget;
+			var target = _7eef8177eb732314fb850470094a70c9_510b1c05cf0249e68fbcff362acff187_CommandTarget;
 			target.ChangeState((System.Boolean)(command.newBusyState));
         }
         

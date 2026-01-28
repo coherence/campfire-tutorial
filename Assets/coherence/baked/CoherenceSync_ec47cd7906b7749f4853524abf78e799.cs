@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldOrientation)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -158,7 +158,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (GenericScale)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -209,7 +209,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_ec47cd7906b7749f4853524abf78e799_432812263773753349)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.holdingForUUID = Value;
             }
@@ -260,7 +260,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_ec47cd7906b7749f4853524abf78e799_432812263773753349)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.isObjectPresent = Value;
             }
@@ -311,7 +311,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_ec47cd7906b7749f4853524abf78e799_432812263773753349)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.syncConfigId = Value;
             }
@@ -382,7 +382,7 @@ namespace Coherence.Generated
         {
             _ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d_CommandTarget = (global::ObjectAnchor)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"ObjectAnchor.ChangeLinkedObjectStateAuth",
+				"ObjectAnchor.ChangeLinkedObjectStateAuth",
             	"(System.Boolean)",
             	SendCommand__ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d,
             	ReceiveLocalCommand__ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d,
@@ -418,7 +418,7 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d(_ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d command)
         {
-            var target = _ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d_CommandTarget;
+			var target = _ec47cd7906b7749f4853524abf78e799_d9e25df655c0450f92da43abe92a930d_CommandTarget;
 			target.ChangeLinkedObjectStateAuth((System.Boolean)(command.newState));
         }
         

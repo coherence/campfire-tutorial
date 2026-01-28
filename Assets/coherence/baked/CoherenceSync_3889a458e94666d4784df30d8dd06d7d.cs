@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_3889a458e94666d4784df30d8dd06d7d_6540142254599110064)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.activeFireEffect = Value;
             }
@@ -158,7 +158,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_3889a458e94666d4784df30d8dd06d7d_6540142254599110064)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.fireTimer = Value;
             }
@@ -209,7 +209,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_3889a458e94666d4784df30d8dd06d7d_6540142254599110064)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.bigFireTimer = Value;
             }
@@ -284,7 +284,7 @@ namespace Coherence.Generated
         {
             _3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db_CommandTarget = (global::Campfire)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"Campfire.PlayInstantEffects",
+				"Campfire.PlayInstantEffects",
             	"()",
             	SendCommand__3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db,
             	ReceiveLocalCommand__3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db,
@@ -318,14 +318,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db(_3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db command)
         {
-            var target = _3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db_CommandTarget;
+			var target = _3889a458e94666d4784df30d8dd06d7d_3738e04300d846dfa774ba252d8208db_CommandTarget;
 			target.PlayInstantEffects();
         }
         private void BakeCommandBinding__3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4_CommandTarget = (global::Campfire)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"Campfire.BurnObject",
+				"Campfire.BurnObject",
             	"(System.String)",
             	SendCommand__3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4,
             	ReceiveLocalCommand__3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4,
@@ -361,14 +361,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4(_3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4 command)
         {
-            var target = _3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4_CommandTarget;
+			var target = _3889a458e94666d4784df30d8dd06d7d_f8f688eb08cb493facb6d766417377d4_CommandTarget;
 			target.BurnObject((System.String)(command.syncConfigID));
         }
         private void BakeCommandBinding__3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38_CommandTarget = (global::Campfire)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"Campfire.FireDiedDown",
+				"Campfire.FireDiedDown",
             	"(System.Int32System.Int32)",
             	SendCommand__3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38,
             	ReceiveLocalCommand__3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38,
@@ -406,14 +406,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38(_3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38 command)
         {
-            var target = _3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38_CommandTarget;
+			var target = _3889a458e94666d4784df30d8dd06d7d_3664e59fd3cd4dd28175902369f5bb38_CommandTarget;
 			target.FireDiedDown((System.Int32)(command.oldEffectID),(System.Int32)(command.newEffectID));
         }
         private void BakeCommandBinding__3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391_CommandTarget = (global::Campfire)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"Campfire.FireStateChanged",
+				"Campfire.FireStateChanged",
             	"(System.Int32System.Int32System.String)",
             	SendCommand__3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391,
             	ReceiveLocalCommand__3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391,
@@ -453,7 +453,7 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391(_3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391 command)
         {
-            var target = _3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391_CommandTarget;
+			var target = _3889a458e94666d4784df30d8dd06d7d_df8fe4d8a6104b7ab780e439afba5391_CommandTarget;
 			target.FireStateChanged((System.Int32)(command.oldEffectID),(System.Int32)(command.newEffectID),(System.String)(command.syncConfigID));
         }
         

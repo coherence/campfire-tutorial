@@ -12,21 +12,113 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b58ca8e478745dfab801a85671962e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showHubModuleQuickHelp: 1
+  showHubModuleQuickHelp: 0
   portalToken: 
-  worldUDPPort: 32001
-  worldWebPort: 32002
-  roomsUDPPort: 42001
-  roomsWebPort: 42002
-  sendFrequency: 20
-  recvFrequency: 60
   localRoomsCleanupTimeSeconds: 120
   localWorldHostAuthority: 0
   rsConsoleLogLevel: 2
   rsLogToFile: 0
   rsLogFilePath: Logs/rs_logs.txt
   rsFileLogLevel: 1
-  reportAnalytics: 1
+  reportAnalytics: 0
   RSBundlingEnabled: 1
   keepConnectionAlive: 1
   activeSchemas: []
+  organization:
+    id: c1mnh99rn6r9re0fhp00
+    name: AsyaTest2
+    slug: asya-test-2
+    projects:
+    - id: d095tn9qpo250m0osp5g
+      portal_token: 797f5ed2b6da407fa79b91a116b86382
+      runtime_key: 8581e3d0f67b4b0db703594e41511a6a
+      name: asdfa
+    - id: c2fs84h71ic1k2mqlktg
+      portal_token: 04868934e4f94c0190e7f44b0506a5a31
+      runtime_key: 1cc93228c3ea46d0898d58c83f74b51c
+      name: asya-playground
+    - id: cke7octklouml7ml5lrg
+      portal_token: c3b77691987a4e8287bcb081cc91a311
+      runtime_key: dfd8f781fadc4c13bdbe782e793e52f1
+      name: campfire
+    - id: d1sh0s9qpo2572df6bv0
+      portal_token: e9542dd7392548a3be2fb02a8711c5cf
+      runtime_key: 322c7f2a1c944f8ea1aa8b6c64336ac8
+      name: deve
+    - id: cg51kh5bo1hunat2a8j0
+      portal_token: d81c30a60d064424a5a3579130d8cbfd
+      runtime_key: f71d90848e2f43d2b03a1f6a5a56051a
+      name: dystopia
+    - id: cf7aun5bo1hssa8gsg90
+      portal_token: 26e1bf6cf47942bf817588a69ec20bc6
+      runtime_key: 96267c87447c4739bac94cecf3400c1a
+      name: firststeps
+    - id: cg34t0tbo1hvll6seg80
+      portal_token: 50e73f16d4704c978a5f604113ffe92a
+      runtime_key: 1c7d1d59a8ac49cd931d8d4d82d84c6a
+      name: hdpr-2021
+    - id: c1mnkn9rn6r9re0fhq60
+      portal_token: 0fc72a6cd1d44f4d8ea0eee814d1a9bd1
+      runtime_key: 2b2707aedae146bba9d1dce31734f066
+      name: Lobby-1
+    - id: cpasffa2t1cqa1b0s1u0
+      portal_token: ef0019890335427083941c138985e92a
+      runtime_key: 5f9dd0f43e6e41ada2063e259ac5c37a
+      name: lobby-2
+    - id: cthk4djoc4r4q37rqna0
+      portal_token: e51db791f37d454d9624ba26698a5ad8
+      runtime_key: d974c37d73a14787af3f715c1011d025
+      name: My ProjectWebGL1.4
+    - id: chlsmu7ssp04t13jkg9g
+      portal_token: eb78fe1fabaa4378905ccac04c643038
+      runtime_key: 1c2f767a42724065b8987da017da3c1c
+      name: next-wildlife
+    - id: c1mnlg9rn6r9re0fhqjg
+      portal_token: b228a2ec00da4e25adef50285497a74b1
+      runtime_key: d5c86013049841eb811319e810773837
+      name: Project 2
+    - id: d1sh0v9qpo2572df6c7g
+      portal_token: 22ec290e93574b8c858afc32b0201a0a
+      runtime_key: 5becf929e5c946ae9797775fb3b31a07
+      name: rele
+    - id: c2h5ebp71ic1k2mqrfq0
+      portal_token: 94b102643c734135a91e4c07f01de8501
+      runtime_key: 1188a7011bed4f91a795071f9405e5f2
+      name: supersoldiers
+    - id: ciikdju4h3r2dug10ps0
+      portal_token: 7e76ad8f22724f5a97d5804bc9ac5ba8
+      runtime_key: e45ba61c80eb45a0beccace7aa223d3a
+      name: supersoldiers-lobby
+    - id: cfcmaalbo1hqgv2au6f0
+      portal_token: fd174459d57742a69f0923082b3b8484
+      runtime_key: 02bfa41743634c248feac5d85482acf0
+      name: Test Compression
+    - id: c1mnl49rn6r9re0fhqe0
+      portal_token: 2c459d49299c4e1d940a4a3fa3ead0f11
+      runtime_key: ba8eb0370d8f4b29b761c7efb7bf4ff0
+      name: Gamejam Viking
+    - id: cc1o1nbri4d6034ck1og
+      portal_token: b365422079154b8c9e53f028712f4333
+      runtime_key: a8b45ed5cf694cc0856cd74217459dc8
+      name: wildlife
+  multipleProjects:
+  - name: Development
+    tooltip: Project to use in the editor and in development builds.
+    project:
+      id: cke7octklouml7ml5lrg
+      portal_token: c3b77691987a4e8287bcb081cc91a311
+      runtime_key: dfd8f781fadc4c13bdbe782e793e52f1
+      name: campfire
+    conditions:
+    - type: 0
+      requiredValue: True
+    - type: 1
+      requiredValue: True
+  - name: Release
+    tooltip: Project to use in non-development builds.
+    project:
+      id: d1sh0s9qpo2572df6bv0
+      portal_token: e9542dd7392548a3be2fb02a8711c5cf
+      runtime_key: 322c7f2a1c944f8ea1aa8b6c64336ac8
+      name: deve
+    conditions: []

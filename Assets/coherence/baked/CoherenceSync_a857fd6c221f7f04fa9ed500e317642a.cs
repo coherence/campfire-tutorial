@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldOrientation)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -158,7 +158,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_a857fd6c221f7f04fa9ed500e317642a_4667129514690375174)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.IsFlailing = Value;
             }
@@ -209,7 +209,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_a857fd6c221f7f04fa9ed500e317642a_4667129514690375174)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.IsCarrying = Value;
             }
@@ -260,7 +260,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_a857fd6c221f7f04fa9ed500e317642a_8551261703447512967)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.isBusy = Value;
             }
@@ -338,7 +338,7 @@ namespace Coherence.Generated
         {
             _a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8_CommandTarget = (global::KeeperRobot)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"KeeperRobot.PlayVoiceSound",
+				"KeeperRobot.PlayVoiceSound",
             	"()",
             	SendCommand__a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8,
             	ReceiveLocalCommand__a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8,
@@ -372,14 +372,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8(_a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8 command)
         {
-            var target = _a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8_CommandTarget;
+			var target = _a857fd6c221f7f04fa9ed500e317642a_a08cbf1b7c0b489e9d34a142c88514c8_CommandTarget;
 			target.PlayVoiceSound();
         }
         private void BakeCommandBinding__a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2_CommandTarget = (global::KeeperRobot)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"KeeperRobot.PlayConjure",
+				"KeeperRobot.PlayConjure",
             	"()",
             	SendCommand__a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2,
             	ReceiveLocalCommand__a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2,
@@ -413,14 +413,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2(_a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2 command)
         {
-            var target = _a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2_CommandTarget;
+			var target = _a857fd6c221f7f04fa9ed500e317642a_e584959f421448c0b118bf28bd4867b2_CommandTarget;
 			target.PlayConjure();
         }
         private void BakeCommandBinding__a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb_CommandTarget = (global::KeeperRobot)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"KeeperRobot.PlayAppear",
+				"KeeperRobot.PlayAppear",
             	"()",
             	SendCommand__a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb,
             	ReceiveLocalCommand__a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb,
@@ -454,14 +454,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb(_a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb command)
         {
-            var target = _a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb_CommandTarget;
+			var target = _a857fd6c221f7f04fa9ed500e317642a_0f10acf8439d449385dbd33450d1f0fb_CommandTarget;
 			target.PlayAppear();
         }
         private void BakeCommandBinding__a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6_CommandTarget = (global::KeeperRobot)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"KeeperRobot.PlayHumSound",
+				"KeeperRobot.PlayHumSound",
             	"()",
             	SendCommand__a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6,
             	ReceiveLocalCommand__a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6,
@@ -495,14 +495,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6(_a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6 command)
         {
-            var target = _a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6_CommandTarget;
+			var target = _a857fd6c221f7f04fa9ed500e317642a_e86b8c2ff539476e96c5792baaad07d6_CommandTarget;
 			target.PlayHumSound();
         }
         private void BakeCommandBinding__a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4_CommandTarget = (global::Chair)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"Chair.ChangeState",
+				"Chair.ChangeState",
             	"(System.Boolean)",
             	SendCommand__a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4,
             	ReceiveLocalCommand__a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4,
@@ -538,7 +538,7 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4(_a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4 command)
         {
-            var target = _a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4_CommandTarget;
+			var target = _a857fd6c221f7f04fa9ed500e317642a_7f3e0b9e3ab247f68ebb0067b5b4b6c4_CommandTarget;
 			target.ChangeState((System.Boolean)(command.newBusyState));
         }
         

@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldOrientation)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -158,7 +158,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (GenericScale)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -209,7 +209,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_0d27e1ad6d8e5ba4abca3216a92298f7_7947429143224902437)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.path = Value;
             }
@@ -260,7 +260,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_0d27e1ad6d8e5ba4abca3216a92298f7_7947429143224902437)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.pathDirtyCounter = Value;
             }
@@ -311,7 +311,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_0d27e1ad6d8e5ba4abca3216a92298f7_7577043058907851794)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.isBeingCarried = Value;
             }
@@ -362,7 +362,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_0d27e1ad6d8e5ba4abca3216a92298f7_4384992023136877932)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.objectAnchorSync = Value;
             }
@@ -434,7 +434,7 @@ namespace Coherence.Generated
         {
             _0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286_CommandTarget = (global::PositionedObject)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"PositionedObject.PlayReappearShaderEffect",
+				"PositionedObject.PlayReappearShaderEffect",
             	"()",
             	SendCommand__0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286,
             	ReceiveLocalCommand__0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286,
@@ -468,7 +468,7 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286(_0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286 command)
         {
-            var target = _0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286_CommandTarget;
+			var target = _0d27e1ad6d8e5ba4abca3216a92298f7_ad9e635638034d88b0c6dcd8a9c83286_CommandTarget;
 			target.PlayReappearShaderEffect();
         }
         
