@@ -1,0 +1,11 @@
+<linker>
+    <assembly fullname="System">
+        <type fullname="System.Net.Configuration.ConnectionManagementSection" />
+        <type fullname="System.Net.Configuration.ConnectionManagementElementCollection" />
+        <type fullname="System.Net.Configuration.NetSectionGroup" />
+    </assembly>
+
+    <assembly fullname="System.Configuration">
+        <type fullname="System.Configuration.ExeConfigurationHost" />
+    </assembly>
+</linker>
