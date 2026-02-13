@@ -56,7 +56,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (WorldPosition)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.value = Value;
             }
@@ -107,7 +107,7 @@ namespace Coherence.Generated
         public override ICoherenceComponentData WriteComponentData(ICoherenceComponentData coherenceComponent, AbsoluteSimulationFrame simFrame)
         {
             var update = (_3d92447627afdfc419ceeb6b26251a87_1406947345458511524)coherenceComponent;
-            if (Interpolator.IsInterpolationNone)
+            if (Interpolator.IsInterpolationNone || SyncMode == SyncMode.Manual)
             {
                 update.energy = Value;
             }
@@ -178,7 +178,7 @@ namespace Coherence.Generated
         {
             _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6_CommandTarget = (global::ChoppableTree)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"ChoppableTree.Chop",
+				"ChoppableTree.Chop",
             	"()",
             	SendCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6,
             	ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6,
@@ -212,14 +212,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6(_3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6 command)
         {
-            var target = _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6_CommandTarget;
+			var target = _3d92447627afdfc419ceeb6b26251a87_e5df7db2535f410690edf553148f2ac6_CommandTarget;
 			target.Chop();
         }
         private void BakeCommandBinding__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7_CommandTarget = (global::ChoppableTree)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"ChoppableTree.ChangeState",
+				"ChoppableTree.ChangeState",
             	"(System.Boolean)",
             	SendCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7,
             	ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7,
@@ -255,14 +255,14 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7(_3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7 command)
         {
-            var target = _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7_CommandTarget;
+			var target = _3d92447627afdfc419ceeb6b26251a87_64674b8d4999426fb995493ab95cb6d7_CommandTarget;
 			target.ChangeState((System.Boolean)(command.toUp));
         }
         private void BakeCommandBinding__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09(CommandBinding commandBinding, CommandsHandler commandsHandler)
         {
             _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09_CommandTarget = (global::ChoppableTree)commandBinding.UnityComponent;
             commandsHandler.AddBakedCommand(
-            	"ChoppableTree.PlayChopEffect",
+				"ChoppableTree.PlayChopEffect",
             	"()",
             	SendCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09,
             	ReceiveLocalCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09,
@@ -296,7 +296,7 @@ namespace Coherence.Generated
 
         private void ReceiveCommand__3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09(_3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09 command)
         {
-            var target = _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09_CommandTarget;
+			var target = _3d92447627afdfc419ceeb6b26251a87_195171a3094b49ce9dc624b38e8a6b09_CommandTarget;
 			target.PlayChopEffect();
         }
         
