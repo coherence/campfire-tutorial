@@ -16,8 +16,8 @@ MonoBehaviour:
     EditorLogLevel: 2
     LogLevel: 2
     FilterMode: 0
-    LogStackTrace: 0
-    AddTimestamp: 0
+    LogStackTrace: 1
+    AddTimestamp: 1
     Watermark: (coherence)
     AddSourceType: 0
     SourceFilters: 
@@ -25,7 +25,7 @@ MonoBehaviour:
     LogFilePath: Logs/player_logs.txt
     MigratedToSerializedObject: 1
     FileLogLevel: 1
-  schemaID: 9990d66f3e6f7cea6e814a5dd497ef6bbbf7cf87
+  schemaID: 2bac603d48769f76c1269aff72746aabbbe980c3
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: 3f2154ade8334278aac056f46461c185
   simulatorSlug: apr 23 1.6.1_2 v1
@@ -38,13 +38,14 @@ MonoBehaviour:
   apiPort: 64001
   worldsAPIPort: 64002
   pingPort: 0
+  sendFrequency: 20
+  recvFrequency: 60
   useDebugStreams: 0
-  organizationID: c1ho23prn6r43hh5tc40
+  organizationID: 
   projectID: cgqlbqlbo1hvlpolchog
   projectName: Campfire tutorial
-  organizationName: coherence
+  organizationName: 
   transportType: 0
-  transportConfiguration: 0
   advancedSettings:
     ThreadResumer:
       Enabled: 0
@@ -56,10 +57,8 @@ MonoBehaviour:
   storedSdkVersionBuildMetadata: 
   schemas:
   - {fileID: -1758743643018166929, guid: 266a112c2c9e941a58a87a48e7a4f8cb, type: 3}
-  - {fileID: -1758743643018166929, guid: 3aeb27b07acaa41819b7ed83883baf84, type: 3}
+  - {fileID: -1758743643018166929, guid: aadda9b1a87e14a7ea4ec0429940e2da, type: 3}
   extraSchemas: []
-  defaultTransportMode: 0
-  defaultTransportModeMigrated: 1
   defaultAuthorityTransferType: 2
   simulatorLockTargetFramerate: 1
   simulatorTargetFramerate: 30

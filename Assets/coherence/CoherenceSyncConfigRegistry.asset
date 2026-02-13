@@ -12,4 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe206545a28be2142b8fa937387721e8, type: 3}
   m_Name: CoherenceSyncConfigRegistry
   m_EditorClassIdentifier: 
-  storedConfigs: []
+  storedConfigs:
+  - {fileID: 11400000, guid: 73960bab4eb0d4bf1ad6ad30e70c6b9d, type: 2}
+  - {fileID: 11400000, guid: 2cdaad91620c4439b92884967fde9f30, type: 2}
+  - {fileID: 11400000, guid: a9e2d0573cbae49d6be36bfb298d9958, type: 2}
+  - {fileID: 11400000, guid: 64dd145f654aa43de8f68215f7e339e5, type: 2}
+  - {fileID: 11400000, guid: e1cd0e32baf734c91a159ca7586cfaeb, type: 2}
+  - {fileID: 11400000, guid: 43e433ff3e74248ad95708db83f6a76f, type: 2}
+  - {fileID: 11400000, guid: 5699544c20e924fcb9f4a42cd6736e01, type: 2}
+  - {fileID: 11400000, guid: 441f392d9dc824482b4e13802385bfeb, type: 2}
+  - {fileID: 11400000, guid: 6a6db1bdba4ab487284b5319ff01dbc5, type: 2}
+  - {fileID: 11400000, guid: ca3e3f28028dc42ef9832ab73f60a906, type: 2}
+  - {fileID: 11400000, guid: 597f1a34caf1c47ac8f3effc95d11e6a, type: 2}
+  - {fileID: 11400000, guid: 4c3a77d27d3c1475391d6532d5882c37, type: 2}
+  - {fileID: 11400000, guid: ec6c7e2facb094da9afdf15dbe59aa68, type: 2}
+  - {fileID: 11400000, guid: 9e1456362c4b145bd91682fb336376a6, type: 2}
+  - {fileID: 11400000, guid: 1ce4da03b47594a0d8b365b6ddbefce9, type: 2}
+  - {fileID: 11400000, guid: 172c22d80c3634c1aa39fc596ce79d1c, type: 2}
+  - {fileID: 11400000, guid: 3cffc511327974263ab6e7b49d868f28, type: 2}
+  - {fileID: 11400000, guid: dbb25900ae86d4a2f844a0eaf3392530, type: 2}
+  - {fileID: 11400000, guid: af3c62f56471441d0a35ead5219bd1f2, type: 2}
+  - {fileID: 11400000, guid: 991950f3f62bc4395a755965b7bdf7b7, type: 2}
+  - {fileID: 11400000, guid: 091e0c25280f64294b00dd10422cc76a, type: 2}
