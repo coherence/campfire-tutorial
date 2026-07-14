@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269269562991978131}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1498616242359619048}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &4620371565644370732
 CapsuleCollider:
@@ -41,8 +41,17 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269269562991978131}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.68447167
   m_Height: 2.3003566
   m_Direction: 0
@@ -92,6 +101,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2272056274626123602}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -102,7 +112,6 @@ Transform:
   - {fileID: 5477664959342397225}
   - {fileID: 1806475306694297030}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8111638725544808720
 Rigidbody:
@@ -111,10 +120,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2272056274626123602}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 4
   m_Drag: 0.1
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -284,6 +304,7 @@ MonoBehaviour:
   bakedScriptType: Coherence.Generated.CoherenceSync_8833df0ce8b904a2c930b33acfa5fd13,
     Assembly-CSharp
   isGlobal: 0
+  synchronizeParent: 1
   approveAuthorityTransferRequests: 0
   simulationType: 0
   authorityTransferConfig: 1
@@ -300,8 +321,8 @@ MonoBehaviour:
   - rid: 3472946656693190773
   - rid: 3472946656693190774
   - rid: 134368550202900516
-  - rid: 8975625062529892426
   - rid: 8975625062529892549
+  - rid: 464123148303597586
   scenePrefabInstanceUUID: 
   coherenceUUID: 
   assetVersion: 20
@@ -340,7 +361,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1240127558968939656}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 134368550202900517
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -362,11 +383,56 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 134368709440962560
       type: {class: DisableBehaviourComponentAction, ns: Coherence.Toolkit.ComponentActions,
         asm: Coherence.Toolkit}
       data:
         component: {fileID: 4956315802915571190}
+    - rid: 464123148303597586
+      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 464123148303597587
+        routing: 1
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 1d97e8b68da1419a9d8bbf2023980031
+        archetypeData:
+          type: 0
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields: []
+        unityComponent: {fileID: 4956315802915571190}
+        coherenceSync: {fileID: 6375189795360318608}
+        _interpolationSettings: {fileID: 0}
+    - rid: 464123148303597587
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: PlayReappearShaderEffect
+        monoAssemblyType: 
+        required: 1
+        enforcesLODingWhenFieldsOverriden: 0
+        valueSyncCallbackName: 
+        memberType: 8
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: PositionedObject, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+        methodCompatible: 1
+        defaultRouting: 1
     - rid: 3472946656693190763
       type: {class: PositionBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
         asm: Coherence.Toolkit}
@@ -391,7 +457,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1498616242359619048}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+        _interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
           type: 2}
     - rid: 3472946656693190764
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
@@ -414,6 +480,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 3472946656693190765
       type: {class: RotationBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
         asm: Coherence.Toolkit}
@@ -438,7 +506,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1498616242359619048}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
+        _interpolationSettings: {fileID: 11400000, guid: ae4419d1d9a8643709bf5f6b90c584a5,
           type: 2}
     - rid: 3472946656693190766
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
@@ -461,6 +529,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 3472946656693190767
       type: {class: ScaleBinding, ns: Coherence.Toolkit.Bindings.TransformBindings,
         asm: Coherence.Toolkit}
@@ -485,7 +555,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1498616242359619048}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 3472946656693190768
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -507,6 +577,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 3472946656693190772
       type: {class: DisableBehaviourComponentAction, ns: Coherence.Toolkit.ComponentActions,
         asm: Coherence.Toolkit}
@@ -535,7 +607,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1610091049627114431}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 3472946656693190774
       type: {class: IntBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
       data:
@@ -559,7 +631,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 1610091049627114431}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 3472946656693190775
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -581,6 +653,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 3472946656693190776
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -602,47 +676,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
-    - rid: 8975625062529892426
-      type: {class: CommandBinding, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        descriptor:
-          rid: 8975625062529892427
-        routing: 1
-        syncMode: 0
-        isPredicted: 0
-        predictionMode: 0
-        guid: ad9e635638034d88b0c6dcd8a9c83286
-        archetypeData:
-          type: 0
-          minRange: 0
-          maxRange: 0
-          sampleRate: 20
-          floatCompression: 0
-          fields: []
-        unityComponent: {fileID: 4956315802915571190}
-        coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
-    - rid: 8975625062529892427
-      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
-      data:
-        name: PlayReappearShaderEffect
-        monoAssemblyType: 
-        required: 1
-        enforcesLODingWhenFieldsOverriden: 0
-        valueSyncCallbackName: 
-        memberType: 8
-        parameterAssemblyTypes: []
-        ownerType:
-          assemblyQualifiedName: PositionedObject, Assembly-CSharp, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-        defaultSyncMode: 0
-        CustomData:
-          rid: -2
-        bindingType:
-          assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        oldName: 
-        oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
     - rid: 8975625062529892549
       type: {class: ReferenceBinding, ns: Coherence.Toolkit.Bindings.ValueBindings,
         asm: Coherence.Toolkit}
@@ -667,7 +702,7 @@ MonoBehaviour:
             floatCompression: 0
         unityComponent: {fileID: 4956315802915571190}
         coherenceSync: {fileID: 0}
-        interpolationSettings: {fileID: 0}
+        _interpolationSettings: {fileID: 0}
     - rid: 8975625062529892550
       type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
       data:
@@ -689,6 +724,8 @@ MonoBehaviour:
             Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
 --- !u!114 &1610091049627114431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,13 +781,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2694923458204196241}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1498616242359619048}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3382381305466872356
 MeshFilter:
@@ -845,13 +882,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5640495392823266360}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1498616242359619048}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &4868421963353815200
 AudioSource:
@@ -967,6 +1004,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1498616242359619048}
     m_Modifications:
     - target: {fileID: 3129766074022126719, guid: 9ab9e7e959e10154c8441c8e055ca38d,
@@ -1035,6 +1073,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7164931542136375948}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ab9e7e959e10154c8441c8e055ca38d, type: 3}
 --- !u!4 &738376647610722319 stripped
 Transform:

@@ -834,7 +834,7 @@ PlayerSettings:
   scriptingDefineSymbols:
     Android: 
     Server: 
-    Standalone: COHERENCE_DISABLE_LOG_WARNING
+    Standalone: COHERENCE_DISABLE_LOG_WARNING;COHERENCE_LOG_DEBUG
     WebGL: COHERENCE_LOG_DEBUG;COHERENCE_LOG_TRACE
     iPhone: 
   additionalCompilerArguments: {}

@@ -13,22 +13,22 @@ MonoBehaviour:
   m_Name: RuntimeSettings
   m_EditorClassIdentifier: 
   logSettings:
-    EditorLogLevel: 2
-    LogLevel: 2
+    EditorLogLevel: 1
+    LogLevel: 1
     FilterMode: 0
     LogStackTrace: 1
     AddTimestamp: 1
     Watermark: (coherence)
-    AddSourceType: 0
+    AddSourceType: 1
     SourceFilters: 
-    LogToFile: 0
+    LogToFile: 1
     LogFilePath: Logs/player_logs.txt
     MigratedToSerializedObject: 1
-    FileLogLevel: 1
-  schemaID: 2bac603d48769f76c1269aff72746aabbbe980c3
+    FileLogLevel: 0
+  schemaID: d78538fde15005c2eb1b7f4538a3bdb028668df7
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
-  runtimeKey: 3f2154ade8334278aac056f46461c185
-  simulatorSlug: apr 23 1.6.1_2 v1
+  runtimeKey: dfd8f781fadc4c13bdbe782e793e52f1
+  simulatorSlug: simulator-development
   localHost: 127.0.0.1
   localWorldUDPPort: 32001
   localWorldWebPort: 32002
@@ -42,8 +42,8 @@ MonoBehaviour:
   recvFrequency: 60
   useDebugStreams: 0
   organizationID: 
-  projectID: cgqlbqlbo1hvlpolchog
-  projectName: Campfire tutorial
+  projectID: cke7octklouml7ml5lrg
+  projectName: campfire
   organizationName: 
   transportType: 0
   advancedSettings:
