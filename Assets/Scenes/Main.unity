@@ -26234,6 +26234,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1624837533}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &949011307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949011308}
+  - component: {fileID: 949011309}
+  m_Layer: 0
+  m_Name: AutoSimulatorConnection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &949011308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949011307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1384396892}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &949011309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949011307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb9923c3fc734990b2fcc0c59fb6fa98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reconnectTime: 3
+  attemptsBeforeRefetch: 3
+  autoLoginToCloud: 1
+  bridge: {fileID: 0}
 --- !u!1001 &949608104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40074,6 +40122,8 @@ Transform:
   - {fileID: 503013440}
   - {fileID: 438728332}
   - {fileID: 64174767}
+  - {fileID: 949011308}
+  - {fileID: 2106038983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1386038091 stripped
@@ -41515,8 +41565,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   uniqueId: 
-  autoLoginAsGuest: 1
-  playerAccount: 0
+  autoLoginAsGuest: 0
+  playerAccount: 2
 --- !u!4 &1423719545
 Transform:
   m_ObjectHideFlags: 0
@@ -48796,6 +48846,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2375060055151760671, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 3642171110511019655, guid: 3899d1d755bc04d48bf3f1dab37a3f3b,
         type: 3}
@@ -60177,6 +60232,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2105996753}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2106038982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106038983}
+  - component: {fileID: 2106038984}
+  m_Layer: 0
+  m_Name: CoherenceCloudLogin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2106038983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106038982}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1384396892}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2106038984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106038982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1204023f91ac64f930df8b0ee0dde5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  login: 1
+  usernameCloudUniqueIdOrIdentity:
+    rid: 3859272015834513408
+  passwordTokenTicketOrCode:
+    rid: 3859272015834513409
+  autoSignup: 1
+  logInOnLoad: 1
+  logInSimulators: 1
+  onLoggedIn:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoginFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 3859272015834513408
+      type: {class: StringTextInput, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        text: 
+    - rid: 3859272015834513409
+      type: {class: StringTextInput, ns: Coherence.Toolkit, asm: Coherence.Toolkit}
+      data:
+        text: 
 --- !u!1001 &2110263722
 PrefabInstance:
   m_ObjectHideFlags: 0
