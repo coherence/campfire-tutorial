@@ -27,8 +27,8 @@ MonoBehaviour:
     FileLogLevel: 1
   schemaID: 8665bf19118bc39dcff68eb61b7b9dfb2f420810
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
-  runtimeKey: dfd8f781fadc4c13bdbe782e793e52f1
-  simulatorSlug: jul29 - 2.2
+  runtimeKey: 3f2154ade8334278aac056f46461c185
+  simulatorSlug: jul 28 2.2.0
   localHost: 127.0.0.1
   localWorldUDPPort: 32001
   localWorldWebPort: 32002
@@ -42,8 +42,8 @@ MonoBehaviour:
   recvFrequency: 60
   useDebugStreams: 0
   organizationID: 
-  projectID: cke7octklouml7ml5lrg
-  projectName: campfire
+  projectID: cgqlbqlbo1hvlpolchog
+  projectName: Campfire tutorial
   organizationName: 
   transportType: 0
   advancedSettings:
