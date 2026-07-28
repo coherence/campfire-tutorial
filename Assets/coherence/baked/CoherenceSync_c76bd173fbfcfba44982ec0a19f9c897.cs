@@ -174,7 +174,7 @@ namespace Coherence.Generated
     	    CastedUnityComponent = (global::Coherence.Toolkit.CoherenceNode)UnityComponent;
         }
 
-        public override uint CoherenceComponentID => 47;
+        public override uint CoherenceComponentID => 48;
         public override int FieldIndex => 0;
 
         public override System.String Value
@@ -219,7 +219,7 @@ namespace Coherence.Generated
     	    CastedUnityComponent = (global::Coherence.Toolkit.CoherenceNode)UnityComponent;
         }
 
-        public override uint CoherenceComponentID => 47;
+        public override uint CoherenceComponentID => 48;
         public override int FieldIndex => 1;
 
         public override System.Int32 Value
@@ -264,7 +264,7 @@ namespace Coherence.Generated
     	    CastedUnityComponent = (global::Grabbable)UnityComponent;
         }
 
-        public override uint CoherenceComponentID => 46;
+        public override uint CoherenceComponentID => 47;
         public override int FieldIndex => 0;
 
         public override System.Boolean Value
@@ -309,7 +309,7 @@ namespace Coherence.Generated
     	    CastedUnityComponent = (global::PositionedObject)UnityComponent;
         }
 
-        public override uint CoherenceComponentID => 45;
+        public override uint CoherenceComponentID => 46;
         public override int FieldIndex => 0;
 
         public override Entity Value

@@ -16,7 +16,7 @@ namespace Coherence.Generated
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void OnRuntimeMethodLoad()
         {
-            Impl.BakedDataSchemaID = "d78538fde15005c2eb1b7f4538a3bdb028668df7";
+            Impl.BakedDataSchemaID = "8665bf19118bc39dcff68eb61b7b9dfb2f420810";
         }
     }
 }

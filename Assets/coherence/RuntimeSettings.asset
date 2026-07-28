@@ -24,11 +24,11 @@ MonoBehaviour:
     LogToFile: 1
     LogFilePath: Logs/player_logs.txt
     MigratedToSerializedObject: 1
-    FileLogLevel: 0
-  schemaID: d78538fde15005c2eb1b7f4538a3bdb028668df7
+    FileLogLevel: 1
+  schemaID: 8665bf19118bc39dcff68eb61b7b9dfb2f420810
   versionInfo: {fileID: 11400000, guid: 2191b6f902c97477baa32a7919010503, type: 2}
   runtimeKey: dfd8f781fadc4c13bdbe782e793e52f1
-  simulatorSlug: simulator-development
+  simulatorSlug: jul29 - 2.2
   localHost: 127.0.0.1
   localWorldUDPPort: 32001
   localWorldWebPort: 32002

@@ -15,7 +15,7 @@ MonoBehaviour:
   showHubModuleQuickHelp: 1
   portalToken: 
   localRoomsCleanupTimeSeconds: 120
-  localWorldHostAuthority: 0
+  localWorldHostAuthority: 1
   rsConsoleLogLevel: 0
   rsLogToFile: 1
   rsLogFilePath: 2.2.rs.logs.txt

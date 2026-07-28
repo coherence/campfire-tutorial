@@ -1,3 +1,11 @@
+enum KeeperRobot_RobotState [bits "3", range-min "0", range-max "5"] 
+  Idle 0
+  RecreatingObject 1
+  CarryingObject 2
+  SeekingObject 3
+  GoingToSleep 4
+  Sleeping 5
+
 component _0109999de4f6d45bb8c13493b504dee7_1143969198414876421 [id "18"]
   path String 
   pathDirtyCounter Int [range-min "-2147483648", range-max "2147483647"]
@@ -85,66 +93,71 @@ component _a857fd6c221f7f04fa9ed500e317642a_4667129514690375174 [id "43"]
   IsFlailing Bool 
   IsCarrying Bool 
 
-component _a857fd6c221f7f04fa9ed500e317642a_8551261703447512967 [id "44"]
+component _a857fd6c221f7f04fa9ed500e317642a_5450002341135503407 [id "44"]
+  situationCheckCooldown Float [compression "None"]
+  _state KeeperRobot_RobotState 
+  enabled Bool 
+
+component _a857fd6c221f7f04fa9ed500e317642a_8551261703447512967 [id "45"]
   isBusy Bool 
 
-component _c76bd173fbfcfba44982ec0a19f9c897_4384992023136877932 [id "45"]
+component _c76bd173fbfcfba44982ec0a19f9c897_4384992023136877932 [id "46"]
   objectAnchorSync Entity 
 
-component _c76bd173fbfcfba44982ec0a19f9c897_7577043058907851794 [id "46"]
+component _c76bd173fbfcfba44982ec0a19f9c897_7577043058907851794 [id "47"]
   isBeingCarried Bool 
 
-component _c76bd173fbfcfba44982ec0a19f9c897_7947429143224902437 [id "47"]
+component _c76bd173fbfcfba44982ec0a19f9c897_7947429143224902437 [id "48"]
   path String 
   pathDirtyCounter Int [range-min "-2147483648", range-max "2147483647"]
 
-component _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 [id "48"]
+component _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 [id "49"]
   MoveSpeed Float [sim-frames "true", compression "None"]
   Grounded Bool 
   CarryingBig Bool 
   IsChopping Bool 
   IsSitting Bool 
 
-component _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181 [id "49"]
+component _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181 [id "50"]
   text String 
 
-component _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216 [id "50"]
+component _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216 [id "51"]
   path String 
   pathDirtyCounter Int [range-min "-2147483648", range-max "2147483647"]
 
-component _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 [id "51"]
+component _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 [id "52"]
   position Vector3 [sim-frames "true", compression "FixedPoint", range-min "-100", range-max "600", precision "0.01", bits "17"]
 
-component _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618 [id "52"]
+component _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618 [id "53"]
   currentBackpack Int [range-min "-2", range-max "3"]
   currentSkinTone Int [range-min "-2", range-max "20"]
   currentClothes Int [range-min "-2147483648", range-max "2147483647"]
   currentBody Int [range-min "-2147483648", range-max "2147483647"]
   currentHairstyle Int [range-min "-2147483648", range-max "2147483647"]
 
-component _e74854605b68b435280bc0ac73fef6c1_6806255523165594879 [id "53"]
+component _e74854605b68b435280bc0ac73fef6c1_6806255523165594879 [id "54"]
   objectAnchorSync Entity 
 
-component _e74854605b68b435280bc0ac73fef6c1_831233887725647233 [id "54"]
+component _e74854605b68b435280bc0ac73fef6c1_831233887725647233 [id "55"]
   isBeingCarried Bool 
 
-component _e74854605b68b435280bc0ac73fef6c1_929081723536030390 [id "55"]
+component _e74854605b68b435280bc0ac73fef6c1_929081723536030390 [id "56"]
   path String 
   pathDirtyCounter Int [range-min "-2147483648", range-max "2147483647"]
 
-component _ec47cd7906b7749f4853524abf78e799_432812263773753349 [id "56"]
+component _ec47cd7906b7749f4853524abf78e799_432812263773753349 [id "57"]
   holdingForUUID String 
   isObjectPresent Bool 
   syncConfigId String 
 
-component _f446f3c484ae048c4ba11ef7b8642420_4071990166734286761 [id "57"]
+component _f446f3c484ae048c4ba11ef7b8642420_4071990166734286761 [id "58"]
   path String 
   pathDirtyCounter Int [range-min "-2147483648", range-max "2147483647"]
 
-component _f446f3c484ae048c4ba11ef7b8642420_4607038716989399198 [id "58"]
+component _f446f3c484ae048c4ba11ef7b8642420_4607038716989399198 [id "59"]
   isBeingCarried Bool 
 
-component _f446f3c484ae048c4ba11ef7b8642420_7643438469673120224 [id "59"]
+component _f446f3c484ae048c4ba11ef7b8642420_7643438469673120224 [id "60"]
   objectAnchorSync Entity 
 
 command _0109999de4f6d45bb8c13493b504dee7_1d97e8b68da1419a9d8bbf2023980031 [id "6", routing "All"]
@@ -229,38 +242,38 @@ command _f446f3c484ae048c4ba11ef7b8642420_1d97e8b68da1419a9d8bbf2023980031 [id "
 
 archetype _3889a458e94666d4784df30d8dd06d7d [id "0"]
   lod 0
-    WorldPosition [id "60", base-id "0"]
+    WorldPosition [id "61", base-id "0"]
       archetype_field value [sim-frames "true", compression "None"]
-    _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 [id "61", base-id "24"]
+    _3889a458e94666d4784df30d8dd06d7d_6540142254599110064 [id "62", base-id "24"]
       archetype_field activeFireEffect [range-min "-1", range-max "10"]
       archetype_field fireTimer [compression "FixedPoint", range-min "-5", range-max "100", precision "0.001", bits "17"]
       archetype_field bigFireTimer [compression "FixedPoint", range-min "-5", range-max "100", precision "0.001", bits "17"]
 
 archetype _cd9bcc1feead9419fac0c5981ce85c23 [id "1"]
   lod 0
-    WorldPosition [id "62", base-id "0"]
+    WorldPosition [id "63", base-id "0"]
       archetype_field value [sim-frames "true", compression "FixedPoint", range-min "-100", range-max "600", precision "0.01", bits "17"]
-    WorldOrientation [id "63", base-id "1"]
+    WorldOrientation [id "64", base-id "1"]
       archetype_field value [sim-frames "true", bits "12"]
-    GenericScale [id "64", base-id "17"]
+    GenericScale [id "65", base-id "17"]
       archetype_field value [sim-frames "true", compression "None"]
-    _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618 [id "65", base-id "52"]
+    _cd9bcc1feead9419fac0c5981ce85c23_8520998716179763618 [id "66", base-id "53"]
       archetype_field currentBackpack [range-min "-2", range-max "3"]
       archetype_field currentSkinTone [range-min "-2", range-max "20"]
       archetype_field currentClothes [range-min "-2147483648", range-max "2147483647"]
       archetype_field currentBody [range-min "-2147483648", range-max "2147483647"]
       archetype_field currentHairstyle [range-min "-2147483648", range-max "2147483647"]
-    _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181 [id "66", base-id "49"]
+    _cd9bcc1feead9419fac0c5981ce85c23_3184128103638100181 [id "67", base-id "50"]
       archetype_field text 
-    _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 [id "67", base-id "51"]
+    _cd9bcc1feead9419fac0c5981ce85c23_4998465150839130408 [id "68", base-id "52"]
       archetype_field position [sim-frames "true", compression "FixedPoint", range-min "-100", range-max "600", precision "0.01", bits "17"]
-    _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 [id "68", base-id "48"]
+    _cd9bcc1feead9419fac0c5981ce85c23_176131441763086322 [id "69", base-id "49"]
       archetype_field MoveSpeed [sim-frames "true", compression "None"]
       archetype_field Grounded 
       archetype_field CarryingBig 
       archetype_field IsChopping 
       archetype_field IsSitting 
-    _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216 [id "69", base-id "50"]
+    _cd9bcc1feead9419fac0c5981ce85c23_4874302885197676216 [id "70", base-id "51"]
       archetype_field path 
       archetype_field pathDirtyCounter [range-min "-2147483648", range-max "2147483647"]
 

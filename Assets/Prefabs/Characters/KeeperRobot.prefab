@@ -176,7 +176,7 @@ MonoBehaviour:
   holdSocket: {fileID: 8693188804916679657}
   situationCheckCooldown: 12
   _state: 5
-  _log: 0
+  _log: 1
 --- !u!114 &-3359619185253440237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
   RigidbodyUpdateMode: 0
   bakedScriptType: Coherence.Generated.CoherenceSync_a857fd6c221f7f04fa9ed500e317642a,
     Assembly-CSharp
-  isGlobal: 0
+  isGlobal: 1
   synchronizeParent: 1
   approveAuthorityTransferRequests: 1
   simulationType: 2
@@ -330,6 +330,9 @@ MonoBehaviour:
   - rid: 464123148303597569
   - rid: 464123148303597570
   - rid: 464123148303597571
+  - rid: 3859272015834513734
+  - rid: 3859272015834513735
+  - rid: 3859272015834513736
   scenePrefabInstanceUUID: 
   coherenceUUID: keeper-robot
   assetVersion: 20
@@ -604,6 +607,147 @@ MonoBehaviour:
         bindingType:
           assemblyQualifiedName: Coherence.Toolkit.Bindings.CommandBinding, Coherence.Toolkit,
             Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
+    - rid: 3859272015834513734
+      type: {class: FloatBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 3859272015834513740
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 7bdbd9a8685a4f6d9ca68b99e9a541fc
+        archetypeData:
+          type: 4
+          minRange: -9223372036854775808
+          maxRange: 9223372036854775807
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 4
+            bits: 32
+            precision: 0.001
+            floatCompression: 0
+        unityComponent: {fileID: 5450002341135503407}
+        coherenceSync: {fileID: -3359619185253440237}
+        _interpolationSettings: {fileID: 0}
+    - rid: 3859272015834513735
+      type: {class: EnumBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 3859272015834513741
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 191f016e9e1247d1a2d360eef5cf9d84
+        archetypeData:
+          type: 20
+          minRange: 0
+          maxRange: 5
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 20
+            bits: 3
+            precision: 0
+            floatCompression: 0
+        unityComponent: {fileID: 5450002341135503407}
+        coherenceSync: {fileID: -3359619185253440237}
+        _interpolationSettings: {fileID: 0}
+    - rid: 3859272015834513736
+      type: {class: BoolBinding, ns: Coherence.Toolkit.Bindings.ValueBindings, asm: Coherence.Toolkit}
+      data:
+        descriptor:
+          rid: 3859272015834513742
+        routing: 0
+        syncMode: 0
+        isPredicted: 0
+        predictionMode: 0
+        guid: 2f0354a9115a494d84c4173b43993356
+        archetypeData:
+          type: 3
+          minRange: 0
+          maxRange: 0
+          sampleRate: 20
+          floatCompression: 0
+          fields:
+          - type: 3
+            bits: 1
+            precision: 0
+            floatCompression: 0
+        unityComponent: {fileID: 5450002341135503407}
+        coherenceSync: {fileID: -3359619185253440237}
+        _interpolationSettings: {fileID: 0}
+    - rid: 3859272015834513740
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: situationCheckCooldown
+        monoAssemblyType: System.Single, mscorlib
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: KeeperRobot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.FloatBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
+    - rid: 3859272015834513741
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: _state
+        monoAssemblyType: KeeperRobot+RobotState, Assembly-CSharp
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 4
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: KeeperRobot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.EnumBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        oldName: 
+        oldParameterAssemblyTypes: []
+        methodCompatible: 0
+        defaultRouting: 0
+    - rid: 3859272015834513742
+      type: {class: Descriptor, ns: Coherence.Toolkit.Bindings, asm: Coherence.Toolkit}
+      data:
+        name: enabled
+        monoAssemblyType: System.Boolean, mscorlib
+        required: 0
+        enforcesLODingWhenFieldsOverriden: 1
+        valueSyncCallbackName: 
+        memberType: 16
+        parameterAssemblyTypes: []
+        ownerType:
+          assemblyQualifiedName: KeeperRobot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+            PublicKeyToken=null
+        defaultSyncMode: 0
+        CustomData:
+          rid: -2
+        bindingType:
+          assemblyQualifiedName: Coherence.Toolkit.Bindings.ValueBindings.BoolBinding,
+            Coherence.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
         oldName: 
         oldParameterAssemblyTypes: []
         methodCompatible: 0
