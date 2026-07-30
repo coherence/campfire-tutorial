@@ -58,6 +58,11 @@ public class KeeperRobot : MonoBehaviour
 
     private void OnLiveQuerySynced(CoherenceBridge bridge)
     {
+        // This scene-placed copy may have just been deactivated by CoherenceSync.HandleConnected
+        // because it turned out to be a server-owned object on this client (isServerObjectOnClient).
+        // The real, networked KeeperRobot will be driven by the Simulator instead.
+        if (!gameObject.activeInHierarchy) return;
+
         PlayHumSound();
         _sync.SendCommand<KeeperRobot>(nameof(PlayHumSound), MessageTarget.Other);
 

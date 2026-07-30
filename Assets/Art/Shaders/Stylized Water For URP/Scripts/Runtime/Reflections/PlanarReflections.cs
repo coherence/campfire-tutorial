@@ -205,7 +205,16 @@ namespace StylizedWater
             var data = new PlanarReflectionSettingData();
             data.Set();
             BeginPlanarReflections?.Invoke(context, _reflectionCamera);
-            if (_reflectionCamera.WorldToViewportPoint(reflectionTarget.transform.position).z < 100000) UniversalRenderPipeline.RenderSingleCamera(context, _reflectionCamera);
+            if (_reflectionCamera.WorldToViewportPoint(reflectionTarget.transform.position).z < 100000)
+            {
+                // RenderSingleCamera is obsolete, but its suggested replacement (RenderPipeline.SubmitRenderRequest
+                // with UniversalRenderer.SingleCameraRequest) starts a new top-level pipeline pass and isn't meant
+                // to be called reentrantly from inside an active beginCameraRendering callback like this one.
+                // Keeping the obsolete call here is intentional until URP supports nested single-camera renders.
+#pragma warning disable CS0618
+                UniversalRenderPipeline.RenderSingleCamera(context, _reflectionCamera);
+#pragma warning restore CS0618
+            }
             data.Restore();
             Shader.SetGlobalTexture(_planarReflectionTextureId, _reflectionTexture);
         }

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: coherence
-  productName: Campfire
+  productName: sim_x86_64
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.0754717, g: 0.07013172, b: 0.071466714, a: 1}
@@ -834,8 +834,8 @@ PlayerSettings:
   scriptingDefineSymbols:
     Android: 
     Server: 
-    Standalone: COHERENCE_DISABLE_LOG_WARNING
-    WebGL: COHERENCE_LOG_DEBUG;COHERENCE_LOG_TRACE
+    Standalone: COHERENCE_DISABLE_LOG_WARNING;COHERENCE_LOG_DEBUG
+    WebGL: COHERENCE_LOG_DEBUG
     iPhone: 
   additionalCompilerArguments: {}
   platformArchitecture: {}

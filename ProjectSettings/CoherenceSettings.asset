@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b58ca8e478745dfab801a85671962e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showHubModuleQuickHelp: 0
+  showHubModuleQuickHelp: 1
   portalToken: 
   localRoomsCleanupTimeSeconds: 120
-  localWorldHostAuthority: 0
-  rsConsoleLogLevel: 2
-  rsLogToFile: 0
-  rsLogFilePath: Logs/rs_logs.txt
-  rsFileLogLevel: 1
-  reportAnalytics: 0
+  localWorldHostAuthority: 1
+  rsConsoleLogLevel: 0
+  rsLogToFile: 1
+  rsLogFilePath: 2.2.rs.logs.txt
+  rsFileLogLevel: 3
+  reportAnalytics: 1
   RSBundlingEnabled: 1
   keepConnectionAlive: 1
+  useUnlockToken: 0
   activeSchemas: []
   organization:
     id: c1ho23prn6r43hh5tc40
@@ -81,6 +82,10 @@ MonoBehaviour:
       portal_token: 6848ee833e124ede8d4738c37b00e82f
       runtime_key: f8a38d319e1f470caba36a62983d35a7
       name: eriks-self-hosting-testbed
+    - id: d93ql9q7u6kv31liujjg
+      portal_token: 446814baebcd4cad8caca692e09dd5b9
+      runtime_key: c22a82a6a54e492f9e78f1bf2896b6be
+      name: filip-memories
     - id: cnk5nni2t1ck6t1vopr0
       portal_token: 29565dd462a14fc39b339da50b339135
       runtime_key: 5121ef6fa15d4635af57be5d90038642
@@ -145,6 +150,14 @@ MonoBehaviour:
       portal_token: 11101bb2cb1a47d1afdb92f719860dcc
       runtime_key: de7d22d0bd504eb1b2bef94bf28535b6
       name: gamejam-cary-connected
+    - id: d92qo38efthe0e500q3g
+      portal_token: 2cdd94094ca04fab89ec2f4de195c402
+      runtime_key: 458b68fad1394287b0af52e37b046aea
+      name: gamejam-cary-dots-roguelike
+    - id: d92nh00efthe0e4vc77g
+      portal_token: 13c97222c5c747879d9fb2dbf5244f5d
+      runtime_key: df24ab8939a54528acef2dfd3d8744c9
+      name: gamejam-cary-football
     - id: chv1vne4h3r5m0r6abvg
       portal_token: 81d419a4f83346368bfe854bcac64748
       runtime_key: 78623e83ff0b4670b5cf5614f5413ba8
@@ -380,7 +393,7 @@ MonoBehaviour:
     - id: com1jdi2t1ch2t9ao1c0
       portal_token: 8bb75ecc20a245c3afb0fb530f8c3f30
       runtime_key: 003a15eff070484c8e07e842d93c9b00
-      name: leos-playground
+      name: leos-playground2
     - id: cccpp8jri4db8gho0300
       portal_token: 52b0fd2912994d57afc27278c531ca45
       runtime_key: 026c917fabc1407aba22fa7391cd7e94
@@ -393,10 +406,18 @@ MonoBehaviour:
       portal_token: d4e7a8c718794573a324dcd59d270fbb
       runtime_key: 87f08d50582f471d81f3f7ee8054cc4a
       name: MoonBoot
+    - id: d8bcq1h4qnkdhpm3scg0
+      portal_token: 2b12337aa60d4b29bd286c13091396f2
+      runtime_key: 54f004efa2e24d05973fdb02eff2c356
+      name: perf-tests
     - id: c7ldvepvpaj54s68i780
       portal_token: 33c6209b4cfd4e7db19be66a432c818e
       runtime_key: b56bc6a561f64b8587c928aa1cbbca19
       name: Playground Original
+    - id: d7jtl34oq66hb6fmnn00
+      portal_token: 4616c0ac36fd4377ad051a8764173a14
+      runtime_key: 937cfe10b61340168779b712082229a4
+      name: poc-cary-recycling
     - id: cs7f6bv088d66d5ip0vg
       portal_token: 0f91226d6b8f42f590f524e238273a30
       runtime_key: 875a93101dad4adcbc396fcb8ba507a5
@@ -417,6 +438,10 @@ MonoBehaviour:
       portal_token: 945a1ddd59584bddbff75f837ed4c953
       runtime_key: 20929b8417734cef815808e372542fb4
       name: prefab-mapper-testbed
+    - id: d9348kii7voeic3mrvl0
+      portal_token: c3b1d8ab802747f5b1e1256119f71114
+      runtime_key: 883dbc71675c4b6aaae63fe46b4d87ab
+      name: quickjam-auth-transfer
     - id: d0cue3hqpo26m25gapo0
       portal_token: 7e5a97b598704dd2bcf04ffce8ea2957
       runtime_key: c3ac12c0d5c744cb8b35b1f526d249d3
@@ -433,6 +458,10 @@ MonoBehaviour:
       portal_token: 6355e20c075442b9b4a72e1f6c77c644
       runtime_key: 13e3929ec97c4ddf8b77adddae39120e
       name: squingle
+    - id: d6k0nvitq2r3lhrg0io0
+      portal_token: 6aa8bf929de448899a99fa69625fe1b3
+      runtime_key: b352cc63f9b7483e8bfd9e5adac5c33b
+      name: stickman
     - id: c92n8tdt84j1ocj4mv8g
       portal_token: 530467a2520d4954806db267fbc20d0e
       runtime_key: 09196e4708e741bfb36ba1521e11abb1
