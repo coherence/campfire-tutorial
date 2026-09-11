@@ -34,7 +34,7 @@ jobs:
           --request POST --data "{\"branchName\": \"${{ github.event_name == 'workflow_dispatch' && inputs.branch || github.head_ref }}\", \"buildType\": { \"id\": \"Sdk_GameProjects_BuildCampfire\"} }" \
           https://coherence.teamcity.com/app/rest/buildQueue)
 
-          url=$( jq -r '.webUrl' <<< "${response}" )
+          url=$( jq -r '.webUrl' <<< "${response}" 2>/dev/null ) || url=""
 
           if [ -z "${url}" ] || [ "${url}" = "null" ]; then
             echo "Failed to start TeamCity build. Response: ${response}" >&2
