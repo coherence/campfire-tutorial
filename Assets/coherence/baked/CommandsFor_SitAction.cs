@@ -12,20 +12,20 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_SitAction
 {
-    public static bool PlaySitSound(this SitAction self, MessageTarget target)
+    public static bool PlaySitSound(this SitAction _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlaySitSound), target);
+        return __sync.SendCommand(_self, nameof(PlaySitSound), coherenceMessageTarget);
     }
 }
 #endif

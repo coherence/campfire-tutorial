@@ -278,7 +278,16 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(11, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-            command.GetField(0).SetString(((System.String)requestArgs.Args[0]));
+            // The command is rented from a pool, so it has to be returned if an argument can't be written.
+            try
+            {
+                command.GetField(0).SetString(((System.String)requestArgs.Args[0]));
+            }
+            catch
+            {
+                command.Dispose();
+                throw;
+            }
 
             client.SendCommand(command, requestArgs.ChannelID);
         }
@@ -317,7 +326,6 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(9, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-
             client.SendCommand(command, requestArgs.ChannelID);
         }
         
@@ -354,8 +362,17 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(8, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-            command.GetField(0).SetInt(((System.Int32)requestArgs.Args[0]));
-            command.GetField(1).SetInt(((System.Int32)requestArgs.Args[1]));
+            // The command is rented from a pool, so it has to be returned if an argument can't be written.
+            try
+            {
+                command.GetField(0).SetInt(((System.Int32)requestArgs.Args[0]));
+                command.GetField(1).SetInt(((System.Int32)requestArgs.Args[1]));
+            }
+            catch
+            {
+                command.Dispose();
+                throw;
+            }
 
             client.SendCommand(command, requestArgs.ChannelID);
         }
@@ -395,9 +412,18 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(10, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-            command.GetField(0).SetInt(((System.Int32)requestArgs.Args[0]));
-            command.GetField(1).SetInt(((System.Int32)requestArgs.Args[1]));
-            command.GetField(2).SetString(((System.String)requestArgs.Args[2]));
+            // The command is rented from a pool, so it has to be returned if an argument can't be written.
+            try
+            {
+                command.GetField(0).SetInt(((System.Int32)requestArgs.Args[0]));
+                command.GetField(1).SetInt(((System.Int32)requestArgs.Args[1]));
+                command.GetField(2).SetString(((System.String)requestArgs.Args[2]));
+            }
+            catch
+            {
+                command.Dispose();
+                throw;
+            }
 
             client.SendCommand(command, requestArgs.ChannelID);
         }

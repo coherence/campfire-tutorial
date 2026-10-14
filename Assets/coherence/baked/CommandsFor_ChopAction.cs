@@ -12,20 +12,20 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_ChopAction
 {
-    public static bool PlayChopSound(this ChopAction self, MessageTarget target)
+    public static bool PlayChopSound(this ChopAction _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayChopSound), target);
+        return __sync.SendCommand(_self, nameof(PlayChopSound), coherenceMessageTarget);
     }
 }
 #endif

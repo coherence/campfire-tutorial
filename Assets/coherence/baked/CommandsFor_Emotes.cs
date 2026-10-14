@@ -12,52 +12,52 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_Emotes
 {
-    public static bool PlayYesSound(this Emotes self, MessageTarget target)
+    public static bool PlayYesSound(this Emotes _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayYesSound), target);
+        return __sync.SendCommand(_self, nameof(PlayYesSound), coherenceMessageTarget);
     }
 
-    public static bool PlayNoSound(this Emotes self, MessageTarget target)
+    public static bool PlayNoSound(this Emotes _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayNoSound), target);
+        return __sync.SendCommand(_self, nameof(PlayNoSound), coherenceMessageTarget);
     }
 
-    public static bool PlayHeySound(this Emotes self, MessageTarget target)
+    public static bool PlayHeySound(this Emotes _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayHeySound), target);
+        return __sync.SendCommand(_self, nameof(PlayHeySound), coherenceMessageTarget);
     }
 }
 #endif

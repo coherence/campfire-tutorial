@@ -12,68 +12,68 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_KeeperRobot
 {
-    public static bool PlayHumSound(this KeeperRobot self, MessageTarget target)
+    public static bool PlayHumSound(this KeeperRobot _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayHumSound), target);
+        return __sync.SendCommand(_self, nameof(PlayHumSound), coherenceMessageTarget);
     }
 
-    public static bool PlayVoiceSound(this KeeperRobot self, MessageTarget target)
+    public static bool PlayVoiceSound(this KeeperRobot _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayVoiceSound), target);
+        return __sync.SendCommand(_self, nameof(PlayVoiceSound), coherenceMessageTarget);
     }
 
-    public static bool PlayConjure(this KeeperRobot self, MessageTarget target)
+    public static bool PlayConjure(this KeeperRobot _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayConjure), target);
+        return __sync.SendCommand(_self, nameof(PlayConjure), coherenceMessageTarget);
     }
 
-    public static bool PlayAppear(this KeeperRobot self, MessageTarget target)
+    public static bool PlayAppear(this KeeperRobot _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayAppear), target);
+        return __sync.SendCommand(_self, nameof(PlayAppear), coherenceMessageTarget);
     }
 }
 #endif

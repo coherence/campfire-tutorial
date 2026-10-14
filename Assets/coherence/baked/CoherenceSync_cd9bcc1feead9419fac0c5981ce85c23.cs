@@ -890,7 +890,16 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(29, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-            command.GetField(0).SetString(((System.String)requestArgs.Args[0]));
+            // The command is rented from a pool, so it has to be returned if an argument can't be written.
+            try
+            {
+                command.GetField(0).SetString(((System.String)requestArgs.Args[0]));
+            }
+            catch
+            {
+                command.Dispose();
+                throw;
+            }
 
             client.SendCommand(command, requestArgs.ChannelID);
         }
@@ -929,7 +938,6 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(30, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-
             client.SendCommand(command, requestArgs.ChannelID);
         }
         
@@ -965,7 +973,6 @@ namespace Coherence.Generated
         {
             var command = client.SchemaDataFactory.CreateCommand(31, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
-
 
             client.SendCommand(command, requestArgs.ChannelID);
         }
@@ -1003,7 +1010,6 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(33, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-
             client.SendCommand(command, requestArgs.ChannelID);
         }
         
@@ -1039,7 +1045,6 @@ namespace Coherence.Generated
         {
             var command = client.SchemaDataFactory.CreateCommand(34, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
-
 
             client.SendCommand(command, requestArgs.ChannelID);
         }
@@ -1077,7 +1082,6 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(28, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-
             client.SendCommand(command, requestArgs.ChannelID);
         }
         
@@ -1113,7 +1117,6 @@ namespace Coherence.Generated
         {
             var command = client.SchemaDataFactory.CreateCommand(27, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
-
 
             client.SendCommand(command, requestArgs.ChannelID);
         }
@@ -1151,7 +1154,6 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(32, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-
             client.SendCommand(command, requestArgs.ChannelID);
         }
         
@@ -1188,7 +1190,16 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(35, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-            command.GetField(0).SetBytes(((System.Byte[])requestArgs.Args[0]));
+            // The command is rented from a pool, so it has to be returned if an argument can't be written.
+            try
+            {
+                command.GetField(0).SetBytes(((System.Byte[])requestArgs.Args[0]));
+            }
+            catch
+            {
+                command.Dispose();
+                throw;
+            }
 
             client.SendCommand(command, requestArgs.ChannelID);
         }

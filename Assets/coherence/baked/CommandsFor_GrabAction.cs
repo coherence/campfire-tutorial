@@ -12,36 +12,36 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_GrabAction
 {
-    public static bool PlayPickUpSound(this GrabAction self, MessageTarget target)
+    public static bool PlayPickUpSound(this GrabAction _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayPickUpSound), target);
+        return __sync.SendCommand(_self, nameof(PlayPickUpSound), coherenceMessageTarget);
     }
 
-    public static bool PlayDropSound(this GrabAction self, MessageTarget target)
+    public static bool PlayDropSound(this GrabAction _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayDropSound), target);
+        return __sync.SendCommand(_self, nameof(PlayDropSound), coherenceMessageTarget);
     }
 }
 #endif

@@ -184,7 +184,6 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(14, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-
             client.SendCommand(command, requestArgs.ChannelID);
         }
         
@@ -220,7 +219,6 @@ namespace Coherence.Generated
         {
             var command = client.SchemaDataFactory.CreateCommand(13, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
-
 
             client.SendCommand(command, requestArgs.ChannelID);
         }
@@ -258,7 +256,16 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(12, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-            command.GetField(0).SetBool(((System.Boolean)requestArgs.Args[0]));
+            // The command is rented from a pool, so it has to be returned if an argument can't be written.
+            try
+            {
+                command.GetField(0).SetBool(((System.Boolean)requestArgs.Args[0]));
+            }
+            catch
+            {
+                command.Dispose();
+                throw;
+            }
 
             client.SendCommand(command, requestArgs.ChannelID);
         }

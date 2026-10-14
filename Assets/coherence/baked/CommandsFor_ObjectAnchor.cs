@@ -12,20 +12,20 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_ObjectAnchor
 {
-    public static bool ChangeLinkedObjectStateAuth(this ObjectAnchor self, MessageTarget target, System.Boolean newState)
+    public static bool ChangeLinkedObjectStateAuth(this ObjectAnchor _self, MessageTarget coherenceMessageTarget, System.Boolean newState)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(ChangeLinkedObjectStateAuth), target, (typeof(System.Boolean), (object)newState));
+        return __sync.SendCommand(_self, nameof(ChangeLinkedObjectStateAuth), coherenceMessageTarget, (typeof(System.Boolean), (object)newState));
     }
 }
 #endif
