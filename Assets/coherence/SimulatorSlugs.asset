@@ -15,7 +15,7 @@ MonoBehaviour:
   projectSlugs:
   - ProjectId: cgqlbqlbo1hvlpolchog
     UseSimulator: 1
-    SimulatorSlug: jul 28 2.2.0
+    SimulatorSlug: oct 14 2.3.0
   - ProjectId: cke7octklouml7ml5lrg
     UseSimulator: 1
     SimulatorSlug: jul29 - 2.2

@@ -12,20 +12,20 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_Chair
 {
-    public static bool ChangeState(this Chair self, MessageTarget target, System.Boolean newBusyState)
+    public static bool ChangeState(this Chair _self, MessageTarget coherenceMessageTarget, System.Boolean newBusyState)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(ChangeState), target, (typeof(System.Boolean), (object)newBusyState));
+        return __sync.SendCommand(_self, nameof(ChangeState), coherenceMessageTarget, (typeof(System.Boolean), (object)newBusyState));
     }
 }
 #endif

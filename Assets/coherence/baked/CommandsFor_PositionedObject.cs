@@ -12,20 +12,20 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_PositionedObject
 {
-    public static bool PlayReappearShaderEffect(this PositionedObject self, MessageTarget target)
+    public static bool PlayReappearShaderEffect(this PositionedObject _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayReappearShaderEffect), target);
+        return __sync.SendCommand(_self, nameof(PlayReappearShaderEffect), coherenceMessageTarget);
     }
 }
 #endif

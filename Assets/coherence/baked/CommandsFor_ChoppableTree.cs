@@ -12,52 +12,52 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_ChoppableTree
 {
-    public static bool Chop(this ChoppableTree self, MessageTarget target)
+    public static bool Chop(this ChoppableTree _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(Chop), target);
+        return __sync.SendCommand(_self, nameof(Chop), coherenceMessageTarget);
     }
 
-    public static bool PlayChopEffect(this ChoppableTree self, MessageTarget target)
+    public static bool PlayChopEffect(this ChoppableTree _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayChopEffect), target);
+        return __sync.SendCommand(_self, nameof(PlayChopEffect), coherenceMessageTarget);
     }
 
-    public static bool ChangeState(this ChoppableTree self, MessageTarget target, System.Boolean toUp)
+    public static bool ChangeState(this ChoppableTree _self, MessageTarget coherenceMessageTarget, System.Boolean toUp)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(ChangeState), target, (typeof(System.Boolean), (object)toUp));
+        return __sync.SendCommand(_self, nameof(ChangeState), coherenceMessageTarget, (typeof(System.Boolean), (object)toUp));
     }
 }
 #endif

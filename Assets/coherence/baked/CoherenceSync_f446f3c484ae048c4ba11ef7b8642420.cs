@@ -412,7 +412,6 @@ namespace Coherence.Generated
             var command = client.SchemaDataFactory.CreateCommand(38, entityId, requestArgs.Target, 
                 requestArgs.UsesMeta, requestArgs.Sender, requestArgs.Frame);
 
-
             client.SendCommand(command, requestArgs.ChannelID);
         }
         

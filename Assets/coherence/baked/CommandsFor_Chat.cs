@@ -12,20 +12,20 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_Chat
 {
-    public static bool SendChatMessage(this Chat self, MessageTarget target, System.Byte[] encodedMessage)
+    public static bool SendChatMessage(this Chat _self, MessageTarget coherenceMessageTarget, System.Byte[] encodedMessage)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(SendChatMessage), target, (typeof(System.Byte[]), (object)encodedMessage));
+        return __sync.SendCommand(_self, nameof(SendChatMessage), coherenceMessageTarget, (typeof(System.Byte[]), (object)encodedMessage));
     }
 }
 #endif

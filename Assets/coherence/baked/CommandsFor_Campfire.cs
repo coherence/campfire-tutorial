@@ -12,68 +12,68 @@ using Coherence.Toolkit;
 [UnityEngine.Scripting.Preserve]
 public static class CommandsFor_Campfire
 {
-    public static bool BurnObject(this Campfire self, MessageTarget target, System.String syncConfigID)
+    public static bool BurnObject(this Campfire _self, MessageTarget coherenceMessageTarget, System.String syncConfigID)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(BurnObject), target, (typeof(System.String), (object)syncConfigID));
+        return __sync.SendCommand(_self, nameof(BurnObject), coherenceMessageTarget, (typeof(System.String), (object)syncConfigID));
     }
 
-    public static bool PlayInstantEffects(this Campfire self, MessageTarget target)
+    public static bool PlayInstantEffects(this Campfire _self, MessageTarget coherenceMessageTarget)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(PlayInstantEffects), target);
+        return __sync.SendCommand(_self, nameof(PlayInstantEffects), coherenceMessageTarget);
     }
 
-    public static bool FireDiedDown(this Campfire self, MessageTarget target, System.Int32 oldEffectID, System.Int32 newEffectID)
+    public static bool FireDiedDown(this Campfire _self, MessageTarget coherenceMessageTarget, System.Int32 oldEffectID, System.Int32 newEffectID)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(FireDiedDown), target, (typeof(System.Int32), (object)oldEffectID), (typeof(System.Int32), (object)newEffectID));
+        return __sync.SendCommand(_self, nameof(FireDiedDown), coherenceMessageTarget, (typeof(System.Int32), (object)oldEffectID), (typeof(System.Int32), (object)newEffectID));
     }
 
-    public static bool FireStateChanged(this Campfire self, MessageTarget target, System.Int32 oldEffectID, System.Int32 newEffectID, System.String syncConfigID)
+    public static bool FireStateChanged(this Campfire _self, MessageTarget coherenceMessageTarget, System.Int32 oldEffectID, System.Int32 newEffectID, System.String syncConfigID)
     {
-        if (!self)
+        if (!_self)
         {
             return false;
         }
 
-        var _sync = self.GetComponentInParent<CoherenceSync>(true);
-        if (!_sync)
+        var __sync = _self.GetComponentInParent<CoherenceSync>(true);
+        if (!__sync)
         {
             return false;
         }
 
-        return _sync.SendCommand(self, nameof(FireStateChanged), target, (typeof(System.Int32), (object)oldEffectID), (typeof(System.Int32), (object)newEffectID), (typeof(System.String), (object)syncConfigID));
+        return __sync.SendCommand(_self, nameof(FireStateChanged), coherenceMessageTarget, (typeof(System.Int32), (object)oldEffectID), (typeof(System.Int32), (object)newEffectID), (typeof(System.String), (object)syncConfigID));
     }
 }
 #endif
